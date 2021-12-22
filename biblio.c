@@ -133,3 +133,38 @@ void nouvellePartie(){
 
 
 }
+#include "banque.h"
+
+int p_banque(int banqueJoueur,int somme){
+    int argentBanque=1000000;
+    printf("Le joueur doit recuperer %d\n",somme);
+    banqueJoueur+=somme;
+    argentBanque-=somme;
+    printf("Le joueur a %d\n",banqueJoueur);
+    return banqueJoueur;
+}
+
+int passageCaseDepart(int banqueJoueur){
+    printf("Vous venez de passer par la case départ +200\n");
+    p_banque(banqueJoueur,200);
+    return banqueJoueur;
+}
+int p_Joueur(int banqueJoueur,int somme){
+    int n=0;
+    
+    while (n != 0 || 1)
+    {
+    if(banqueJoueur - somme<0){
+        printf("\nVous n'avez pas assez d'argent dommage...\nVendre des proprieter ?[1] Oui  [0] non.\n.\n.\n");
+        scanf("%d",&n);
+        
+        if(n == 0){
+            printf("Faillite! Vous etes eliminé");
+        } else if(n == 1){
+            printf("Veuiller vendre vos proprieter !");
+        }else{
+            printf("Erreur");
+        }
+    }
+    return banqueJoueur;
+    }}
