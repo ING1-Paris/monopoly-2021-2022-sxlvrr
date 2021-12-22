@@ -25,9 +25,20 @@ int main()
     }
     if (choixUser == 1)
     {
-        nouvellePartie();
-
-        return 0;
+        nouvelle partie();
     }
-
+    else if (choixUser == 2)
+    {
+        sauvegarder_une_partie();
+    }
+    else if (choixUser == 3)
+    {
+        charger_une_partie();
+    }
+    else if (choixUser == 4)
+    {
+        afficheregle();
+    }
+        
+        return 0;
 }
