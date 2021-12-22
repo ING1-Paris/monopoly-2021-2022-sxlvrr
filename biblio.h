@@ -3,8 +3,9 @@
 
 int my_strlen(const char *str);
 
-void nouvellePartie();
+void nouvellePartie(void);
 
-void grilleJeux();
+void grilleJeux(void);
+void afficheregle(void);
 
 #endif // BIBLI
