@@ -1,6 +1,6 @@
 """create new file"""
 
-def sauvegarder_une_partie(fichier_sauvegarde){
+int sauvegarder_une_partie(fichier_sauvegarde){
   maSauvegarde=fopen("game.txt", "a+");
  
   if(maSauvegarde == NULL) {
@@ -12,7 +12,7 @@ def sauvegarder_une_partie(fichier_sauvegarde){
 }
 
 
-def charger_une_partie(){
+int charger_une_partie(){
   maSauvegarde=fopen("sauvegarde","a+");
   fprintf(maSauvegarde, "%d,", data);
   fclose(maSauvegarde);
