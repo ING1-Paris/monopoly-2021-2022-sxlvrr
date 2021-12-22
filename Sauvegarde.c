@@ -1,4 +1,4 @@
-"""create new file"""
+
 
 int sauvegarder_une_partie(fichier_sauvegarde){
   maSauvegarde=fopen("game.txt", "a+");
