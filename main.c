@@ -10,7 +10,7 @@ int main()
     int choixUser = 0;
     int choixPossible[4] = {1,2,3,4};
 
-    printf("Bienvenu sur monopoly world !\n");
+    printf("Bienvenu sur monopoly Marque !\n");
     printf("Veuillez nous indiquer ce que vous voulez faire\n");
     printf("1- lancer une nouvelle partie\n");
     printf("2- sauvegarder la partie en cours\n");
