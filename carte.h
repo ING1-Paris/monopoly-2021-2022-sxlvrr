@@ -1,52 +1,53 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 struct carte1 {
         char nom[200];
         int prixC;
         int loyer,loyerGr;
-        int m1,m2,m3,m4,h,;
+        int m1,m2,m3,m4,h;
         int prixM,prixH;
         int hypotheque;
         int deshypotheque;
     };
 int carte (){
     struct carte1 cA; // DEPART
-    cA.nom = 'Depart';
-    cA.loyer = NULL;
-    cA.m1=cA.m2=cA.m3=cA.m4=NULL;
-    cA.prixM = cA.prixH = NULL;
-    cA.hypotheque = cA.deshypotheque= NULL;
+    strcpy (cA.nom, "Depart");
+    cA.loyer = 0;
+    cA.m1=cA.m2=cA.m3=cA.m4=0;
+    cA.prixM = cA.prixH = 0;
+    cA.hypotheque = cA.deshypotheque= 0;
 
     struct carte1 cB; // PRISON
-    cB.nom = 'Prison';
-    cB.loyer = NULL;
-    cB.m1=cB.m2=cB.m3=cB.m4=NULL;
-    cB.prixM = cB.prixH = NULL;
-    cB.hypotheque = cB.deshypotheque= NULL;
+    strcpy (cB.nom , "Prison");
+    cB.loyer = 0;
+    cB.m1=cB.m2=cB.m3=cB.m4=0;
+    cB.prixM = cB.prixH = 0;
+    cB.hypotheque = cB.deshypotheque= 0;
 
     struct carte1 cC; // VISITE PRISON
-    cC.nom = 'Visite Prison';
-    cC.loyer = NULL;
-    cC.m1=cC.m2=cC.m3=cC.m4=NULL;
-    cC.prixM = cC.prixH = NULL;
-    cC.hypotheque = cC.deshypotheque= NULL;
+    strcpy(cC.nom , "Visite Prison");
+    cC.loyer = 0;
+    cC.m1=cC.m2=cC.m3=cC.m4=0;
+    cC.prixM = cC.prixH = 0;
+    cC.hypotheque = cC.deshypotheque= 0;
 
     struct carte1 cD; // CARTE ENCHERE
-    cD.nom = 'Enchere';
-    cD.loyer = NULL;
-    cD.m1=cD.m2=cD.m3=cD.m4=NULL;
-    cD.prixM = cD.prixH = NULL;
-    cD.hypotheque = cD.deshypotheque= NULL;
+    strcpy(cD.nom , "Enchere");
+    cD.loyer = 0;
+    cD.m1=cD.m2=cD.m3=cD.m4=0;
+    cD.prixM = cD.prixH = 0;
+    cD.hypotheque = cD.deshypotheque= 0;
 
     struct carte1 cF;
-    cF.nom = 'Stationnement gratuit';
-    cF.loyer = NULL;
-    cF.m1=cF.m2=cF.m3=cF.m4=NULL;
-    cF.prixM = cF.prixH = NULL;
-    cF.hypotheque = cF.deshypotheque= NULL;
+    strcpy(cF.nom , "Stationnement gratuit");
+    cF.loyer = 0;
+    cF.m1=cF.m2=cF.m3=cF.m4=0;
+    cF.prixM = cF.prixH = 0;
+    cF.hypotheque = cF.deshypotheque= 0;
 
     struct carte1 cG;
-    cG.nom = 'Wish';
+    strcpy(cG.nom , "Wish");
     cG.prixC=60;
     cG.loyer =2;
     cG.loyerGr=4;
@@ -54,14 +55,14 @@ int carte (){
     cG.m2=30;
     cG.m3=90;
     cG.m4=160;
-    cG.h=250
+    cG.h=250;
     cG.prixM =50;
     cG.prixH = 50;
     cG.hypotheque = 30 ;
     cG.deshypotheque=33 ;
 
     struct carte1 cH;
-    cH.nom = 'Epicier du coin';
+    strcpy(cH.nom , "Epicier du coin");
     cH.prixC=60;
     cH.loyer =4;
     cH.loyerGr=8;
@@ -76,7 +77,7 @@ int carte (){
     cH.deshypotheque= 33;
 
     struct carte1 cI;
-    cI.nom = 'Action';
+    strcpy(cI.nom , "Action");
     cI.prixC=100;
     cI.loyer =6;
     cI.loyerGr=12;
@@ -91,7 +92,7 @@ int carte (){
     cI.deshypotheque= 55;
 
     struct carte1 cJ;
-    cJ.nom = 'Lidl';
+    strcpy(cJ.nom , "Lidl");
     cJ.prixC=100;
     cJ.loyer =6;
     cJ.loyerGr=12;
@@ -106,7 +107,7 @@ int carte (){
     cJ.deshypotheque=55 ;
 
     struct carte1 cK;
-    cK.nom = 'Franprix';
+    strcpy(cK.nom , "Franprix");
     cK.prixC=120;
     cK.loyer =8;
     cK.loyerGr=16;
@@ -121,7 +122,7 @@ int carte (){
     cK.deshypotheque=66 ;
 
     struct carte1 cL;
-    cL.nom = 'Monoprix';
+    strcpy(cL.nom , "Monoprix");
     cL.prixC=140;
     cL.loyer =10;
     cL.loyerGr=20;
@@ -136,7 +137,7 @@ int carte (){
     cL.deshypotheque=77 ;
 
     struct carte1 cM;
-    cM.nom = 'Nike';
+    strcpy(cM.nom , "Nike");
     cM.prixC=140;
     cM.loyer =10;
     cM.loyerGr=20;
@@ -151,7 +152,7 @@ int carte (){
     cM.deshypotheque=77 ;
 
     struct carte1 cN;
-    cN.nom = 'Adidas';
+    strcpy(cN.nom , "Adidas");
     cN.prixC=160;
     cN.loyer =12;
     cN.loyerGr=24;
@@ -166,7 +167,7 @@ int carte (){
     cN.deshypotheque= 88;
 
     struct carte1 cO;
-    cO.nom = 'Rebook';
+    strcpy(cO.nom , "Rebook");
     cO.prixC=180;
     cO.loyer =14;
     cO.loyerGr=28;
@@ -181,7 +182,7 @@ int carte (){
     cO.deshypotheque= 99;
 
     struct carte1 cP;
-    cP.nom = 'Samsung';
+    strcpy(cP.nom , "Samsung");
     cP.prixC=180;
     cP.loyer =14;
     cP.loyerGr=28;
@@ -196,7 +197,7 @@ int carte (){
     cP.deshypotheque=99 ;
 
     struct carte1 cQ;
-    cQ.nom = 'Apple';
+    strcpy(cQ.nom , "Apple");
     cQ.prixC=200;
     cQ.loyer =16;
     cQ.loyerGr=32;
@@ -211,7 +212,7 @@ int carte (){
     cQ.deshypotheque= 110;
 
     struct carte1 cR;
-    cR.nom = 'Xaomi';
+    strcpy(cR.nom , "Xaomi");
     cR.prixC=220;
     cR.loyer =18;
     cR.loyerGr=36;
@@ -219,14 +220,14 @@ int carte (){
     cR.m2=250;
     cR.m3=700;
     cR.m4=875;
-    cR.h=1050
+    cR.h=1050;
     cR.prixM =150;
     cR.prixH = 150;
     cR.hypotheque = 110;
     cR.deshypotheque= 121;
 
     struct carte1 cS;
-    cS.nom = 'Louis Vuitton';
+    strcpy(cS.nom , "Louis Vuitton");
     cS.prixC=220;
     cS.loyer =18;
     cS.loyerGr=36;
@@ -241,7 +242,7 @@ int carte (){
     cS.deshypotheque= 121;
 
     struct carte1 cT;
-    cT.nom = 'Gucci';
+    strcpy(cT.nom , "Gucci");
     cT.prixC=240;
     cT.loyer =20;
     cT.loyerGr=40;
@@ -249,14 +250,14 @@ int carte (){
     cT.m2=300;
     cT.m3=750;
     cT.m4=925;
-    cT.h=1100
+    cT.h=1100;
     cT.prixM =150;
     cT.prixH = 150;
     cT.hypotheque =120 ;
     cT.deshypotheque=132 ;
 
     struct carte1 cU;
-    cU.nom = 'Rolex';
+    strcpy(cU.nom , "Rolex");
     cU.prixC=280;
     cU.loyer =24;
     cU.loyerGr=48;
@@ -264,14 +265,14 @@ int carte (){
     cU.m2=360;
     cU.m3=850;
     cU.m4=1025;
-    cU.h=1200
+    cU.h=1200;
     cU.prixM =150;
     cU.prixH = 150;
     cU.hypotheque = 140;
     cU.deshypotheque= 154;
 
     struct carte1 cV;
-    cV.nom = 'Bugatti';
+    strcpy(cV.nom , "Bugatti");
     cV.prixC=300;
     cV.loyer =26;
     cV.loyerGr=52;
@@ -286,68 +287,291 @@ int carte (){
     cV.deshypotheque=165;
 
     struct carte1 cW;
-    cW.nom = 'SNCF';
+    strcpy(cW.nom , "SNCF");
     cW.prixC=200;
     cW.loyer =50;
-    cW.m1=NULL;
+    cW.m1=0;
     cW.m2=100; // LOYER SI 2 gares
     cW.m3=200; // Loyer si toutes les gares
-    cW.m4=NULL;
-    cW.prixM =NULL;
-    cW.prixH = NULL;
+    cW.m4=0;
+    cW.prixM =0;
+    cW.prixH = 0;
     cW.hypotheque =100 ;
     cW.deshypotheque=110 ;
 
     struct carte1 cX;
-    cX.nom = 'AirFrance';
+    strcpy(cX.nom , "AirFrance");
     cX.prixC=200;
     cX.loyer =50;
-    cX.m1=NULL;
+    cX.m1=0;
     cX.m2=100;
     cX.m3=200;
-    cX.m4=NULL;
-    cX.prixM =NULL;
-    cX.prixH = NULL;
+    cX.m4=0;
+    cX.prixM =0;
+    cX.prixH = 0;
     cX.hypotheque = 100;
     cX.deshypotheque= 110;
 
     struct carte1 cY;
-    cY.nom = 'RATP';
+    strcpy(cY.nom , "RATP");
     cY.prixC=200;
     cY.loyer =50;
-    cY.m1=NULL;
+    cY.m1=0;
     cY.m2=100;
     cY.m3=200;
-    cY.m4=NULL;
-    cY.prixM =NULL;
-    cY.prixH = NULL;
+    cY.m4=0;
+    cY.prixM =0;
+    cY.prixH = 0;
     cY.hypotheque =100 ;
     cY.deshypotheque=110 ;
 
     struct carte1 cZ;
-    cZ.nom = 'EDF';
+    strcpy(cZ.nom , "EDF");
     cZ.prixC=150;
-    cZ.loyer =4*dé; //4 fois le résultat du dé
-    cZ.m1=NULL;
-    cZ.m2=10*dé; // Si les deux services : fois 10
-    cZ.m3=NULL;
-    cZ.m4=NULL;
-    cZ.prixM =NULL;
-    cZ.prixH = NULL;
+    cZ.loyer =4*dé;
+    cZ.loyerGr=10*dé; //4 fois le résultat du dé
+    cZ.m1=0;
+    cZ.m2=0; // Si les deux services : fois 10
+    cZ.m3=0;
+    cZ.m4=0;
+    cZ.prixM =0;
+    cZ.prixH = 0;
     cZ.hypotheque = 100;
     cZ.deshypotheque= 110;
 
     struct carte1 cZZ;
-    cZZ.nom = 'Suez';
+    strcpy(cZZ.nom , "Suez");
     cZZ.prixC=150;
     cZZ.loyer =4*dé;
-    cZZ.m1=NULL;
-    cZZ.m2=10*dé;
-    cZZ.m3=NULL;
-    cZZ.m4=NULL;
-    cZZ.prixM =NULL;
-    cZZ.prixH = NULL;
+    cZZ.m1=0;
+    cZZ.loyerGr=10*dé;
+    cZZ.m2=0;
+    cZZ.m3=0;
+    cZZ.m4=0;
+    cZZ.prixM =0;
+    cZZ.prixH = 0;
     cZZ.hypotheque =100 ;
     cZZ.deshypotheque= 110;
 
+
+    struct joueur{
+        char nom[200];
+        int argent;
+        carte[30];
+    }
+    
+
+
+//POUR CARTE IF AVEC UN FOR DEDANS
+
+
+    int tableau[32]; // Tableau qui permet d'afficher le nom le loyer et le prix de la carte au joueur (on devra aussi demander s'il veut acheter ou si ca appartient déja et dans ce cas obliger de payer le loyer)
+                        // Il faut aussi faire ajouter un if dans chaque case associer au dé qui fait que à s'il est dessus et que dé=/// alors il avance de par exemple tableau 0 + dé
+    if (j1 == tableau[0] || j2 == tableau[0] || j3 == tableau[0] || j4 == tableau[0]) ; // Départ
+        printf("Case: %s",cA.nom);
+        argent = argent + 200;
+
+        
+    
+
+    if (j1 == tableau[1] || j2 == tableau[1] || j3 == tableau[1] || j4 == tableau[1]) ; // Wish
+        printf("Case: %s",cG.nom);
+        printf("Prix de la carte: %d",cG.prixC);
+        printf("Loyer: %d",cG.loyer);
+        printf("Loyer de tous le groupe: %d",cG.loyerGr);
+    
+    if (j1 == tableau[2] || j2 == tableau[2] || j3 == tableau[2] || j4 == tableau[2]) ; // Epicier
+        printf("Case: %s",cH.nom);
+        printf("Prix de la carte: %d",cH.prixC);
+        printf("Loyer: %d",cH.loyer);
+        printf("Loyer de tous le groupe: %d",cH.loyerGr);
+
+    if (j1 == tableau[3] || j2 == tableau[3] || j3 == tableau[3] || j4 == tableau[3]) ;
+        printf("Case: %s",cA.nom);
+        printf("Prix de la carte: %d",cA.prixC);²²      // CAISSE COMMU
+        printf("Loyer: %d",cA.loyer);
+        printf("Loyer de tous le groupe: %d",cA.loyerGr);
+    
+    if (j1 == tableau[4] || j2 == tableau[4] || j3 == tableau[4] || j4 == tableau[4]) ; // Action
+        printf("Case: %s",cI.nom);
+        printf("Prix de la carte: %d",cI.prixC);
+        printf("Loyer: %d",cI.loyer);
+        printf("Loyer de tous le groupe: %d",cI.loyerGr);
+
+    if (j1 == tableau[5] || j2 == tableau[5] || j3 == tableau[5] || j4 == tableau[5]) ; // EDF
+        printf("Case: %s",cZ.nom);
+        printf("Prix de la carte: %d",cZ.prixC);
+        printf("Loyer: %d",cZ.loyer);
+        printf("Loyer de tous le groupe: %d",cZ.loyerGr);
+
+    
+    if (j1 == tableau[6] || j2 == tableau[6] || j3 == tableau[6] || j4 == tableau[6]) ; // Lidl
+        printf("Case: %s",cJ.nom);
+        printf("Prix de la carte: %d",cJ.prixC);
+        printf("Loyer: %d",cJ.loyer);
+        printf("Loyer de tous le groupe: %d",cJ.loyerGr);
+
+    if (j1 == tableau[7] || j2 == tableau[7] || j3 == tableau[7] || j4 == tableau[7]) ; // Fraprix
+        printf("Case: %s",cK.nom);
+        printf("Prix de la carte: %d",cK.prixC);
+        printf("Loyer: %d",cK.loyer);
+        printf("Loyer de tous le groupe: %d",cK.loyerGr);
+
+    
+    if (j1 == tableau[8] || j2 == tableau[8] || j3 == tableau[8] || j4 == tableau[8) ;
+        printf("Case: %s",cI.nom);
+        printf("Prix de la carte: %d",cI.prixC);            // CHANCE
+        printf("Loyer: %d",cI.loyer);
+        printf("Loyer de tous le groupe: %d",cI.loyerGr);
+
+
+    if (j1 == tableau[9] || j2 == tableau[9] || j3 == tableau[9] || j4 == tableau[9]) ;// Monoprix
+        printf("Case: %s",cL.nom);
+        printf("Prix de la carte: %d",cL.prixC);
+        printf("Loyer: %d",cL.loyer);
+        printf("Loyer de tous le groupe: %d",cL.loyerGr);
+
+    if (j1 == tableau[10] || j2 == tableau[10]|| j3 == tableau[10] || j4 == tableau[10]) ; // Visite prison
+        printf("Case: %s",cC.nom);
+        printf("Prix de la carte: %d",cC.prixC);
+        printf("Loyer: %d",cC.loyer);
+        printf("Loyer de tous le groupe: %d",cC.loyerGr);
+
+    
+    if (j1 == tableau[11] || j2 == tableau[11] || j3 == tableau[11] || j4 == tableau[11]) ; // Nike
+        printf("Case: %s",cM.nom);
+        printf("Prix de la carte: %d",cM.prixC);
+        printf("Loyer: %d",cM.loyer);
+        printf("Loyer de tous le groupe: %d",cM.loyerGr);
+
+    
+    if (j1 == tableau[12] || j2 == tableau[12] || j3 == tableau[12] || j4 == tableau[12]) ; // AirFrance
+        printf("Case: %s",cX.nom);
+        printf("Prix de la carte: %d",cX.prixC);
+        printf("Loyer: %d",cX.loyer);
+        printf("Loyer de 2 transports: %d",cX.m2);
+        printf("Loyer de tous les transports: ",cX.m3);
+
+
+    if (j1 == tableau[13] || j2 == tableau[13] || j3 == tableau[13] || j4 == tableau[13]) ; //Adidas
+        printf("Case: %s",cN.nom);
+        printf("Prix de la carte: %d",cN.prixC);
+        printf("Loyer: %d",cN.loyer);
+        printf("Loyer de tous le groupe: %d",cN.loyerGr);
+
+    
+    if (j1 == tableau[14] || j2 == tableau[14] || j3 == tableau[14] || j4 == tableau[14]) ; // Reebok
+        printf("Case: %s",cO.nom);
+        printf("Prix de la carte: %d",cO.prixC);
+        printf("Loyer: %d",cO.loyer);
+        printf("Loyer de tous le groupe: %d",cO.loyerGr);
+
+    if (j1 == tableau[15] || j2 == tableau[15] || j3 == tableau[15] || j4 == tableau[15]) ; // Stationnement
+        printf("Case: %s",cF.nom);
+        printf("Prix de la carte: %d",cF.prixC);
+        printf("Loyer: %d",cF.loyer);
+        printf("Loyer de tous le groupe: %d",cF.loyerGr);
+
+    
+    if (j1 == tableau[16] || j2 == tableau[16] || j3 == tableau[16] || j4 == tableau[16]) ;
+        printf("Case: %s",cQ.nom);
+        printf("Prix de la carte: %d",cQ.prixC);
+        printf("Loyer: %d",cQ.loyer);
+        printf("Loyer de tous le groupe: %d",cQ.loyerGr);
+
+
+    if (j1 == tableau[17] || j2 == tableau[17] || j3 == tableau[17] || j4 == tableau[17]) ; // Commu
+        printf("Case: %s",cO.nom);
+        printf("Prix de la carte: %d",cO.prixC);
+        printf("Loyer: %d",cO.loyer);
+        printf("Loyer de tous le groupe: %d",cO.loyerGr);
+
+
+    if (j1 == tableau[18] || j2 == tableau[18] || j3 == tableau[18] || j4 == tableau[18]) ; // SAMSUG
+        printf("Case: %s",cP.nom);
+        printf("Prix de la carte: %d",cP.prixC);
+        printf("Loyer: %d",cP.loyer);
+        printf("Loyer de tous le groupe: %d",cP.loyerGr);
+
+    if (j1 == tableau[19] || j2 == tableau[19] || j3 == tableau[19] || j4 == tableau[19]) ;// XAOMI
+        printf("Case: %s",cR.nom);
+        printf("Prix de la carte: %d",cR.prixC);
+        printf("Loyer: %d",cR.loyer);
+        printf("Loyer de tous le groupe: %d",cR.loyerGr);
+
+
+    if (j1 == tableau[20] || j2 == tableau[20] || j3 == tableau[20] || j4 == tableau[20]) ; // SUEZ
+        printf("Case: %s",cZZ.nom);
+        printf("Prix de la carte: %d",cZZ.prixC);
+        printf("Loyer: %d",cZZ.loyer);
+        printf("Loyer de tous le groupe: %d",cZZ.loyerGr);
+
+    if (j1 == tableau[21] || j2 == tableau[21] || j3 == tableau[21] || j4 == tableau[21]) ; // RATP
+        printf("Case: %s",cY.nom);
+        printf("Prix de la carte: %d",cY.prixC);
+        printf("Loyer: %d",cY.loyer);
+        printf("Loyer de tous le groupe: %d",cY.loyerGr);
+    
+    if (j1 == tableau[22] || j2 == tableau[22] || j3 == tableau[22] || j4 == tableau[22]) ; //Louis Vuitton
+        printf("Case: %s",cS.nom);
+        printf("Prix de la carte: %d",cS.prixC);
+        printf("Loyer: %d",cS.loyer);
+        printf("Loyer de tous le groupe: %d",cS.loyerGr);
+
+    
+    if (j1 == tableau[23] || j2 == tableau[23] || j3 == tableau[23] || j4 == tableau[23]) ; // IMPOT
+        printf("Case: %s",cO.nom);
+        printf("Prix de la carte: %d",cO.prixC);
+        printf("Loyer: %d",cO.loyer);
+        printf("Loyer de tous le groupe: %d",cO.loyerGr);
+
+    if (j1 == tableau[24] || j2 == tableau[24] || j3 == tableau[24] || j4 == tableau[24]) ; // GUCCI
+        printf("Case: %s",cT.nom);
+        printf("Prix de la carte: %d",cT.prixC);
+        printf("Loyer: %d",cT.loyer);
+        printf("Loyer de tous le groupe: %d",cT.loyerGr);
+
+    if (j1 == tableau[25] || j2 == tableau[25] || j3 == tableau[25] || j4 == tableau[25]) ;// PRISON
+        printf("Case: %s",cO.nom);
+        printf("Prix de la carte: %d",cO.prixC);
+        printf("Loyer: %d",cO.loyer);
+        printf("Loyer de tous le groupe: %d",cO.loyerGr);
+
+    if (j1 == tableau[26] || j2 == tableau[26] || j3 == tableau[26] || j4 == tableau[26]) ; // ENCHERE
+        printf("Case: %s",cO.nom);
+        printf("Prix de la carte: %d",cO.prixC);
+        printf("Loyer: %d",cO.loyer);
+        printf("Loyer de tous le groupe: %d",cO.loyerGr);
+        
+
+    if (j1 == tableau[27] || j2 == tableau[27] || j3 == tableau[27] || j4 == tableau[27]) ; //Rolex
+        printf("Case: %s",cU.nom);
+        printf("Prix de la carte: %d",cU.prixC);
+        printf("Loyer: %d",cU.loyer);
+        printf("Loyer de tous le groupe: %d",cU.loyerGr);
+
+    if (j1 == tableau[28] || j2 == tableau[28] || j3 == tableau[28] || j4 == tableau[28]) ;//SNCF
+        printf("Case: %s",cW.nom);
+        printf("Prix de la carte: %d",cW.prixC);
+        printf("Loyer: %d",cW.loyer);
+        printf("Loyer de tous le groupe: %d",cW.loyerGr);
+
+    if (j1 == tableau[29] || j2 == tableau[29] || j3 == tableau[29] || j4 == tableau[29]) ; //TAXE
+        printf("Case: %s",cO.nom);
+        printf("Prix de la carte: %d",cO.prixC);
+        printf("Loyer: %d",cO.loyer);
+        printf("Loyer de tous le groupe: %d",cO.loyerGr);
+
+    if (j1 == tableau[30] || j2 == tableau[30] || j3 == tableau[30] || j4 == tableau[30]) ; // BUGATTI
+        printf("Case: %s",cV.nom);
+        printf("Prix de la carte: %d",cV.prixC)
+        printf("Loyer: %d",cV.loyer);
+        printf("Loyer de tous le groupe: %d",cV.loyerGr);
+    
+    if (j1 == tableau[31] || j2 == tableau[31] || j3 == tableau[31] || j4 == tableau[31]) ; //CHANCE
+        printf("Case: %s",cO.nom);
+        printf("Prix de la carte: %d",cO.prixC);
+        printf("Loyer: %d",cO.loyer);
+        printf("Loyer de tous le groupe: %d",cO.loyerGr);
 }
+
