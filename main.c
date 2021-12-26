@@ -25,7 +25,7 @@ int main()
     }
     if (choixUser == 1)
     {
-        nouvelle partie();
+        nouvelle_partie();
     }
     else if (choixUser == 2)
     {
