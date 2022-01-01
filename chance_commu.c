@@ -42,4 +42,29 @@ void commucard()
             p4.argent -=100;
         }
     }
+    if (r==2){
+        printf("C'est votre anniversaire !\nTous les joeurs vous versent 200€");
+        if(j1 == tableau[17]){
+            p2.argent -=200;
+            p3.argent -=200;
+            p4.argent -=200;
+            p1.argent +=600;
+        if(j2 == tableau[17]){
+            p1.argent -=200;
+            p3.argent -=200;
+            p4.argent -=200;
+            p2.argent +=600;
+        if(j3 == tableau[17]){
+            p1.argent -=200;
+            p2.argent -=200;
+            p4.argent -=200;
+            p3.argent +=600;
+        if(j4 == tableau[17]){
+            p1.argent -=200;
+            p2.argent -=200;
+            p3.argent -=200;
+            p4.argent +=600;
+        }
+    }
+
 }
