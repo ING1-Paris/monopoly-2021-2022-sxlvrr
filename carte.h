@@ -451,7 +451,7 @@ int carte (){
 
                 if(j1==tableau[1])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p1.achat);}
                     while(p1.achat!=1||p1.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j1==tableau[1] && p1.achat==1);
@@ -460,7 +460,7 @@ int carte (){
                 
                 if(j2==tableau[1])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p2.achat);}
                     while(p2.achat!=1||p2.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j2==tableau[1] && p2.achat==1);
@@ -470,7 +470,7 @@ int carte (){
 
                 if(j3==tableau[1])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p3.achat);}
                     while(p3.achat!=1||p3.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j3==tableau[1] && p3.achat==1);
@@ -479,7 +479,7 @@ int carte (){
                         
                 if(j4==tableau[1])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p4.achat);}
                     while(p4.achat!=1||p4.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j4==tableau[1] && p4.achat==1);
@@ -553,7 +553,7 @@ int carte (){
             if (!(cH.nom==p1.carte[k] && cH.nom==p2.carte[k]&& cH.nom==p3.carte[k]&& cH.nom==p4.carte[k])) // Si la carte appartient à personne
                 if(j1==tableau[2])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p1.achat);}
                     while(p1.achat!=1||p1.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j1==tableau[1] && p1.achat==1);
@@ -562,7 +562,7 @@ int carte (){
                 
                 if(j2==tableau[2])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p2.achat);}
                     while(p2.achat!=1||p2.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j2==tableau[2] && p2.achat==1);
@@ -572,7 +572,7 @@ int carte (){
 
                 if(j3==tableau[2])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p3.achat);}
                     while(p3.achat!=1||p3.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j3==tableau[2] && p3.achat==1);
@@ -581,7 +581,7 @@ int carte (){
                         
                 if(j4==tableau[2])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p4.achat);}
                     while(p4.achat!=1||p4.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j4==tableau[2] && p4.achat==1);
@@ -661,7 +661,7 @@ int carte (){
             if (!(cI.nom==p1.carte[k] && cI.nom==p2.carte[k]&& cI.nom==p3.carte[k]&& cI.nom==p4.carte[k])) // Si la carte appartient à personne
                 if(j1==tableau[4])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p1.achat);}
                     while(p1.achat!=1||p1.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j1==tableau[4] && p1.achat==1);
@@ -670,7 +670,7 @@ int carte (){
                 
                 if(j2==tableau[4])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p2.achat);}
                     while(p2.achat!=1||p2.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j2==tableau[4] && p2.achat==1);
@@ -680,7 +680,7 @@ int carte (){
 
                 if(j3==tableau[4])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p3.achat);}
                     while(p3.achat!=1||p3.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j3==tableau[4] && p3.achat==1);
@@ -689,7 +689,7 @@ int carte (){
                         
                 if(j4==tableau[4])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p4.achat);}
                     while(p4.achat!=1||p4.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j4==tableau[4] && p4.achat==1);
@@ -778,7 +778,7 @@ int carte (){
             if (!(cZ.nom==p1.carte[k] && cZ.nom==p2.carte[k]&& cZ.nom==p3.carte[k]&& cZ.nom==p4.carte[k])) // Si la carte appartient à personne
                 if(j1==tableau[5])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p1.achat);}
                     while(p1.achat!=1||p1.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facZn à ce que après la propriété ne soit plus achetable
                         if (j1==tableau[5] && p1.achat==1);
@@ -787,7 +787,7 @@ int carte (){
                 
                 if(j2==tableau[5])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p2.achat);}
                     while(p2.achat!=1||p2.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facZn à ce que après la propriété ne soit plus achetable
                         if (j2==tableau[5] && p2.achat==1);
@@ -797,7 +797,7 @@ int carte (){
 
                 if(j3==tableau[5])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p3.achat);}
                     while(p3.achat!=1||p3.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facZn à ce que après la propriété ne soit plus achetable
                         if (j3==tableau[5] && p3.achat==1);
@@ -806,7 +806,7 @@ int carte (){
                         
                 if(j4==tableau[5])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p4.achat);}
                     while(p4.achat!=1||p4.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facZn à ce que après la propriété ne soit plus achetable
                         if (j4==tableau[5] && p4.achat==1);
@@ -880,7 +880,7 @@ int carte (){
             if (!(cJ.nom==p1.carte[k] && cJ.nom==p2.carte[k]&& cJ.nom==p3.carte[k]&& cJ.nom==p4.carte[k])) // Si la carte appartient à personne
                 if(j1==tableau[6])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p1.achat);}
                     while(p1.achat!=1||p1.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j1==tableau[6] && p1.achat==1);
@@ -889,7 +889,7 @@ int carte (){
                 
                 if(j2==tableau[6])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p2.achat);}
                     while(p2.achat!=1||p2.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j2==tableau[6] && p2.achat==1);
@@ -899,7 +899,7 @@ int carte (){
 
                 if(j3==tableau[6])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p3.achat);}
                     while(p3.achat!=1||p3.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j3==tableau[6] && p3.achat==1);
@@ -908,7 +908,7 @@ int carte (){
                         
                 if(j4==tableau[6])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p4.achat);}
                     while(p4.achat!=1||p4.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j4==tableau[6] && p4.achat==1);
@@ -980,7 +980,7 @@ int carte (){
             if (!(cK.nom==p1.carte[k] && cK.nom==p2.carte[k]&& cK.nom==p3.carte[k]&& cK.nom==p4.carte[k])) // Si la carte appartient à personne
                 if(j1==tableau[7])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p1.achat);}
                     while(p1.achat!=1||p1.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j1==tableau[7] && p1.achat==1);
@@ -989,7 +989,7 @@ int carte (){
                 
                 if(j2==tableau[7])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p2.achat);}
                     while(p2.achat!=1||p2.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j2==tableau[7] && p2.achat==1);
@@ -999,7 +999,7 @@ int carte (){
 
                 if(j3==tableau[7])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p3.achat);}
                     while(p3.achat!=1||p3.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j3==tableau[7] && p3.achat==1);
@@ -1008,7 +1008,7 @@ int carte (){
                         
                 if(j4==tableau[7])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p4.achat);}
                     while(p4.achat!=1||p4.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j4==tableau[7] && p4.achat==1);
@@ -1086,7 +1086,7 @@ int carte (){
             if (!(cL.nom==p1.carte[k] && cL.nom==p2.carte[k]&& cL.nom==p3.carte[k]&& cL.nom==p4.carte[k])) // Si la carte appartient à personne
                 if(j1==tableau[9])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p1.achat);}
                     while(p1.achat!=1||p1.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j1==tableau[9] && p1.achat==1);
@@ -1095,7 +1095,7 @@ int carte (){
                 
                 if(j2==tableau[9])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p2.achat);}
                     while(p2.achat!=1||p2.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j2==tableau[9] && p2.achat==1);
@@ -1105,7 +1105,7 @@ int carte (){
 
                 if(j3==tableau[9])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p3.achat);}
                     while(p3.achat!=1||p3.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j3==tableau[9] && p3.achat==1);
@@ -1114,7 +1114,7 @@ int carte (){
                         
                 if(j4==tableau[9])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p4.achat);}
                     while(p4.achat!=1||p4.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j4==tableau[9] && p4.achat==1);
@@ -1195,7 +1195,7 @@ int carte (){
             if (!(cM.nom==p1.carte[k] && cM.nom==p2.carte[k]&& cM.nom==p3.carte[k]&& cM.nom==p4.carte[k])) // Si la carte appartient à personne
                 if(j1==tableau[11])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p1.achat);}
                     while(p1.achat!=1||p1.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j1==tableau[11] && p1.achat==1);
@@ -1204,7 +1204,7 @@ int carte (){
                 
                 if(j2==tableau[11])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p2.achat);}
                     while(p2.achat!=1||p2.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j2==tableau[11] && p2.achat==1);
@@ -1214,7 +1214,7 @@ int carte (){
 
                 if(j3==tableau[11])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p3.achat);}
                     while(p3.achat!=1||p3.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j3==tableau[11] && p3.achat==1);
@@ -1223,7 +1223,7 @@ int carte (){
                         
                 if(j4==tableau[11])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p4.achat);}
                     while(p4.achat!=1||p4.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j4==tableau[11] && p4.achat==1);
@@ -1305,7 +1305,7 @@ int carte (){
             if (!(cN.nom==p1.carte[k] && cN.nom==p2.carte[k]&& cN.nom==p3.carte[k]&& cN.nom==p4.carte[k])) // Si la carte appartient à personne
                 if(j1==tableau[13])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p1.achat);}
                     while(p1.achat!=1||p1.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j1==tableau[13] && p1.achat==1);
@@ -1314,7 +1314,7 @@ int carte (){
                 
                 if(j2==tableau[13])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p2.achat);}
                     while(p2.achat!=1||p2.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j2==tableau[13] && p2.achat==1);
@@ -1324,7 +1324,7 @@ int carte (){
 
                 if(j3==tableau[13])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p3.achat);}
                     while(p3.achat!=1||p3.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j3==tableau[13] && p3.achat==1);
@@ -1333,7 +1333,7 @@ int carte (){
                         
                 if(j4==tableau[13])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p4.achat);}
                     while(p4.achat!=1||p4.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j4==tableau[13] && p4.achat==1);
@@ -1407,7 +1407,7 @@ int carte (){
             if (!(cO.nom==p1.carte[k] && cO.nom==p2.carte[k]&& cO.nom==p3.carte[k]&& cO.nom==p4.carte[k])) // Si la carte appartient à personne
                 if(j1==tableau[14])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p1.achat);}
                     while(p1.achat!=1||p1.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j1==tableau[14] && p1.achat==1);
@@ -1416,7 +1416,7 @@ int carte (){
                 
                 if(j2==tableau[14])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p2.achat);}
                     while(p2.achat!=1||p2.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j2==tableau[14] && p2.achat==1);
@@ -1426,7 +1426,7 @@ int carte (){
 
                 if(j3==tableau[14])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p3.achat);}
                     while(p3.achat!=1||p3.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j3==tableau[14] && p3.achat==1);
@@ -1435,7 +1435,7 @@ int carte (){
                         
                 if(j4==tableau[14])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p4.achat);}
                     while(p4.achat!=1||p4.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facon à ce que après la propriété ne soit plus achetable
                         if (j4==tableau[14] && p4.achat==1);
@@ -1516,7 +1516,7 @@ int carte (){
             if (!(cQ.nom==p1.carte[k] && cQ.nom==p2.carte[k]&& cQ.nom==p3.carte[k]&& cQ.nom==p4.carte[k])) // Si la carte appartient à personne
                 if(j1==tableau[16])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p1.achat);}
                     while(p1.achat!=1||p1.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facQn à ce que après la propriété ne soit plus achetable
                         if (j1==tableau[16] && p1.achat==1);
@@ -1525,7 +1525,7 @@ int carte (){
                 
                 if(j2==tableau[16])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p2.achat);}
                     while(p2.achat!=1||p2.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facQn à ce que après la propriété ne soit plus achetable
                         if (j2==tableau[16] && p2.achat==1);
@@ -1535,7 +1535,7 @@ int carte (){
 
                 if(j3==tableau[16])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p3.achat);}
                     while(p3.achat!=1||p3.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facQn à ce que après la propriété ne soit plus achetable
                         if (j3==tableau[16] && p3.achat==1);
@@ -1544,7 +1544,7 @@ int carte (){
                         
                 if(j4==tableau[16])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p4.achat);}
                     while(p4.achat!=1||p4.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facQn à ce que après la propriété ne soit plus achetable
                         if (j4==tableau[16] && p4.achat==1);
@@ -1625,7 +1625,7 @@ int carte (){
             if (!(cP.nom==p1.carte[k] && cP.nom==p2.carte[k]&& cP.nom==p3.carte[k]&& cP.nom==p4.carte[k])) // Si la carte appartient à personne
                 if(j1==tableau[18])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p1.achat);}
                     while(p1.achat!=1||p1.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facPn à ce que après la propriété ne soit plus achetable
                         if (j1==tableau[18] && p1.achat==1);
@@ -1634,7 +1634,7 @@ int carte (){
                 
                 if(j2==tableau[18])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p2.achat);}
                     while(p2.achat!=1||p2.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facPn à ce que après la propriété ne soit plus achetable
                         if (j2==tableau[18] && p2.achat==1);
@@ -1644,7 +1644,7 @@ int carte (){
 
                 if(j3==tableau[18])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p3.achat);}
                     while(p3.achat!=1||p3.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facPn à ce que après la propriété ne soit plus achetable
                         if (j3==tableau[18] && p3.achat==1);
@@ -1653,7 +1653,7 @@ int carte (){
                         
                 if(j4==tableau[18])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p4.achat);}
                     while(p4.achat!=1||p4.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facPn à ce que après la propriété ne soit plus achetable
                         if (j4==tableau[18] && p4.achat==1);
@@ -1726,7 +1726,7 @@ int carte (){
             if (!(cR.nom==p1.carte[k] && cR.nom==p2.carte[k]&& cR.nom==p3.carte[k]&& cR.nom==p4.carte[k])) // Si la carte appartient à personne
                 if(j1==tableau[19])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p1.achat);}
                     while(p1.achat!=1||p1.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facRn à ce que après la propriété ne soit plus achetable
                         if (j1==tableau[19] && p1.achat==1);
@@ -1735,7 +1735,7 @@ int carte (){
                 
                 if(j2==tableau[19])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p2.achat);}
                     while(p2.achat!=1||p2.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facRn à ce que après la propriété ne soit plus achetable
                         if (j2==tableau[19] && p2.achat==1);
@@ -1745,7 +1745,7 @@ int carte (){
 
                 if(j3==tableau[19])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p3.achat);}
                     while(p3.achat!=1||p3.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facRn à ce que après la propriété ne soit plus achetable
                         if (j3==tableau[19] && p3.achat==1);
@@ -1754,7 +1754,7 @@ int carte (){
                         
                 if(j4==tableau[19])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p4.achat);}
                     while(p4.achat!=1||p4.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facRn à ce que après la propriété ne soit plus achetable
                         if (j4==tableau[19] && p4.achat==1);
@@ -1845,7 +1845,7 @@ int carte (){
             if (!(cZZ.nom==p1.carte[k] && cZZ.nom==p2.carte[k]&& cZZ.nom==p3.carte[k]&& cZZ.nom==p4.carte[k])) // Si la carte appartient à personne
                 if(j1==tableau[20])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p1.achat);}
                     while(p1.achat!=1||p1.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facZn à ce que après la propriété ne soit plus achetable
                         if (j1==tableau[20] && p1.achat==1);
@@ -1854,7 +1854,7 @@ int carte (){
                 
                 if(j2==tableau[20])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p2.achat);}
                     while(p2.achat!=1||p2.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facZn à ce que après la propriété ne soit plus achetable
                         if (j2==tableau[20] && p2.achat==1);
@@ -1864,7 +1864,7 @@ int carte (){
 
                 if(j3==tableau[20])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p3.achat);}
                     while(p3.achat!=1||p3.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facZn à ce que après la propriété ne soit plus achetable
                         if (j3==tableau[20] && p3.achat==1);
@@ -1873,7 +1873,7 @@ int carte (){
                         
                 if(j4==tableau[20])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p4.achat);}
                     while(p4.achat!=1||p4.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facZn à ce que après la propriété ne soit plus achetable
                         if (j4==tableau[20] && p4.achat==1);
@@ -1949,7 +1949,7 @@ int carte (){
             if (!(cS.nom==p1.carte[k] && cS.nom==p2.carte[k]&& cS.nom==p3.carte[k]&& cS.nom==p4.carte[k])) // Si la carte appartient à personne
                 if(j1==tableau[22])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p1.achat);}
                     while(p1.achat!=1||p1.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facSn à ce que après la propriété ne soit plus achetable
                         if (j1==tableau[22] && p1.achat==1);
@@ -1958,7 +1958,7 @@ int carte (){
                 
                 if(j2==tableau[22])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p2.achat);}
                     while(p2.achat!=1||p2.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facSn à ce que après la propriété ne soit plus achetable
                         if (j2==tableau[22] && p2.achat==1);
@@ -1968,7 +1968,7 @@ int carte (){
 
                 if(j3==tableau[22])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p3.achat);}
                     while(p3.achat!=1||p3.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facSn à ce que après la propriété ne soit plus achetable
                         if (j3==tableau[22] && p3.achat==1);
@@ -1977,7 +1977,7 @@ int carte (){
                         
                 if(j4==tableau[22])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p4.achat);}
                     while(p4.achat!=1||p4.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facSn à ce que après la propriété ne soit plus achetable
                         if (j4==tableau[22] && p4.achat==1);
@@ -2057,7 +2057,7 @@ int carte (){
             if (!(cT.nom==p1.carte[k] && cT.nom==p2.carte[k]&& cT.nom==p3.carte[k]&& cT.nom==p4.carte[k])) // Si la carte appartient à personne
                 if(j1==tableau[24])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p1.achat);}
                     while(p1.achat!=1||p1.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facTn à ce que après la propriété ne soit plus achetable
                         if (j1==tableau[24] && p1.achat==1);
@@ -2066,7 +2066,7 @@ int carte (){
                 
                 if(j2==tableau[24])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p2.achat);}
                     while(p2.achat!=1||p2.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facTn à ce que après la propriété ne soit plus achetable
                         if (j2==tableau[24] && p2.achat==1);
@@ -2076,7 +2076,7 @@ int carte (){
 
                 if(j3==tableau[24])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p3.achat);}
                     while(p3.achat!=1||p3.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facTn à ce que après la propriété ne soit plus achetable
                         if (j3==tableau[24] && p3.achat==1);
@@ -2085,7 +2085,7 @@ int carte (){
                         
                 if(j4==tableau[24])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p4.achat);}
                     while(p4.achat!=1||p4.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facTn à ce que après la propriété ne soit plus achetable
                         if (j4==tableau[24] && p4.achat==1);
@@ -2171,7 +2171,7 @@ int carte (){
             if (!(cU.nom==p1.carte[k] && cU.nom==p2.carte[k]&& cU.nom==p3.carte[k]&& cU.nom==p4.carte[k])) // Si la carte appartient à personne
                 if(j1==tableau[27])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p1.achat);}
                     while(p1.achat!=1||p1.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facUn à ce que après la propriété ne soit plus achetable
                         if (j1==tableau[27] && p1.achat==1);
@@ -2180,7 +2180,7 @@ int carte (){
                 
                 if(j2==tableau[27])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p2.achat);}
                     while(p2.achat!=1||p2.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facUn à ce que après la propriété ne soit plus achetable
                         if (j2==tableau[27] && p2.achat==1);
@@ -2190,7 +2190,7 @@ int carte (){
 
                 if(j3==tableau[27])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p3.achat);}
                     while(p3.achat!=1||p3.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facUn à ce que après la propriété ne soit plus achetable
                         if (j3==tableau[27] && p3.achat==1);
@@ -2199,7 +2199,7 @@ int carte (){
                         
                 if(j4==tableau[27])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p4.achat);}
                     while(p4.achat!=1||p4.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facUn à ce que après la propriété ne soit plus achetable
                         if (j4==tableau[27] && p4.achat==1);
@@ -2284,7 +2284,7 @@ int carte (){
             if (!(cV.nom==p1.carte[k] && cV.nom==p2.carte[k]&& cV.nom==p3.carte[k]&& cV.nom==p4.carte[k])) // Si la carte appartient à personne
                 if(j1==tableau[30])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p1.achat);}
                     while(p1.achat!=1||p1.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facVn à ce que après la propriété ne soit plus achetable
                         if (j1==tableau[30] && p1.achat==1);
@@ -2293,7 +2293,7 @@ int carte (){
                 
                 if(j2==tableau[30])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p2.achat);}
                     while(p2.achat!=1||p2.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facVn à ce que après la propriété ne soit plus achetable
                         if (j2==tableau[30] && p2.achat==1);
@@ -2303,7 +2303,7 @@ int carte (){
 
                 if(j3==tableau[30])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p3.achat);}
                     while(p3.achat!=1||p3.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facVn à ce que après la propriété ne soit plus achetable
                         if (j3==tableau[30] && p3.achat==1);
@@ -2312,7 +2312,7 @@ int carte (){
                         
                 if(j4==tableau[30])
                     do{
-                    printf("Voulez vous achetez cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
+                    printf("Voulez vous acheter cette propriété?\n si oui, rentrez 1 si non rentrez 2\n"); // achat ou non
                     scanf("%d",&p4.achat);}
                     while(p4.achat!=1||p4.achat!=2); // S'il veut l'acheter on l'ajoute en position 1 dans le tableau de carte de ce joueur de facVn à ce que après la propriété ne soit plus achetable
                         if (j4==tableau[30] && p4.achat==1);
