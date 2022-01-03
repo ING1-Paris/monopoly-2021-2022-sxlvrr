@@ -3,6 +3,7 @@
 #include <string.h>
 #include <time.h>
 #include "carte.h"
+#include "players.h"
 
 void luckcard()
 {

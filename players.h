@@ -2,6 +2,17 @@
 #include <stdlib.h>
 #include <string.h>
 
+void portefeuille();
+void
+
+
+
+
+
+
+
+
+
 struct joueur{
     char nom[20];
     int numero;
