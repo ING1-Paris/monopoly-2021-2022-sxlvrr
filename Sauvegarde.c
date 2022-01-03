@@ -1,4 +1,6 @@
+#include <stdlib.h>
 #include <stdio.h>
+
   typedef struct{
     char nom;
     int position, monnaie;
@@ -6,7 +8,7 @@
   }Joueur1;
   typedef struct{
     char nom;
-    int position, monnaie;v
+    int position, monnaie;
     float propriete;
   }Joueur2;
     typedef struct{
@@ -19,10 +21,29 @@
     int position, monnaie;
     float propriete;
   }Joueur4;
+int main(){
+    Joueur j1={
+    .nom=acjoueur1
+    .position=acposition1
+    .monnaie=acmonnaie1
+    .propriete=acpropriete1}
+        Joueur j2={
+    .nom=acjoueur2
+    .position=acposition2
+    .monnaie=acmonnaie2
+    .propriete=acpropriete2}
+        Joueur j3={
+    .nom=acjoueur3
+    .position=acposition3
+    .monnaie=acmonnaie3
+    .propriete=acpropriete3}
+        Joueur j4={
+    .nom=acjoueur1
+    .position=acposition14
+    .monnaie=acmonnaie4
+    .propriete=acpropriete4}
+}
 
-
-int sauvegarder_une_partie(fichier_sauvegarde){
-  
   char nomjoueurj1=acjoueur1;
   char nomjoueurj2=acjoueur2;
   char nomjoueurj3=acjoueur3;
@@ -39,7 +60,8 @@ int sauvegarder_une_partie(fichier_sauvegarde){
   int proprietej2=acpropriete2;
   int proprietej3=acpropriete3;
   int proprietej4=acpropriete4;
-  
+
+int sauvegarder_une_partie(fichier_sauvegarde){
   maSauvegarde=fopen("game.txt", "a+");
   char buffer_in[256], buffer_out[256];
   sprintf(buffer_out,256,"%s,%d,%d,%f\n")
@@ -48,8 +70,11 @@ int sauvegarder_une_partie(fichier_sauvegarde){
   if(maSauvegarde == NULL) {
         printf("Ne peux pas etre ouvert\n");
         exit(1);
-  } 
-  
+  }
+
+
+
+
   fclose(maSauvegarde);
 }
 
@@ -71,6 +96,6 @@ int charger_une_partie(fichier_sauvegarde){
   acpropriete1=proprietej1;
   acpropriete2=proprietej2;
   acpropriete3=proprietej3;
-  acproriete4=proprietej4;  
+  acproriete4=proprietej4;
   fclose(maSauvegarde);
 }
