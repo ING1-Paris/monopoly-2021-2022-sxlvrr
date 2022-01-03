@@ -4,10 +4,13 @@ int sauvegarder_une_partie(fichier_sauvegarde){
   maSauvegarde=fopen("game.txt", "a+");
  
   if(maSauvegarde == NULL) {
-        printf("NE peux pas etre ouvert\n");
+        printf("Ne peux pas etre ouvert\n");
         exit(1);
   } 
   fprintf(maSauvegarde, "%d,", data);
+  
+  for player in Joueur:
+    currentmoney.append(Monnaie[player]
   fclose(maSauvegarde);
 }
 
