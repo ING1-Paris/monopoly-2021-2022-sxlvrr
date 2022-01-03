@@ -91,7 +91,26 @@ void commucard()
         }
     }
     if (r==4){
-        printf("");
+        printf("Erreur de la banque\nUn bug informatique a vendu une part des actions de l'epicier du coin, recevez 2500€");
+        if(j1 == tableau[17]){
+            p1.argent += 2500;
+        }
+        if(j2 == tableau[17]){
+            p2.argent += 2500;
+        }
+        if(j3 == tableau[17]){
+            p3.argent += 2500;
+        }
+        if(j4 == tableau[17]){
+            p4.argent += 2500;
+        }
+    }
+    if (r==5){
+        printf("Fete commune\nChaque joueur verse 400€ a la banque afin de contribuer a la saint jean guile");
+        p1.argent -= 400;
+        p2.argent -= 400;
+        p3.argent -= 400;
+        p4.argent -= 400;
     }
 
 }
