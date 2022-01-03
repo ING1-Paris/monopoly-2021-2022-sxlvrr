@@ -8,6 +8,9 @@ int sauvegarder_une_partie(fichier_sauvegarde){
         exit(1);
   } 
   fprintf(maSauvegarde, "%d,", data);
+  int positionj1,positionj2,positionj3,positionj4;
+  int monnaiej1,monnaiej2,monnaiej3,monnaiej4;
+  int proprietej1,proprietej2,proprietej3,proprietej4;
   
   for player in Joueur:
     currentmoney.append(Monnaie[player]
