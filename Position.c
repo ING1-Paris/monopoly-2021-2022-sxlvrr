@@ -22,10 +22,10 @@ int main()
 
     do{
         if (lance == 0){
-            if(i<=1 || i>=5){
+            if(i>=1 || i<=5){
                 i+=1;
             }
-            else{
+            if(i>nb){
                 i=1;
             }
             printf("Joueur %d, c'est a toi ! (tape 1 pour lancer le de)\n", i);
