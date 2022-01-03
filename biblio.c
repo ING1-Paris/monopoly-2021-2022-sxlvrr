@@ -2,7 +2,27 @@
 #include <stdlib.h>
 #include <time.h>
 #include <windows.h>
-
+void regles() {  // affichage des règles du jeu on sort avec la touche s (s par rapport à sortie)
+    char sortie;
+    printf("                 REGLE DU Jeu ");
+    printf("\                     ");
+    printf("\n                  ");
+    printf("\n                  ");
+    printf("\n    	     ");
+    printf("\n      ");
+    printf("\n	");
+    printf("\n");
+    printf("\n 	");
+    printf("\n");
+    printf("\n	");
+    printf("\n           ");
+    printf("\n            ");
+    printf("\n            ");
+    do {
+        printf("\nPour revenir au menu principal, appuyez sur la touche 's'. ");
+        scanf("%c", &sortie);
+    } while (sortie != 's');  
+}
 int my_strlen(const char *str){
     int i;
     i = 0;
@@ -48,8 +68,10 @@ void nouvellePartie(){
     int argentDepart = 10000;
     int i, choixUser = 0;
 
-    printf("Veuillez rentrez le nombre de joueur: \n");
-    scanf("%d",&choixUser);
+     do {
+        printf("Veuillez entrer le nombre de joueurs entre 2 et 4: ");
+        scanf("%d", &choixUser);
+    } while (choixUser < 2 || choixUser > 4);
 
     int tailleTab = choixUser;
     int Joueurs[tailleTab];
@@ -81,7 +103,6 @@ void nouvellePartie(){
     lanceur = lanceurDe(tailleTabPions);
     deScore = lancerDes();
     printf("de obtenue: %d\n",deScore);
-    grilleJeux(argentDepart,tailleTabPions,lanceur,deScore);
 
 
 }
