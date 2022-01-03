@@ -62,6 +62,7 @@ int main(){
   int proprietej4=acpropriete4;
 
 int sauvegarder_une_partie(fichier_sauvegarde){
+  FILE* maSauvegarde
   maSauvegarde=fopen("game.txt", "a+");
   char buffer_in[256], buffer_out[256];
   sprintf(buffer_out,256,"%s,%d,%d,%f\n")
@@ -79,8 +80,9 @@ int sauvegarder_une_partie(fichier_sauvegarde){
 }
 
 int charger_une_partie(fichier_sauvegarde){
+  FILE* maSauvegarde
   maSauvegarde=fopen("sauvegarde","a+");
-  fprintf(maSauvegarde, "%d", data);
+  fscanf(maSauvegarde, "%d", data);
   acjoueur1=nomjoueurj1;
   acjoueur2=nomjoueurj2;
   acjoueur3=nomjoueurj3;
