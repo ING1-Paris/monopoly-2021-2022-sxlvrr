@@ -8,50 +8,44 @@ typedef struct{
     int propriete, hypothequere;
   }Joueur;
 
-
-}
-
 int sauvegarder_une_partie(){
-  FILE* maSauvegarde=fopen("game.txt", "a+");
+  FILE* maSauvegarde=fopen("game.txt", "w");
   if(maSauvegarde == NULL) {
         printf("Ne peux pas etre ouvert\n");
-        return 1;
-  int main(){
+        return 1;}
     Joueur j1={
     .nom=p1.nom;
     .position=acposition1;
     .monnaie=p1.argent;
-    .propriete=p1.achat
-    .carte=p1.carte
-    }
+    .propriete=p1.achat;
+    .carte=p1.carte;}
         Joueur j2={
-    .nom=acjoueur2
-    .position=acposition2
-    .monnaie=acmonnaie2
-    .propriete=acpropriete2}
+    .nom=acjoueur2;
+    .position=acposition2;
+    .monnaie=acmonnaie2;
+    .propriete=acpropriete2;}
         Joueur j3={
-    .nom=acjoueur3
-    .position=acposition3
-    .monnaie=acmonnaie3
-    .propriete=acpropriete3}
+    .nom=acjoueur3;
+    .position=acposition3;
+    .monnaie=acmonnaie3;
+    .propriete=acpropriete3;}
         Joueur j4={
-    .nom=acjoueur1
-    .position=acposition14
-    .monnaie=acmonnaie4
-    .propriete=acpropriete4}
+    .nom=acjoueur1;
+    .position=acposition14;
+    .monnaie=acmonnaie4;
+    .propriete=acpropriete4;}
+      
   char buffer_in[256], buffer_out[256];
-  sprintf(buffer_out,256,"%s,%d,%d,%f\n")
+  sprintf(buffer_out,256,"%s,%d,%d,%f\n");
   fwrite(buffer_out, sizeof(char),strlen(buffer_out),maSauvegarde);
   fprintf(maSauvegarde, "%d,", data);
-
-  }
   fclose(maSauvegarde);
   maSauvegarde=NULL;
 }
 
 int charger_une_partie(){
   FILE* maSauvegarde
-  maSauvegarde=fopen("sauvegarde","a+");
+  maSauvegarde=fopen("sauvegarde","r");
   fscanf(maSauvegarde, "%d", data);
   p1.nom=nomjoueurj1;
   p2.nom=nomjoueurj2;
