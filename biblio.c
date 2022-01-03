@@ -12,55 +12,7 @@ int my_strlen(const char *str){
     return i;
 }
 
-void grilleJeux(int argent,int nbJoueur,int joueurLanceur,int des)
-{
-    int i,positionj = 0;
-    int pos[] = {0,1,2};
-    int argentJ[8];
-    for(i = 1;i < nbJoueur+1;i++)
-    {
-        argentJ[i] = argent;
-        printf("joueur %d = %d $ ",i,argentJ[i]);
-    }
-    printf("\n");
-    printf("-----------\n");
-    printf("|         |\n");
-    printf("| Depart  |\n");
-    printf("|  %d      |\n",pos[0]);
-    printf("|         |\n");
-    printf("|         |\n");
-    printf("-----------\n");
-    printf("-----------\n");
-    printf("|         |\n");
-    printf("| Nike  |\n");
-    printf("|  %d      |\n",pos[1]);
-    printf("|         |\n");
-    printf("|         |\n");
-    printf("-----------\n");
-    printf("-----------\n");
-    printf("|         |\n");
-    printf("|         |\n");
-    printf("|         |\n");
-    printf("|  %d     |\n",pos[2]);
-    printf("|         |\n");
-    printf("|         |\n");
-    printf("-----------\n");
-    for(i = 0;i < des;i++)
-    {
-        positionj = pos[i];
-    }
-    printf("%d\n",positionj);
-    if(positionj == pos[2])
-    {
-        argentJ[0] +=  500;
-    }
-    for(i = 1;i < nbJoueur+1;i++)
-    {
-        printf("joueur %d = %d $ ",i,argentJ[i]);
-    }
 
-
-}
 
 int lanceurDe(tailleTabPions)
 {
