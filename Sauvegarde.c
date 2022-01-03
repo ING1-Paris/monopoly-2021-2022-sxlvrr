@@ -5,7 +5,7 @@
   typedef struct{
     char nom;
     int position, monnaie;
-    float propriete;
+    int propriete, hypothequere;
   }Joueur;
 
 
@@ -14,6 +14,9 @@
 int sauvegarder_une_partie(){
   FILE* maSauvegarde
   maSauvegarde=fopen("game.txt", "a+");
+  if(maSauvegarde == NULL) {
+        printf("Ne peux pas etre ouvert\n");
+        exit(1);
   int main(){
     Joueur j1={
     .nom=acjoueur1
@@ -39,9 +42,7 @@ int sauvegarder_une_partie(){
   sprintf(buffer_out,256,"%s,%d,%d,%f\n")
   fwrite(buffer_out, sizeof(char),strlen(buffer_out),maSauvegarde);
   fprintf(maSauvegarde, "%d,", data);
-  if(maSauvegarde == NULL) {
-        printf("Ne peux pas etre ouvert\n");
-        exit(1);
+  
   }
   fclose(maSauvegarde);
 }
