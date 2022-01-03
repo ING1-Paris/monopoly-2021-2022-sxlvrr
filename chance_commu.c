@@ -17,6 +17,10 @@ void luckcard()
 
 
     }
+    if(r==2){
+        printf("Allez en prison\nVous allez directement a la case prison et y restez pendant 3 tours");
+        
+    }
 }
 
 void commucard()
