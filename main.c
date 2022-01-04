@@ -76,9 +76,10 @@ int main()
     caseNew(45,65,0,12,"Samsung");//Samsung
     caseNew(45,78,0,15,"Commu");//COMMU
     caseNew(45,91,0,12,"Apple");//APPLE
-
-    
+    gotoligcol(0,115);
+    printf("test");
     //free(p);
+    movePion(j1.position,j2.position,j3.position,j4.position);
 
     return 0;
 }

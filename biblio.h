@@ -27,4 +27,6 @@ void gotoligcol(int lig, int col);
 void grilleJeux(void);
 void afficheregle(void);
 void caseNew(int lig, int col, int color, int colorBack, char name[]);
+void movePion(joueur, int positionTableau);
+
 #endif // BIBLI
