@@ -4,10 +4,12 @@
 #include <time.h>
 #include "biblio.h"
 
-joueur *p luckcard(joueur *p)
+joueur joueur;
+//void joueur *p luckcard(joueur *p)
+void luckcard()
 {
     srand(time(NULL));
-    p[0].argent = 200;
+    j1->argent = 200;
 
     int r;
     char description;

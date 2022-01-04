@@ -26,8 +26,3 @@ joueur *initplayers(){
 
     return p;
 }
-
-int main() {
-    joueur *p = initplayers();
-    //*p = luckcard(p);
-}
