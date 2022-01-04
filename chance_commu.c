@@ -3,7 +3,101 @@
 #include <string.h>
 #include <time.h>
 #include "biblio.h"
+void luckcard() // carte chance 
+{
+    srand(time(NULL));
+    int r;
+    char description;
+    printf("Carte Chance !\n");
+    r=rand() % 21;
 
+    if (r==1){
+        printf("Une amende.\n\nVersez 150€ a la banque.");
+        if(j1 == tableau[17]){
+            p1.argent -=150;
+        }
+        if(j2 == tableau[17]){
+            p2.argent -=150;
+        }
+        if(j3 == tableau[17]){
+            p3.argent -=150;
+        }
+        if(j4 == tableau[17]){
+            p4.argent -=150;
+        }
+    }
+    if (r==2){
+        printf("Oh Oh Oh C'est Noel!\nTous les joeurs vous versent 200€");
+        if(j1 == tableau[17]){
+            p2.argent -=200;
+            p3.argent -=200;
+            p4.argent -=200;
+            p1.argent +=600;
+        }
+        if(j2 == tableau[17]){
+            p1.argent -=200;
+            p3.argent -=200;
+            p4.argent -=200;
+            p2.argent +=600;
+        }
+        if(j3 == tableau[17]){
+            p1.argent -=200;
+            p2.argent -=200;
+            p4.argent -=200;
+            p3.argent +=600;
+        }
+        if(j4 == tableau[17]){
+            p1.argent -=200;
+            p2.argent -=200;
+            p3.argent -=200;
+            p4.argent +=600;
+        }
+    }
+    if (r==3){
+        if(j1 == tableau[17] && p1.argent >= 750000){
+            printf("Coup dur \n Donnez 20% de votre argent a la banque pas de chance...");
+            p1.argent -= (p1.argent/100)*20;
+        }
+        if(j2 == tableau[17] && p2.argent >= 750000){
+            printf("Coup dur \n Donnez 20% de votre argent a la banque pas de chance...");
+            p2.argent -= (p2.argent/100)*20;
+        }
+        if(j3 == tableau[17] && p3.argent >= 750000){
+            printf("Coup dur \n Donnez 20% de votre argent a la banque pas de chance...");
+            p3.argent -= (p3.argent/100)*20;
+        }
+        if(j4 == tableau[17] && p4.argent >= 750000){
+            printf("Coup dur \n Donnez 20% de votre argent a la banque pas de chance...");
+            p4.argent -= (p4.argent/100)*20;
+        }
+        else{
+            r=rand() % 21;
+        }
+    }
+    if (r==4){
+        printf("Erreur de la banque\n Elle vous avez donner que 50 euros au de lieu de 300");
+        if(j1 == tableau[17]){
+            p1.argent += 250;
+        }
+        if(j2 == tableau[17]){
+            p2.argent += 250;
+        }
+        if(j3 == tableau[17]){
+            p3.argent += 250;
+        }
+        if(j4 == tableau[17]){
+            p4.argent += 250;
+        }
+    }
+    if (r==5){
+        printf("C'est votre jour de chance vous gagne au bingo !!!!");
+        p1.argent += 2;
+        p2.argent += 2;
+        p3.argent += 2;
+        p4.argent += 2;
+    }
+
+}
 //void joueur *p luckcard(joueur *p)
 void luckcard()
 {
