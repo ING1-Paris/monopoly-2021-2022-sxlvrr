@@ -4,6 +4,7 @@
 //bibliotheque des fonctions perso du projet
 #include "biblio.h"
 #include "caseNew.c"
+#include "players.h"
 
 int main()
 {
@@ -44,5 +45,7 @@ int main()
     
     caseNew(0,0,15,4);
     
+    free(p);
+
     return 0;
 }
