@@ -3,9 +3,37 @@
 #include <Windows.h>
 //bibliotheque des fonctions perso du projet
 #include "biblio.h"
+#include <string.h>
 
 int main()
 {
+
+    /////////////JOUEUR///////////////
+    typedef struct t_joueur {
+    char nom[20];
+    int numero;
+    int argent;
+    int position;
+    int enprison;
+    char possessions[30];
+}joueur;
+
+
+
+
+    joueur *p = (joueur *)malloc(4*sizeof(joueur));
+    joueur j1 = {"", 1, 400, 0, 0, ""};
+    p[0] = j1;
+    joueur j2 = {"", 2, 0, 0, 0, ""};
+    p[1] = j2;
+    joueur j3 = {"", 3, 0, 0, 0, ""};
+    p[2] = j3;
+    joueur j4 = {"", 4, 0, 0, 0, ""};
+    p[3] = j4;
+    //strcpy(p[1].possessions, "")
+
+   // return p;
+
     //variable
     int choixUser = 0;
     int choixPossible[4] = {1,2,3,4};
@@ -41,7 +69,7 @@ int main()
             //afficheregle();*/
     //}
     //while (choixUser != choixPossible[0] && choixUser != choixPossible[1] && choixUser != choixPossible[2] && choixUser != choixPossible[3]);
-
+    
     ///////////////PLATEAU////////////////////////////////
     system("cls");
     caseNew(0,0,0,15, "Depart"); //Depart
@@ -79,7 +107,7 @@ int main()
     gotoligcol(0,115);
     printf("test");
     //free(p);
-    movePion(j1.position,j2.position,j3.position,j4.position);
-
+    //movePion(j1.position,j2.position,j3.position,j4.position);
+    printf("%d",j1.argent);
     return 0;
 }
