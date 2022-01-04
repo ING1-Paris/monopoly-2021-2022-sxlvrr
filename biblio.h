@@ -1,4 +1,4 @@
-//#ifndef BIBLI
+#ifndef BIBLI
 #define BIBLI
 #include <Windows.h>
 #include "Color.c"
@@ -14,10 +14,6 @@ typedef struct t_joueur{
     int possessions[30];
 }joueur;
 
-int main() {
-    joueur *p = initplayers();
-    //*p = luckcard(p);
-}
 
 int my_strlen(const char *str);
 
