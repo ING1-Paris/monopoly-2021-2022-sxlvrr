@@ -3,7 +3,7 @@
 #include <string.h>
 #include <time.h>
 #include "biblio.h"
-void luckcard() // carte chance 
+void cartechance() // carte chance 
 {
     srand(time(NULL));
     int r;
