@@ -4,7 +4,6 @@
 #include <time.h>
 #include "biblio.h"
 
-joueur joueur;
 //void joueur *p luckcard(joueur *p)
 void luckcard()
 {
