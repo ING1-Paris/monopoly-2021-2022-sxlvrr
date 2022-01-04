@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "biblio.h"
 #include <Windows.h>
-void caseNew(int lig, int col, int color, int colorBack){
-
-        Color(color,colorBack);
-        gotoligcol(lig,col);
-        for(int i;i<5;i++){
-            printf("         ");
-            printf("\n");
-        }
+void caseNew(int lig, int col, int color, int colorBack, char name[]){
+    Color(color,colorBack);
+    for(int i=0;i<5;i++){
+        gotoligcol(lig+i,col);
+        printf("             ");
+    }
+    gotoligcol(lig,col+3);
+    printf("%s", name);
+    Color(15,0);
 }
