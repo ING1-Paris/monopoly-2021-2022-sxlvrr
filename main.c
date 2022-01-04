@@ -1,42 +1,39 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <Windows.h>
-//bibliotheque des fonctions perso du projet
+// bibliotheque des fonctions perso du projet
 #include "biblio.h"
 #include <string.h>
 
-int main()
+/////////////JOUEUR///////////////
+
+
+struct t_joueur *initp()
 {
 
-    /////////////JOUEUR///////////////
-    typedef struct t_joueur {
-    char nom[20];
-    int numero;
-    int argent;
-    int position;
-    int enprison;
-    char possessions[30];
-}joueur;
-
-
-
-
-    joueur *p = (joueur *)malloc(4*sizeof(joueur));
-    joueur j1 = {"", 1, 400, 0, 0, ""};
+    struct t_joueur *p = (struct t_joueur *)malloc(4 * sizeof(struct t_joueur));
+    struct t_joueur j1 = {{0}, 1, 0, 0, 0, {0}};
     p[0] = j1;
-    joueur j2 = {"", 2, 0, 0, 0, ""};
+    struct t_joueur j2 = {{0}, 2, 0, 0, 0, {0}};
     p[1] = j2;
-    joueur j3 = {"", 3, 0, 0, 0, ""};
+    struct t_joueur j3 = {{0}, 3, 0, 0, 0, {0}};
     p[2] = j3;
-    joueur j4 = {"", 4, 0, 0, 0, ""};
+    struct t_joueur j4 = {{0}, 4, 0, 0, 0, {0}};
     p[3] = j4;
-    //strcpy(p[1].possessions, "")
+    // strcpy(p[1].possessions, "")
 
-   // return p;
+    return p;
+}
 
-    //variable
+
+
+
+
+int main()
+{
+    // variable
     int choixUser = 0;
-    int choixPossible[4] = {1,2,3,4};
+    int choixPossible[4] = {1, 2, 3, 4};
 
     /*printf("Bienvenu sur monopoly Marque !\n");
     printf("Veuillez nous indiquer ce que vous voulez faire\n");
@@ -47,10 +44,10 @@ int main()
 
     // S = a * b * c * d si a = 1 mais que b + c + d = 0 alors S = 0 sois conditions non verifier
     do{
-    
+
         printf("faites votre choix: \n");
         scanf("%d", &choixUser);
-    
+
         if (choixUser == 1)
         {
             printf("test");
@@ -68,46 +65,49 @@ int main()
         {
             //afficheregle();*/
     //}
-    //while (choixUser != choixPossible[0] && choixUser != choixPossible[1] && choixUser != choixPossible[2] && choixUser != choixPossible[3]);
+    // while (choixUser != choixPossible[0] && choixUser != choixPossible[1] && choixUser != choixPossible[2] && choixUser != choixPossible[3]);
+    // joueur *p=initp();
     
+
     ///////////////PLATEAU////////////////////////////////
     system("cls");
-    caseNew(0,0,0,15, "Depart"); //Depart
-    caseNew(0,13,0,9,"Wish");//Wish
-    caseNew(0,26,0,9,"Epicier");//Epicier
-    caseNew(0,39,0,15,"Commu");//Commu
-    caseNew(0,52,0,9,"Action");//Action
-    caseNew(0,65,0,7,"EDF");//EDF
-    caseNew(0,78,0,13,"LIDL");//LIDL
-    caseNew(0,91,0,13,"Franprix");//Fraprix
-    caseNew(5,0,0,15,"Chance"); //CHANCE
-    caseNew(5,91,0,15,"Chance");// CHANCE
-    caseNew(10,0,0,1,"Bugatti");//Bugatti
-    caseNew(10,91,0,13,"Monoprix");//Monoprix
-    caseNew(15,0,0,15,"Impot");// Impot
-    caseNew(15,91,0,7,"Visite");// Visite Prison
-    caseNew(20,0,0,7,"SNCF");//SNCF
-    caseNew(20,91,0,2,"Nike");//NIkE
-    caseNew(25,0,0,1,"Rolex");//ROLEX
-    caseNew(25,91,0,7,"AirFrance");//AIRFRANCE
-    caseNew(30,0,0,4,"Enchere");//ENCHERE
-    caseNew(30,91,0,2,"Adidas");//ADIDAS
-    caseNew(35,0,0,8,"Prison");//Prison
-    caseNew(35,91,0,2,"Rebook");//Rebook
-    caseNew(40,0,0,14,"Gucci");//GUCCI
-    caseNew(40,91,0,15,"Station");//STATIONNEMENT
-    caseNew(45,0,0,7,"Taxes");//TAXE
-    caseNew(45,13,0,14,"L-V");//LV
-    caseNew(45,26,0,7,"RATP");//RATP
-    caseNew(45,39,0,7,"Suez");//Suez
-    caseNew(45,52,0,12,"Xaomi");//Xaomi
-    caseNew(45,65,0,12,"Samsung");//Samsung
-    caseNew(45,78,0,15,"Commu");//COMMU
-    caseNew(45,91,0,12,"Apple");//APPLE
-    gotoligcol(0,115);
+    caseNew(0, 0, 0, 15, "Depart");     // Depart
+    caseNew(0, 13, 0, 9, "Wish");       // Wish
+    caseNew(0, 26, 0, 9, "Epicier");    // Epicier
+    caseNew(0, 39, 0, 15, "Commu");     // Commu
+    caseNew(0, 52, 0, 9, "Action");     // Action
+    caseNew(0, 65, 0, 7, "EDF");        // EDF
+    caseNew(0, 78, 0, 13, "LIDL");      // LIDL
+    caseNew(0, 91, 0, 13, "Franprix");  // Fraprix
+    caseNew(5, 0, 0, 15, "Chance");     // CHANCE
+    caseNew(5, 91, 0, 15, "Chance");    // CHANCE
+    caseNew(10, 0, 0, 1, "Bugatti");    // Bugatti
+    caseNew(10, 91, 0, 13, "Monoprix"); // Monoprix
+    caseNew(15, 0, 0, 15, "Impot");     // Impot
+    caseNew(15, 91, 0, 7, "Visite");    // Visite Prison
+    caseNew(20, 0, 0, 7, "SNCF");       // SNCF
+    caseNew(20, 91, 0, 2, "Nike");      // NIkE
+    caseNew(25, 0, 0, 1, "Rolex");      // ROLEX
+    caseNew(25, 91, 0, 7, "AirFrance"); // AIRFRANCE
+    caseNew(30, 0, 0, 4, "Enchere");    // ENCHERE
+    caseNew(30, 91, 0, 2, "Adidas");    // ADIDAS
+    caseNew(35, 0, 0, 8, "Prison");     // Prison
+    caseNew(35, 91, 0, 2, "Rebook");    // Rebook
+    caseNew(40, 0, 0, 14, "Gucci");     // GUCCI
+    caseNew(40, 91, 0, 15, "Station");  // STATIONNEMENT
+    caseNew(45, 0, 0, 7, "Taxes");      // TAXE
+    caseNew(45, 13, 0, 14, "L-V");      // LV
+    caseNew(45, 26, 0, 7, "RATP");      // RATP
+    caseNew(45, 39, 0, 7, "Suez");      // Suez
+    caseNew(45, 52, 0, 12, "Xaomi");    // Xaomi
+    caseNew(45, 65, 0, 12, "Samsung");  // Samsung
+    caseNew(45, 78, 0, 15, "Commu");    // COMMU
+    caseNew(45, 91, 0, 12, "Apple");    // APPLE
+    gotoligcol(0, 115);
     printf("test");
-    //free(p);
-    //movePion(j1.position,j2.position,j3.position,j4.position);
-    printf("%d",j1.argent);
+    free(p);
+    movePion(p);
+    printf("%d", p[0].position);
+    
     return 0;
 }

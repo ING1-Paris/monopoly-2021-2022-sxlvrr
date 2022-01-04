@@ -4,9 +4,12 @@
 #include "biblio.h"
 #include <Windows.h>
 
-void movePion(){
+struct t_joueur *p;
+struct t_joueur* movePion(struct t_joueur *p){
 
-    if (positionTableau==0){
-        
-    }
+    
+        p[0].position=3;
+    
+return p;
 }
+
