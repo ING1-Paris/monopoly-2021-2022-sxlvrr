@@ -3,7 +3,6 @@
 #include "plateau.h"
 #include "carte.h"
 #include "players.h"
-#include "tabplateau.h"
 //#include "displayCarte.h"
 int main(){
     

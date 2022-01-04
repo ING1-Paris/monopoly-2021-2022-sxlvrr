@@ -78,5 +78,7 @@ int main()
     caseNew(45,91,0,12,"Apple");//APPLE
 
     
+    //free(p);
+
     return 0;
 }

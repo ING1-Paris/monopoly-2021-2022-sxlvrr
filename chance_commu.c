@@ -2,12 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include "carte.h"
-#include "players.h"
+#include "biblio.h"
 
-void luckcard()
+joueur *p luckcard(joueur *p)
 {
     srand(time(NULL));
+    p[0].argent = 200;
+
     int r;
     char description;
     printf("Carte chance !\n");
@@ -22,6 +23,8 @@ void luckcard()
         printf("Allez en prison\nVous allez directement a la case prison et y restez pendant 3 tours");
         
     }
+
+    return p;
 }
 
 void commucard()
