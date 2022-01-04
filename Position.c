@@ -4,7 +4,6 @@
 
 int main()
 {
-    srand(time(NULL));
     int i = 1, de = 0, nb = 0, lance = 0, fin = 0;
 
     while(nb <=1 || nb >= 5){
@@ -28,11 +27,14 @@ int main()
             if(i>nb){
                 i=1;
             }
-            printf("Joueur %d, c'est a toi ! (tape 1 pour lancer le de)\n", i);
-            scanf("%d", &lance);
+            while(lance!=1){
+                printf("Joueur %d, c'est a toi ! (tape 1 pour lancer le de)\n", i);
+                scanf("%d", &lance);
+            }
         }
 
         if (lance == 1){
+            srand(time(NULL));
             de = rand() %6+1;
             d[i] += de;
             if(d[i] >=30){
