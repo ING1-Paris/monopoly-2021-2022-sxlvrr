@@ -31,6 +31,8 @@ struct t_joueur *initp()
 
 int main()
 {
+    struct t_joueur *p;
+    initp(*p);
     // variable
     int choixUser = 0;
     int choixPossible[4] = {1, 2, 3, 4};
