@@ -4,7 +4,7 @@
 #include "biblio.h"
 #include <Windows.h>
 
-void movePion(int positionTableau){
+void movePion(){
 
     if (positionTableau==0){
         
