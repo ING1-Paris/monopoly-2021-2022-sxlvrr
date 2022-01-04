@@ -2,7 +2,27 @@
 #include <stdlib.h>
 #include <time.h>
 #include <windows.h>
-
+void regles() {  // affichage des règles du jeu on sort avec la touche s (s par rapport à sortie)
+    char sortie;
+    printf("                 REGLE DU Jeu ");
+    printf("\                     ");
+    printf("\n                  ");
+    printf("\n                  ");
+    printf("\n    	     ");
+    printf("\n      ");
+    printf("\n	");
+    printf("\n");
+    printf("\n 	");
+    printf("\n");
+    printf("\n	");
+    printf("\n           ");
+    printf("\n            ");
+    printf("\n            ");
+    do {
+        printf("\nPour revenir au menu principal, appuyez sur la touche 's'. ");
+        scanf("%c", &sortie);
+    } while (sortie != 's');  
+}
 int my_strlen(const char *str){
     int i;
     i = 0;
@@ -12,55 +32,7 @@ int my_strlen(const char *str){
     return i;
 }
 
-void grilleJeux(int argent,int nbJoueur,int joueurLanceur,int des)
-{
-    int i,positionj = 0;
-    int pos[] = {0,1,2};
-    int argentJ[8];
-    for(i = 1;i < nbJoueur+1;i++)
-    {
-        argentJ[i] = argent;
-        printf("joueur %d = %d $ ",i,argentJ[i]);
-    }
-    printf("\n");
-    printf("-----------\n");
-    printf("|         |\n");
-    printf("| Depart  |\n");
-    printf("|  %d      |\n",pos[0]);
-    printf("|         |\n");
-    printf("|         |\n");
-    printf("-----------\n");
-    printf("-----------\n");
-    printf("|         |\n");
-    printf("| Nike  |\n");
-    printf("|  %d      |\n",pos[1]);
-    printf("|         |\n");
-    printf("|         |\n");
-    printf("-----------\n");
-    printf("-----------\n");
-    printf("|         |\n");
-    printf("|         |\n");
-    printf("|         |\n");
-    printf("|  %d     |\n",pos[2]);
-    printf("|         |\n");
-    printf("|         |\n");
-    printf("-----------\n");
-    for(i = 0;i < des;i++)
-    {
-        positionj = pos[i];
-    }
-    printf("%d\n",positionj);
-    if(positionj == pos[2])
-    {
-        argentJ[0] +=  500;
-    }
-    for(i = 1;i < nbJoueur+1;i++)
-    {
-        printf("joueur %d = %d $ ",i,argentJ[i]);
-    }
 
-
-}
 
 int lanceurDe(tailleTabPions)
 {
@@ -96,8 +68,10 @@ void nouvellePartie(){
     int argentDepart = 10000;
     int i, choixUser = 0;
 
-    printf("Veuillez rentrez le nombre de joueur: \n");
-    scanf("%d",&choixUser);
+     do {
+        printf("Veuillez entrer le nombre de joueurs entre 2 et 4: ");
+        scanf("%d", &choixUser);
+    } while (choixUser < 2 || choixUser > 4);
 
     int tailleTab = choixUser;
     int Joueurs[tailleTab];
@@ -129,7 +103,6 @@ void nouvellePartie(){
     lanceur = lanceurDe(tailleTabPions);
     deScore = lancerDes();
     printf("de obtenue: %d\n",deScore);
-    grilleJeux(argentDepart,tailleTabPions,lanceur,deScore);
 
 
 }
