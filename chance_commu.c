@@ -13,40 +13,40 @@ void cartechance() // carte chance
 
     if (r==1){
         printf("Une amende.\n\nVersez 150€ a la banque.");
-        if(j1 == tableau[17]){
+        if(j1 == tableau[]){
             p1.argent -=150;
         }
-        if(j2 == tableau[17]){
+        if(j2 == tableau[]){
             p2.argent -=150;
         }
-        if(j3 == tableau[17]){
+        if(j3 == tableau[]){
             p3.argent -=150;
         }
-        if(j4 == tableau[17]){
+        if(j4 == tableau[]){
             p4.argent -=150;
         }
     }
     if (r==2){
         printf("Oh Oh Oh C'est Noel!\nTous les joeurs vous versent 200€");
-        if(j1 == tableau[17]){
+        if(j1 == tableau[]){
             p2.argent -=200;
             p3.argent -=200;
             p4.argent -=200;
             p1.argent +=600;
         }
-        if(j2 == tableau[17]){
+        if(j2 == tableau[]){
             p1.argent -=200;
             p3.argent -=200;
             p4.argent -=200;
             p2.argent +=600;
         }
-        if(j3 == tableau[17]){
+        if(j3 == tableau[]){
             p1.argent -=200;
             p2.argent -=200;
             p4.argent -=200;
             p3.argent +=600;
         }
-        if(j4 == tableau[17]){
+        if(j4 == tableau[]){
             p1.argent -=200;
             p2.argent -=200;
             p3.argent -=200;
@@ -54,19 +54,19 @@ void cartechance() // carte chance
         }
     }
     if (r==3){
-        if(j1 == tableau[17] && p1.argent >= 750000){
+        if(j1 == tableau[] && p1.argent >= 750000){
             printf("Coup dur \n Donnez 20% de votre argent a la banque pas de chance...");
             p1.argent -= (p1.argent/100)*20;
         }
-        if(j2 == tableau[17] && p2.argent >= 750000){
+        if(j2 == tableau[] && p2.argent >= 750000){
             printf("Coup dur \n Donnez 20% de votre argent a la banque pas de chance...");
             p2.argent -= (p2.argent/100)*20;
         }
-        if(j3 == tableau[17] && p3.argent >= 750000){
+        if(j3 == tableau[] && p3.argent >= 750000){
             printf("Coup dur \n Donnez 20% de votre argent a la banque pas de chance...");
             p3.argent -= (p3.argent/100)*20;
         }
-        if(j4 == tableau[17] && p4.argent >= 750000){
+        if(j4 == tableau[] && p4.argent >= 750000){
             printf("Coup dur \n Donnez 20% de votre argent a la banque pas de chance...");
             p4.argent -= (p4.argent/100)*20;
         }
@@ -76,16 +76,16 @@ void cartechance() // carte chance
     }
     if (r==4){
         printf("Erreur de la banque\n Elle vous avez donner que 50 euros au de lieu de 300");
-        if(j1 == tableau[17]){
+        if(j1 == tableau[]){
             p1.argent += 250;
         }
-        if(j2 == tableau[17]){
+        if(j2 == tableau[]){
             p2.argent += 250;
         }
-        if(j3 == tableau[17]){
+        if(j3 == tableau[]){
             p3.argent += 250;
         }
-        if(j4 == tableau[17]){
+        if(j4 == tableau[]){
             p4.argent += 250;
         }
     }
