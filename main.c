@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <Windows.h>
 //bibliotheque des fonctions perso du projet
 #include "biblio.h"
+#include "caseNew.c"
 
 int main()
 {
@@ -25,20 +26,23 @@ int main()
     }
     if (choixUser == 1)
     {
-        nouvelle_partie();
+        //nouvelle_partie();
     }
     else if (choixUser == 2)
     {
-        sauvegarder_une_partie();
+       // sauvegarder_une_partie();
     }
     else if (choixUser == 3)
     {
-        charger_une_partie();
+       // charger_une_partie();
     }
     else if (choixUser == 4)
     {
-        afficheregle();
+        //afficheregle();
     }
-        
-        return 0;
+
+    
+    caseNew(0,0,15,4);
+    
+    return 0;
 }

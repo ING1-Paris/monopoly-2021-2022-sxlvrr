@@ -372,116 +372,30 @@ struct perdu d1;
 struct perdu d2;
 struct perdu d3;
 struct perdu d4;
+}
 int fin;
 // dé qui tourne
 int j1=tableau[0];
 int j2=tableau[0];
 int j3=tableau[0];
 int j4=tableau[0];
-int i1=0;
-int i2=0;
-int i3=0;
-int i4=0;
-int j=0;
-int p=0;
+
 int tableau[32]; // Tableau qui permet d'afficher le nom le loyer et le prix de la carte au joueur (on devra aussi demander s'il veut acheter ou si ca appartient déja et dans ce cas obliger de payer le loyer)
                         // Il faut aussi faire ajouter un if dans chaque case associer au dé qui fait que à s'il est dessus et que dé=/// alors il avance de par exemple tableau 0 + dé
-do{
-    while(d1.perdu!=1){
-    j=0;// permet d'envoyer en prison si 3 fois double
-    //random de entre 1 et 6, appeller ce chifffre random1 t random2 
-    randomA + randomB =random1;
-    j1=tableau[i1+random1];
-    i1=random1;
-    
-    if (randomA==randomB)
-        j=j+1;
-        // random
-        j1=tableau[i1+random1];
-        i1=random1;
-        
-        if (j==3)
-            j1=tableau[25];}
-            
-    while(d2.perdu=!1){
-    j=0;// permet d'envoyer en prison si 3 fois double
-    //random de entre 1 et 6, appeller ce chifffre random1 t random2 
-    randomA + randomB =random2;
-    j2=tableau[i2+random2];
-    i2=random2;
-    
-    if (randomA==randomB)
-        j=j+1;
-        // random
-        j1=tableau[i2+random2];
-        i2=random2;
-        
-        if (j==3)
-            j1=tableau[25];}
 
-    while(d3.perdu!=1){
-    j=0;// permet d'envoyer en prison si 3 fois double
-    //random de entre 1 et 6, appeller ce chifffre random1 t random2 
-    randomB + randomA =random3;
-    j3=tableau[i3+random3];
-    i3=random3;
-    
-    if (randomA==randomB)
-        j=j+1;
-        // random
-        j3=tableau[i3+random3];
-        i3=random3;
-        
-        if (j==3)
-            j3=tableau[25];}
-    
-
-    while(d4.perdu!=1){
-    j=0;// permet d'envoyer en prison si 3 fois double
-    //random de entre 1 et 6, appeller ce chifffre random1 t random2 
-    randomA + randomB =random4;
-    j4=tableau[i4+random4];
-    i4=random4;
-    
-    if (randomA==randomB)
-        j=j+1;
-        // random
-        j4=tableau[i4+random4];
-        i4=random4;
-        
-        if (j==3)
-            j4=tableau[25];}
-    
-
-}while(d1.perdu==1 && d2.perdu==1 && d3.perdu==1 || d4.perdu==1 && d2.perdu==1 && d3.perdu==1 || d1.perdu==1 && d4.perdu==1 && d3.perdu==1 || d1.perdu==1 && d2.perdu==1 && d4.perdu==1);
-    
 
 // boucle do while qui fait jouer les joueurs de 1 à 4 tant que 3 n'ont pas fait faillite. dé qui tourne 
 //POUR CARTE IF AVEC UN FOR DEDANS
 
     
     
-    if (j1 == tableau[0]); // Départ
-        printf("Case: %s",cA.nom);
-        p1.argent = p1.argent + 200;
-    
-    if (j2== tableau[0]); // Départ
-        printf("Case: %s",cA.nom);
-        p2.argent = p2.argent + 200;
-    
-    if (j3 == tableau[0]); // Départ
-        printf("Case: %s",cA.nom);          //PAS BON CAR SI PASSE PAR DEPART
-        p3.argent = p3.argent + 200;
-    
-    if (j4 == tableau[0]); // Départ
-        printf("Case: %s",cA.nom);
-        p4.argent = p4.argent + 200;
+   
 
     if (j1 == tableau[1]); // Wish
         printf("Case: %s",cG.nom);
         printf("Prix de la carte: %d",cG.prixC);
         printf("Loyer: %d",cG.loyer);
-        printf("Loyer de tous le groupe: %d",cG.loyerGr);
+        printf("Loyer de tous le groupe: %d",cG.loyerGr); //CP
 
 
         for (int k=0;k>30;k++) // regarde si la carte appartient deja à quelqu"un
