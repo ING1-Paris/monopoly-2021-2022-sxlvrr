@@ -57,7 +57,7 @@ int menu();
 
 void regles();
 
-void achatCarte(struct t_joueur *p, struct carte1 *c);
+int achatCarte(struct t_joueur *p, struct carte1 *c);
 
 void movePion(struct t_joueur *p);
 
