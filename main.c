@@ -57,9 +57,7 @@ int main()
     gotoligcol(0, 115);
     printf("%d", p[0].position);
 
-    movePion(p);
     printf("%d", p[0].position);
-    free(p);
 
     while(nb <=1 || nb >= 5){
         printf("Combien de joueurs ?\n");
@@ -138,11 +136,12 @@ int main()
                 if(compteurdouble == 1 || compteurdouble == 2){
                     i-=1;
                 }
+                movePion(p);
                 lance = 0;
             }
         }
     }while(fin==0);
-
+    free(p);
 
     return 0;
 }
