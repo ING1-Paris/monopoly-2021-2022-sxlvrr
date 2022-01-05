@@ -59,8 +59,8 @@ int main()
                 de1 = rand() %6+1;
                 de2 = rand() %6+1;
                 d[i] += de1+de2;
-                if(d[i] >=30){
-                    d[i] -= 30;
+                if(d[i] >= 31){
+                    d[i] -= 31;
                 }
                 printf("%4d\n", d[i]);
                 lance = 0;

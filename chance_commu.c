@@ -3,13 +3,19 @@
 #include <string.h>
 #include <time.h>
 #include "biblio.h"
+/*
+ATTENTION 16 cartes chances et communauté imposées
+Les actions qui impliquent plusieurs joueurs -> Communauté
+Les actions qui impliquent un seul joueur -> Chance
+*/
+
 void cartechance() // carte chance 
 {
     srand(time(NULL));
     int r;
     char description;
     printf("Carte Chance !\n");
-    r=rand() % 21;
+    r=rand() % 16+1;
 
     if (r==1){
         printf("Une amende.\n\nVersez 150€ a la banque.");
@@ -128,7 +134,7 @@ void commucard()
     int r;
     char description;
     printf("Carte communaute !\n");
-    r=rand() % 21;
+    r=rand() % 16+1;
 
     if (r==1){
         printf("Oeuvre de charite\nLa croix rouge recolte des dons et vous etes favorable a leurs actions.\nVersez 100€ a la banque.");
