@@ -1,21 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-#include <windows.h>
+#include <string.h>
 #include "biblio.h"
-
-    
-int my_strlen(const char *str){
-    int i;
-    i = 0;
-    while (str[i] != '\0'){
-        i++;
-    }
-    return i;
-}
-
-
-
+#include <Windows.h>
 void nouvellePartie(){
     int argentDepart = 10000;
     int i, choixUser = 0;
@@ -61,24 +48,3 @@ void nouvellePartie(){
 
 
 }
-
-
-int p_Joueur(int banqueJoueur,int somme){
-    int n=0;
-    
-    while (n != 0 || 1)
-    {
-    if(banqueJoueur - somme<0){
-        do{
-        printf("\nVous n'avez pas assez d'argent dommage...\nVendre des proprieter ?[1] Oui  [0] non.\n.\n.\n");
-        scanf("%d",&n);
-        }while(n!=1 || n!=0);
-    
-        if(n == 0){
-            printf("Faillite! Vous etes eliminé");
-        } else if(n == 1){
-            printf("Veuiller vendre vos proprieter !");
-        }
-    }
-    return banqueJoueur;
-    }}

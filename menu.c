@@ -24,6 +24,24 @@ int menu(){
 
         
     }while (choixUser != choixPossible[0] || choixUser != choixPossible[1] || choixUser != choixPossible[2] || choixUser != choixPossible[3]);
-    return choixUser;
+    if (choixUser == 1)
+        {
+            nouvellePartie();
+        }
+        else if (choixUser == 2)
+        {
+            //sauvegarder_une_partie();
+            printf("a coder");
+        }
+        else if (choixUser == 3)
+        {
+            //charger_une_partie();
+            printf("a coder");
+        }
+        else if (choixUser == 4)
+        {
+            regles();
+            
+        }
     }
     

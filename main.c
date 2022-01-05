@@ -34,27 +34,8 @@ int main()
     struct t_joueur *p;
     initp(*p);
     // variable
-    int choixUser;
+    
     menu();
-    if (choixUser == 1)
-        {
-            nouvellePartie();
-        }
-        else if (choixUser == 2)
-        {
-            //sauvegarder_une_partie();
-            printf("a coder");
-        }
-        else if (choixUser == 3)
-        {
-            //charger_une_partie();
-            printf("a coder");
-        }
-        else if (choixUser == 4)
-        {
-            regles();
-            
-        }
 
     ///////////////PLATEAU////////////////////////////////
     system("cls");
@@ -91,7 +72,6 @@ int main()
     caseNew(45, 78, 0, 15, "Commu");    // COMMU
     caseNew(45, 91, 0, 12, "Apple");    // APPLE
     gotoligcol(0, 115);
-    printf("test");
     printf("%d", p[0].position);
     free(p);
     movePion(p,0);
