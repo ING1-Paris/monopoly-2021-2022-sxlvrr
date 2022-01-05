@@ -77,6 +77,9 @@ int main()
             if(i>=1 || i<=5){
                 i+=1;
             }
+            if(p[i].faillite == 1){
+                    i+=1;
+                }
             if(i>nb || i<nb){
                 i=1;
             }
