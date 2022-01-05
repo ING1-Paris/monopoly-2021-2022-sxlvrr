@@ -33,6 +33,8 @@ int main()
 {
     struct t_joueur *p;
     initp(*p);
+    struct carte1 *c;
+    initc(*c);
     // variable
     
     menu();

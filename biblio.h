@@ -6,7 +6,16 @@
 #include "caseNew.c"
 #include "movePion.c"
 #include "regles.c"
-
+struct carte1 {
+    char nom[200];
+    int prixC;
+    int loyer,loyerGr;
+    int m1,m2,m3,m4,h;
+    int prixM,prixH;
+    int hyp;
+    int deshyp;
+    int numero;
+};
 struct t_joueur{
     char nom[20];
     int numero;

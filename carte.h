@@ -3,37 +3,31 @@
 #include <string.h>
 #include "biblio.h"
 
-
-struct carte1 {
-    char nom[200];
-    int prixC;
-    int loyer,loyerGr;
-    int m1,m2,m3,m4,h;
-    int prixM,prixH;
-    int hyp;
-    int deshyp;
-    int numero;
-};
-
-int carte (){
+struct carte1 *initc(){
+    struct carte1 *c = (struct carte1 *)malloc(4 * sizeof(struct carte1));
     struct carte1 c_depart; // DEPART
     strcpy (c_depart.nom, "Depart");
     c_depart.numero=0;
+    c[0]=c_depart;
     struct carte1 c_prison; // PRISON
     strcpy (c_prison.nom , "Prison");
     c_prison.numero=25;
+    c[25]=c_prison;
 
     struct carte1 c_visiteprison; // VISITE PRISON
     strcpy(c_visiteprison.nom , "Visite Prison");
     c_visiteprison.numero=10;
+    c[10]=c_visiteprison;
 
     struct carte1 c_enchere; // CARTE ENCHERE
     strcpy(c_enchere.nom , "Enchere");
     c_enchere.numero=26;
+    c[26]=c_enchere;
 
     struct carte1 c_stationnement; // STATIONNEMENT GRATUIT
     strcpy(c_stationnement.nom , "Stationnement gratuit");
     c_stationnement.numero=15;
+    c[15]=c_stationnement;
 
     struct carte1 c_wish; // WISH
     strcpy(c_wish.nom , "Wish");
@@ -50,6 +44,7 @@ int carte (){
     c_wish.hyp = 30 ;
     c_wish.deshyp=33 ;
     c_wish.numero=1;
+    c[1]=c_wish;
 
     struct carte1 c_epicier; // EPICIER DU COIN
     strcpy(c_epicier.nom , "Epicier du coin");
@@ -66,6 +61,7 @@ int carte (){
     c_epicier.hyp = 30;
     c_epicier.deshyp= 33;
     c_epicier.numero=2;
+    c[2]=c_epicier;
 
     struct carte1 c_action; // ACTION (enseigne)
     strcpy(c_action.nom , "Action");
@@ -82,6 +78,7 @@ int carte (){
     c_action.hyp = 50;
     c_action.deshyp= 55;
     c_action.numero=4;
+    c[4]=c_action;
 
     struct carte1 c_lidl; // LIDL
     strcpy(c_lidl.nom , "Lidl");
@@ -98,6 +95,7 @@ int carte (){
     c_lidl.hyp =50 ;
     c_lidl.deshyp=55 ;
     c_lidl.numero=6;
+    c[6]=c_lidl;
 
     struct carte1 c_franprix; // FRANPRIX
     strcpy(c_franprix.nom , "Franprix");
@@ -114,6 +112,7 @@ int carte (){
     c_franprix.hyp =60 ;
     c_franprix.deshyp=66 ;
     c_franprix.numero=7;
+    c[7]=c_franprix;
 
     struct carte1 c_monoprix; // MONOPRIX
     strcpy(c_monoprix.nom , "Monoprix");
@@ -130,6 +129,7 @@ int carte (){
     c_monoprix.hyp =70 ;
     c_monoprix.deshyp=77 ;
     c_monoprix.numero=9;
+    c[9]=c_monoprix;
 
     struct carte1 c_nike; // NIKE
     strcpy(c_nike.nom , "Nike");
@@ -146,6 +146,7 @@ int carte (){
     c_nike.hyp =70 ;
     c_nike.deshyp=77 ;
     c_nike.numero=11;
+    c[11]=c_nike;
 
     struct carte1 c_adidas; // ADIDAS
     strcpy(c_adidas.nom , "Adidas");
@@ -162,6 +163,7 @@ int carte (){
     c_adidas.hyp = 80;
     c_adidas.deshyp= 88;
     c_adidas.numero=13;
+    c[13]=c_adidas;
 
 
     struct carte1 c_reebok; // REEBOK
@@ -179,6 +181,7 @@ int carte (){
     c_reebok.hyp = 90;
     c_reebok.deshyp= 99;
     c_reebok.numero=14;
+    c[14]=c_reebok; 
 
     struct carte1 c_samsung; // SAMSUNG
     strcpy(c_samsung.nom , "Samsung");
@@ -195,6 +198,7 @@ int carte (){
     c_samsung.hyp = 90;
     c_samsung.deshyp=99 ;
     c_samsung.numero=18;
+    c[18]=c_samsung;
 
     struct carte1 c_apple; // APPLE
     strcpy(c_apple.nom , "Apple");
@@ -211,6 +215,7 @@ int carte (){
     c_apple.hyp =100 ;
     c_apple.deshyp= 110;
     c_apple.numero=16;
+    c[16]=c_apple;
 
     struct carte1 c_xaomi; // XAOMI
     strcpy(c_xaomi.nom , "Xaomi");
@@ -227,6 +232,7 @@ int carte (){
     c_xaomi.hyp = 110;
     c_xaomi.deshyp= 121;
     c_xaomi.numero=19;
+    c[19]=c_xaomi;
 
     struct carte1 c_lv; // LV
     strcpy(c_lv.nom , "Louis Vuitton");
@@ -243,6 +249,7 @@ int carte (){
     c_lv.hyp =110 ;
     c_lv.deshyp= 121;
     c_lv.numero=22;
+    c[21]=c_lv;
 
     struct carte1 c_gucci; // GUCCI
     strcpy(c_gucci.nom , "Gucci");
@@ -259,6 +266,7 @@ int carte (){
     c_gucci.hyp =120 ;
     c_gucci.deshyp=132 ;
     c_gucci.numero=24;
+    c[24]=c_gucci;
 
     struct carte1 c_rolex; // ROLEX
     strcpy(c_rolex.nom , "Rolex");
@@ -275,6 +283,7 @@ int carte (){
     c_rolex.hyp = 140;
     c_rolex.deshyp= 154;
     c_rolex.numero=27;
+    c[27]=c_rolex;
 
     struct carte1 c_gatti; // BUGATTI
     strcpy(c_gatti.nom , "Bugatti");
@@ -291,6 +300,7 @@ int carte (){
     c_gatti.hyp =150 ;
     c_gatti.deshyp=165;
     c_gatti.numero=30;
+    c[30]=c_gatti;
 
     struct carte1 c_sncf; // SNCF
     strcpy(c_sncf.nom , "SNCF");
@@ -305,6 +315,7 @@ int carte (){
     c_sncf.hyp =100 ;
     c_sncf.deshyp=110 ;
     c_sncf.numero=28;
+    c[28]=c_sncf;
 
     struct carte1 c_airf; // AIRFRANCE
     strcpy(c_airf.nom , "AirFrance");
@@ -319,6 +330,7 @@ int carte (){
     c_airf.hyp = 100;
     c_airf.deshyp= 110;
     c_airf.numero=12;
+    c[12]=c_airf;
 
     struct carte1 c_ratp; // RATP
     strcpy(c_ratp.nom , "RATP");
@@ -333,6 +345,7 @@ int carte (){
     c_ratp.hyp =100 ;
     c_ratp.deshyp=110 ;
     c_ratp.numero=21;
+    c[21]=c_ratp;
 
     struct carte1 c_edf; // EDF (/!\ ne pas oublier l'implantation du dé /!\)
     strcpy(c_edf.nom , "EDF");
@@ -347,6 +360,7 @@ int carte (){
     c_edf.hyp = 100;
     c_edf.deshyp= 110;
     c_edf.numero=5;
+    c[5]=c_edf;
 
     struct carte1 c_suez; // SUEZ (/!\ ne pas oublier l'implantation du dé /!\)
     strcpy(c_suez.nom , "Suez");
@@ -361,4 +375,13 @@ int carte (){
     c_suez.hyp =100 ;
     c_suez.deshyp= 110;
     c_suez.numero=20;
+    c[20]=c_suez;
+
+    return c;
+}
+
+
+
+
+    
 
