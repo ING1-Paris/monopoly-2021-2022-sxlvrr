@@ -43,7 +43,7 @@ int main()
                 prison = 1;
                 srand(time(NULL));
                 de = rand() %6+1;
-                printf("%d",de);
+                printf("%4d\n",de);
                 lance = 0;
                 if(de == 6){
                     d[i] += 1;
