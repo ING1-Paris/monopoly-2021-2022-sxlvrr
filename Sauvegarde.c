@@ -2,13 +2,8 @@
 #include <stdio.h>
 #include <Sauvegarde.h>
 
-struct joueurSave{
-    char nom;
-    int position, monnaie;
-    int propriete, hypothequere;
-  }
 
-int sauvegarder_une_partie(){
+int Sauvegarde(){
   FILE* maSauvegarde=fopen("game.txt", "w");
   if(maSauvegarde == NULL) {
         printf("Ne peux pas etre ouvert\n");
@@ -43,7 +38,7 @@ int sauvegarder_une_partie(){
   maSauvegarde=NULL;
 }
 
-int charger_une_partie(){
+int Chargement(){
   FILE* maSauvegarde
   maSauvegarde=fopen("sauvegarde","r");
   fscanf(maSauvegarde, "%d", data);
