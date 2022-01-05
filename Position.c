@@ -34,6 +34,11 @@ int main()
         }
 
         if (lance == 1){
+            while(d[i] == 25 && de !=6){ //Si le joueur est en prison, un dé de 6 lui permettra de sortir
+                srand(time(NULL));
+                de = rand() %6+1;
+            }
+
             srand(time(NULL));
             de = rand() %6+1;
             d[i] += de;
@@ -43,6 +48,13 @@ int main()
             printf("%4d\n", d[i]);
             lance = 0;
         }
+
+        if (d[i] == 25){
+            
+            }
+        }
+
+    
     }while(fin==0);
 
 
