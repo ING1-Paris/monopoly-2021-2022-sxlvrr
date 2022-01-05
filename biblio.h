@@ -44,6 +44,7 @@ struct t_joueur{
     int argent;
     int position;
     int enprison;
+    int carteprison;
     int possessions[30];
     int faillite;
 };

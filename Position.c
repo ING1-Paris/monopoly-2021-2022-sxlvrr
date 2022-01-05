@@ -4,7 +4,8 @@
 
 int main()
 {
-    int i = 1, de = 0, nb = 0, lance = 0, fin = 0, prison = 0;
+    int i = 1, de1 = 0, de2 = 0, nb = 0, lance = 0, fin = 0;
+    int prison = 0; //TEST ICI, SERA DANS STRUCT DE JOUEUR A LA FIN
 
     while(nb <=1 || nb >= 5){
         printf("Combien de joueurs ?\n");
@@ -29,10 +30,10 @@ int main()
             }
             while(lance!=1){
                 if(d[i]!=25){
-                    printf("Joueur %d, c'est a toi ! (tape 1 pour lancer le de)\n", i);
+                    printf("Joueur %d, c'est a toi ! (tape 1 pour lancer les des)\n", i);
                 }
                 else{
-                    printf("Joueur %d, tu es en prison, fait un 6 en lancant le de (en tapant 1) pour sortir !\n", i);
+                    printf("Joueur %d, tu es en prison, fais un double en lancant les des (en tapant 1) pour sortir !\n", i);
                 }
                 scanf("%d", &lance);
             }
@@ -40,12 +41,13 @@ int main()
 
         if (lance == 1){
             if(d[i] == 25){ //Si le joueur est en prison, un dé de 6 lui permettra de sortir
-                prison = 1;
+                prison = 1; //TEST ICI, SERA DANS STRUCT DE JOUEUR A LA FIN
                 srand(time(NULL));
-                de = rand() %6+1;
-                printf("%4d\n",de);
+                de1 = rand() %6+1;
+                de2 = rand() %6+1;
+                printf("%4d%4d\n",de1,de2);
                 lance = 0;
-                if(de == 6){
+                if(de1 == de2){
                     d[i] += 1;
                 }
             }
@@ -54,8 +56,9 @@ int main()
                     d[i] -= 1;
                 }
                 srand(time(NULL));
-                de = rand() %6+1;
-                d[i] += de;
+                de1 = rand() %6+1;
+                de2 = rand() %6+1;
+                d[i] += de1+de2;
                 if(d[i] >=30){
                     d[i] -= 30;
                 }
