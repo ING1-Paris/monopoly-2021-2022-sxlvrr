@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "biblio.h"
 
 void caseNew(int lig, int col, int color, int colorBack, char name[]){

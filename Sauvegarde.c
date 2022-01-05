@@ -1,7 +1,3 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <Sauvegarde.h>
 const char* PERSON_FORMAT_IN="{\n\t \" nom \" : \" %[^\"] \" , \n\t \" hypothequere \" : %d,\n\t \" position \" : \" %d \" \n\t \" argent \" : \" %d \" ,\n\t \" carte \" : \"}";
 const char* PERSON_FORMAT_OUT="{\n\t \" nom \" : \" %s \" , \n\t \" age \" : %d,\n\t \" position \" : \" %d \" \n}";
 

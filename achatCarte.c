@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "biblio.h"
 int achatCarte(struct t_joueur *p, struct carte1 *c){
     for(int i=0;i<4;i++){

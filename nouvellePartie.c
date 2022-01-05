@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "biblio.h"
-#include <Windows.h>
 void nouvellePartie(){
     int argentDepart = 10000;
     int i, choixUser = 0;

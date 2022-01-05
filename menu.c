@@ -1,9 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <Windows.h>
 // bibliotheque des fonctions perso du projet
 #include "biblio.h"
-#include <string.h>
 
 int menu(){
     int choixUser = 0;
