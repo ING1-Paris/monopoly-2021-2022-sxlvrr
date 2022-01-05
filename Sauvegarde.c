@@ -2,28 +2,28 @@
 #include <stdio.h>
 #include <Sauvegarde.h>
 
-typedef struct{
+struct joueurSave{
     char nom;
     int position, monnaie;
     int propriete, hypothequere;
-  }Joueur;
+  }
 
 int sauvegarder_une_partie(){
   FILE* maSauvegarde=fopen("game.txt", "w");
   if(maSauvegarde == NULL) {
         printf("Ne peux pas etre ouvert\n");
         return 1;}
-    Joueur j1={
-    .nom=p1.nom;
-    .position=acposition1;
-    .monnaie=p1.argent;
-    .propriete=p1.achat;
-    .carte=p1.carte;}
-        Joueur j2={
-    .nom=acjoueur2;
-    .position=acposition2;
-    .monnaie=acmonnaie2;
-    .propriete=acpropriete2;}
+    struct joueurSave j1={
+    j1.nom=p[0].nom;
+    j1.position=acposition1;
+    j1.monnaie=p1.argent;
+    j1.propriete=p1.achat;
+    j1.carte=p1.possessions;}
+       struct joueurSave j2={
+    j2.nom=acjoueur2;
+    j2.position=acposition2;
+    j2.monnaie=acmonnaie2;
+    j2.propriete=acpropriete2;}
         Joueur j3={
     .nom=acjoueur3;
     .position=acposition3;

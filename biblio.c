@@ -2,27 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include <windows.h>
-void regles() {  // affichage des règles du jeu on sort avec la touche s (s par rapport à sortie)
-    char sortie;
-    printf("                 REGLE DU Jeu ");
-    printf("\                     ");
-    printf("\n                  ");
-    printf("\n                  ");
-    printf("\n    	     ");
-    printf("\n      ");
-    printf("\n	");
-    printf("\n");
-    printf("\n 	");
-    printf("\n");
-    printf("\n	");
-    printf("\n           ");
-    printf("\n            ");
-    printf("\n            ");
-    do {
-        printf("\nPour revenir au menu principal, appuyez sur la touche 's'. ");
-        scanf("%c", &sortie);
-    } while (sortie != 's');  
-}
+#include "biblio.h"
+
+    
 int my_strlen(const char *str){
     int i;
     i = 0;
@@ -33,36 +15,6 @@ int my_strlen(const char *str){
 }
 
 
-
-int lanceurDe(tailleTabPions)
-{
-    int i = 0;
-    int choixUser;
-    printf("qui lance les des: ");
-    for(i = 1;i<tailleTabPions+1;i++)
-    {
-        printf("joueur %d ?(1/0)\n",i);
-        scanf("%d",&choixUser);
-        while(choixUser != 1 && choixUser != 0){
-            scanf("%d",&choixUser);
-            if(choixUser == 1)
-                {
-                    return i;
-                }
-
-
-            }
-    }
-}
-
-int lancerDes()
-{
-
-    srand(time(NULL));
-    int nbgen = rand() % 6 + 1;
-    return nbgen;
-
-}
 
 void nouvellePartie(){
     int argentDepart = 10000;
@@ -93,11 +45,14 @@ void nouvellePartie(){
     Sleep(1000);
     system("cls");
     printf("Generation de la grille de jeux en cours\n");
-    for(i = 0;i < 3;i++)
-    {
-        printf(".\n");
-        Sleep(1000);
+    printf("Que le jeu commence !");
+    printf("|");
+    for(int z=0;z<15;z++){
+        printf("-");
+        Sleep(100);
+
     }
+    printf("|");
     system("cls");
     int lanceur,deScore = 0;
     lanceur = lanceurDe(tailleTabPions);
@@ -106,37 +61,23 @@ void nouvellePartie(){
 
 
 }
-#include "banque.h"
 
-int p_banque(int banqueJoueur,int somme){
-    int argentBanque=1000000;
-    printf("Le joueur doit recuperer %d\n",somme);
-    banqueJoueur+=somme;
-    argentBanque-=somme;
-    printf("Le joueur a %d\n",banqueJoueur);
-    return banqueJoueur;
-}
 
-int passageCaseDepart(int banqueJoueur){
-    printf("Vous venez de passer par la case départ +200\n");
-    p_banque(banqueJoueur,200);
-    return banqueJoueur;
-}
 int p_Joueur(int banqueJoueur,int somme){
     int n=0;
     
     while (n != 0 || 1)
     {
     if(banqueJoueur - somme<0){
+        do{
         printf("\nVous n'avez pas assez d'argent dommage...\nVendre des proprieter ?[1] Oui  [0] non.\n.\n.\n");
         scanf("%d",&n);
-        
+        }while(n!=1 || n!=0);
+    
         if(n == 0){
             printf("Faillite! Vous etes eliminé");
         } else if(n == 1){
             printf("Veuiller vendre vos proprieter !");
-        }else{
-            printf("Erreur");
         }
     }
     return banqueJoueur;

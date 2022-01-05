@@ -34,42 +34,27 @@ int main()
     struct t_joueur *p;
     initp(*p);
     // variable
-    int choixUser = 0;
-    int choixPossible[4] = {1, 2, 3, 4};
-
-    /*printf("Bienvenu sur monopoly Marque !\n");
-    printf("Veuillez nous indiquer ce que vous voulez faire\n");
-    printf("1- lancer une nouvelle partie\n");
-    printf("2- sauvegarder la partie en cours\n");
-    printf("3- charger une partie precedente\n");
-    printf("4- afficher les regles\n");
-
-    // S = a * b * c * d si a = 1 mais que b + c + d = 0 alors S = 0 sois conditions non verifier
-    do{
-
-        printf("faites votre choix: \n");
-        scanf("%d", &choixUser);
-
-        if (choixUser == 1)
+    int choixUser;
+    menu();
+    if (choixUser == 1)
         {
-            printf("test");
-            //nouvelle_partie();
-        }/*
+            nouvellePartie();
+        }
         else if (choixUser == 2)
         {
-        // sauvegarder_une_partie();
+            //sauvegarder_une_partie();
+            printf("a coder");
         }
         else if (choixUser == 3)
         {
-        // charger_une_partie();
+            //charger_une_partie();
+            printf("a coder");
         }
         else if (choixUser == 4)
         {
-            //afficheregle();*/
-    //}
-    // while (choixUser != choixPossible[0] && choixUser != choixPossible[1] && choixUser != choixPossible[2] && choixUser != choixPossible[3]);
-    // joueur *p=initp();
-    
+            regles();
+            
+        }
 
     ///////////////PLATEAU////////////////////////////////
     system("cls");
@@ -107,9 +92,10 @@ int main()
     caseNew(45, 91, 0, 12, "Apple");    // APPLE
     gotoligcol(0, 115);
     printf("test");
-    free(p);
-    movePion(p);
     printf("%d", p[0].position);
-    
+    free(p);
+    movePion(p,0);
+    printf("%d", p[0].position);
+
     return 0;
 }
