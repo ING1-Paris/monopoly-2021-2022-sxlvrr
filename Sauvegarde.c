@@ -1,63 +1,36 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include <Sauvegarde.h>
+const char* PERSON_FORMAT_IN="{\n\t \" nom \" : \" %[^\"] \" , \n\t \" hypothequere \" : %d,\n\t \" position \" : \" %d \" \n\t \" argent \" : \" %d \" ,\n\t \" carte \" : \"}";
+const char* PERSON_FORMAT_OUT="{\n\t \" nom \" : \" %s \" , \n\t \" age \" : %d,\n\t \" position \" : \" %d \" \n}";
 
-
-int Sauvegarde(){
-  FILE* maSauvegarde=fopen("game.txt", "w");
-  if(maSauvegarde == NULL) {
-        printf("Ne peux pas etre ouvert\n");
-        return 1;}
-    struct joueurSave j1={
-    j1.nom=p[0].nom;
-    j1.position=acposition1;
-    j1.monnaie=p1.argent;
-    j1.propriete=p1.achat;
-    j1.carte=p1.possessions;}
-       struct joueurSave j2={
-    j2.nom=acjoueur2;
-    j2.position=acposition2;
-    j2.monnaie=acmonnaie2;
-    j2.propriete=acpropriete2;}
-        Joueur j3={
-    .nom=acjoueur3;
-    .position=acposition3;
-    .monnaie=acmonnaie3;
-    .propriete=acpropriete3;}
-        Joueur j4={
-    .nom=acjoueur1;
-    .position=acposition14;
-    .monnaie=acmonnaie4;
-    .propriete=acpropriete4;}
-      
-  char buffer_in[256], buffer_out[256];
-  sprintf(buffer_out,256,"%s,%d,%d,%f\n");
-  fwrite(buffer_out, sizeof(char),strlen(buffer_out),maSauvegarde);
-  fprintf(maSauvegarde, "%d,", data);
-  fclose(maSauvegarde);
-  maSauvegarde=NULL;
+int sauvegarder_une_partie(){
+    FILE* maSauvegarde=fopen("game.txt", "w+");
+    if(maSauvegarde == NULL) {
+        printf("Le fichier de sauvegarde ne peut pas etre ouvert.\n");
+        return 1;
+    }
+    fprintf(maSauvegarde, PERSON_FORMAT_OUT, p1.nom, 20, p1.position, p1.argent, p1.propriete, p1.carte1, p1.hypothequere);
+    fprintf(maSauvegarde, PERSON_FORMAT_OUT, p2.nom, 20, p2.position, p2.argent, p2.propriete, p2.carte1, p2.hypothequere);
+    fprintf(maSauvegarde, PERSON_FORMAT_OUT, p3.nom, 20, p3.position, p3.argent, p3.propriete, p3.carte1, p3.hypothequere);
+    fprintf(maSauvegarde, PERSON_FORMAT_OUT, p4.nom, 20, p4.position, p4.argent, p4.propriete, p4.carte1, p4.hypothequere);
+    fclose(maSauvegarde);
+    maSauvegarde=NULL;
 }
 
-int Chargement(){
-  FILE* maSauvegarde
-  maSauvegarde=fopen("sauvegarde","r");
-  fscanf(maSauvegarde, "%d", data);
-  p1.nom=nomjoueurj1;
-  p2.nom=nomjoueurj2;
-  p3.nom=nomjoueurj3;
-  p4.nom=nomjoueurj4;
-  acposition1=positionj1;
-  acposition2=positionj2;
-  acposition3=positionj3;
-  acposition4=positionj4;
-  p1.argent=monnaiej1;
-  p2.argent=monnaiej2;
-  p3.argent=monnaiej3;
-  p4.argent=monnaiej4;
-  p1.achat=proprietej1;
-  p2.achat=proprietej2;
-  p3.achat=proprietej3;
-  p4.achat=proprietej4;
-  fclose(maSauvegarde);
-  maSauvegarde=NULL;
+int charger_une_partie(){
+    FILE* maSauvegarde
+    maSauvegarde=fopen("sauvegarde","r");
+    if(maSauvegarde == NULL) {
+    printf("Le fichier de sauvegarde ne peut pas etre ouvert.\n");
+        return 1;
+    }
+    fseek(file, 0, SEEK_SET);
+    fscanf(maSauvegarde, PERSON_FORMAT_IN, p1.nom, 20, p1.position, p1.argent, p1.propriete, p1.carte, p1.hypothequere);
+    fscanf(maSauvegarde, PERSON_FORMAT_IN, p2.nom, 20, p2.position, p2.argent, p2.propriete, p2.carte, p2.hypothequere);
+    fscanf(maSauvegarde, PERSON_FORMAT_IN, p3.nom, 20, p3.position, p3.argent, p3.propriete, p3.carte, p3.hypothequere);
+    fscanf(maSauvegarde, PERSON_FORMAT_IN, p4.nom, 20, p4.position, p4.argent, p4.propriete, p4.carte, p4.hypothequere);
+    fclose(maSauvegarde);
+    maSauvegarde=NULL;
 }
