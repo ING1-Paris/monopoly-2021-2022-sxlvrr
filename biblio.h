@@ -1,11 +1,30 @@
 #ifndef BIBLI
 #define BIBLI
 #include <Windows.h>
-#include "Color.c"
-#include "gotoligcol.c"
-#include "caseNew.c"
-#include "movePion.c"
-#include "regles.c"
+
+
+
+void gotoligcol( int lig, int col ) {
+
+// ressources
+
+COORD mycoord;
+
+mycoord.X = col;
+
+mycoord.Y = lig;
+
+SetConsoleCursorPosition( GetStdHandle( STD_OUTPUT_HANDLE ), mycoord );
+
+}
+
+
+void Color(int couleurDuTexte,int couleurDeFond) // fonction d'affichage de couleurs
+{
+    HANDLE H=GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(H,couleurDeFond*16+couleurDuTexte);
+}
+
 struct carte1 {
     char nom[200];
     int prixC;
@@ -26,5 +45,8 @@ struct t_joueur{
     int faillite;
 };
 struct t_joueur *p;
+struct carte1 *c;
 void regles();
+
+void movePion(struct t_joueur *p, int i);
 #endif // BIBLI

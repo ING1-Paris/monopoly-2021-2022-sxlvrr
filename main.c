@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <Windows.h>
+
 // bibliotheque des fonctions perso du projet
 #include "biblio.h"
-#include <string.h>
+
 
 /////////////JOUEUR///////////////
 
@@ -32,9 +32,9 @@ struct t_joueur *initp()
 int main()
 {
     struct t_joueur *p;
-    initp(*p);
+    p=initp();
     struct carte1 *c;
-    initc(*c);
+    c=initc();
     // variable
     
     menu();
@@ -75,9 +75,10 @@ int main()
     caseNew(45, 91, 0, 12, "Apple");    // APPLE
     gotoligcol(0, 115);
     printf("%d", p[0].position);
-    free(p);
+
     movePion(p,0);
     printf("%d", p[0].position);
+        free(p);
 
     return 0;
 }

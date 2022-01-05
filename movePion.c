@@ -5,7 +5,7 @@
 #include <Windows.h>
 
 
-struct t_joueur* movePion(struct t_joueur *p, int i){
+void movePion(struct t_joueur *p, int i){
     int ligj,colj=0;
 
     for(int j=0;j<32;j++){
@@ -65,10 +65,10 @@ struct t_joueur* movePion(struct t_joueur *p, int i){
         }
 
             for(i=0;i<4;i++){
-                if (p[i].position==j){
+                if ((*p)[i].position==j){
 
                     gotoligcol(ligj,colj);
-                    printf("%d",p[i].numero);
+                    printf("%d",(*p)[i].numero);
                 }
             }
     }
