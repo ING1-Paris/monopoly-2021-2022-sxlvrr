@@ -52,9 +52,6 @@ int main()
         if (d[i] == 25){
             
             }
-        }
-
-    
     }while(fin==0);
 
 
