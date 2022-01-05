@@ -4,6 +4,7 @@
 
 
 
+
 void gotoligcol( int lig, int col ) {
 
 // ressources
@@ -25,6 +26,8 @@ void Color(int couleurDuTexte,int couleurDeFond) // fonction d'affichage de coul
     SetConsoleTextAttribute(H,couleurDeFond*16+couleurDuTexte);
 }
 
+void caseNew(int lig, int col, int color, int colorBack, char name[]);
+
 struct carte1 {
     char nom[200];
     int prixC;
@@ -45,8 +48,15 @@ struct t_joueur{
     int faillite;
 };
 struct t_joueur *p;
+struct t_joueur *initp();
 struct carte1 *c;
+struct carte1 *initc();
+
+int menu();
+
 void regles();
 
-void movePion(struct t_joueur *p, int i);
+void movePion(struct t_joueur *p);
+
+
 #endif // BIBLI

@@ -1,6 +1,7 @@
 {
     "files.associations": {
-        "carte.h": "c"
+        "carte.h": "c",
+        "biblio.h": "c"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }

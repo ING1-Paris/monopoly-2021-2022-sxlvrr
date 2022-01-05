@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "biblio.h"
-#include <Windows.h>
+
 void caseNew(int lig, int col, int color, int colorBack, char name[]){
     Color(color,colorBack);
     for(int i=0;i<5;i++){
