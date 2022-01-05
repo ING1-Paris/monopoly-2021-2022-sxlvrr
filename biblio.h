@@ -15,6 +15,7 @@ struct t_joueur{
     int position;
     int enprison;
     int possessions[30];
+    int faillite;
 };
 struct t_joueur *p;
 void regles();
