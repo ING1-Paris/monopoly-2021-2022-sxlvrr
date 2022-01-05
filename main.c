@@ -137,6 +137,7 @@ int main()
                     i-=1;
                 }
                 movePion(p);
+                achatCarte(struct t_joueur *p, struct carte1 *c);
                 lance = 0;
             }
         }
