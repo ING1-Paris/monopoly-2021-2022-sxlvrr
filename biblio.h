@@ -59,6 +59,10 @@ void regles();
 
 int achatCarte(struct t_joueur *p, struct carte1 *c);
 
+int cartechance(struct t_joueur *p);
+
+int cartecommu(struct t_joueur *p);
+
 void movePion(struct t_joueur *p);
 
 

@@ -9,7 +9,7 @@ Les actions qui impliquent plusieurs joueurs -> Communauté
 Les actions qui impliquent un seul joueur -> Chance
 */
 
-void cartechance() // carte chance 
+int cartechance(struct t_joueur *p) // carte chance 
 {
     srand(time(NULL));
     int r;
@@ -19,18 +19,7 @@ void cartechance() // carte chance
 
     if (r==1){
         printf("Une amende.\n\nVersez 150€ a la banque.");
-        if(j1 == tableau[]){
-            p1.argent -=150;
-        }
-        if(j2 == tableau[]){
-            p2.argent -=150;
-        }
-        if(j3 == tableau[]){
-            p3.argent -=150;
-        }
-        if(j4 == tableau[]){
-            p4.argent -=150;
-        }
+        p[i].argent -= 150;
     }
     if (r==2){
         printf("Oh Oh Oh C'est Noel!\nTous les joeurs vous versent 200€");
@@ -104,8 +93,8 @@ void cartechance() // carte chance
     }
 
 }
-//void joueur *p luckcard(joueur *p)
-void luckcard()
+
+int luckcard(struct t_joueur *p)
 {
     srand(time(NULL));
     j1->argent = 200;
