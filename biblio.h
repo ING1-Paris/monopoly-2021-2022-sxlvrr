@@ -39,11 +39,11 @@ void nouvellePartie();
 
 int cartechance(struct t_joueur *p, int i);
 
+int cartecommu(struct t_joueur *p, int i, int nb);
+
 void regles();
 
 int achatCarte(struct t_joueur *p, struct carte1 *c);
-
-int cartecommu(struct t_joueur *p);
 
 void movePion(struct t_joueur *p);
 

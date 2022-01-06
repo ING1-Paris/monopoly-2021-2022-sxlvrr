@@ -7,7 +7,7 @@
 
 int main()
 {
-    int i = 1, de1 = 0, de2 = 0, nb = 0, lance = 0, fin = 0 , compteurdouble = 0;
+    int i = 1, de1 = 0, de2 = 0, nb = 0, lance = 0, fin = 0 , compteurdouble = 0, sortie = 0;
     int prison = 0; //TEST ICI, SERA DANS STRUCT DE JOUEUR A LA FIN
 
     struct t_joueur *p;
@@ -94,6 +94,49 @@ int main()
         if (lance == 1){
             if(p[i].position == 25){ //Si le joueur est en prison, un dé de 6 lui permettra de sortir
                 p[i].enprison = 1;
+
+                if(p[i].carteprison == 0){
+                    for(int k=0;k<=nb;k++){
+                        int kc = 0, ic = 0, prixcarte = 0;
+                        printf("Joueur %c, %c est en prison et il se trouve que tu as en ta possession une carte sortie de prison\nSouhaites-tu lui vendre ta carte ? (1 pour oui, 0 pour non)\n",p[k].nom,p[i].nom);
+                        scanf("%d",kc);
+                        if(kc == 1){
+                            printf("A quel prix souhaites-tu vendre ta carte ?\n");
+                            scanf("%d",prixcarte);
+                            printf("Joueur %c, %c accepte de te vendre sa carte prison pour %d€,\nAcceptes-tu l'offre ? (0 pour non, 1 pour oui) : ",p[i].nom,p[k].nom,prixcarte);
+                            scanf("%d",ic);
+                            if(ic == 1){
+                                p[k].carteprison = 0;
+                                p[k].argent += prixcarte;
+                                p[i].carteprison = 1;
+                                p[i].argent -= prixcarte;
+                            }
+                            else{
+                                printf("%c refuse l'offre");
+                            }
+                        }
+                    }
+                }
+
+                if(p[i].carteprison == 1){
+                    printf("\nTu as une carte sortie de prison, veux-tu l'utiliser ?\n1 pour oui, 0 pour non : ");
+                    scanf("%d", sortie);
+                    if(sortie == 1){
+                        p[i].position += 1;
+                        p[i].carteprison = 0;
+                    }
+                    else{
+                        printf("Tu gardes ta carte sortie de prison, tente de faire un double pour sortir (en tapant 1)\n");
+                    }
+
+                }
+                else{
+                    for(int k=0;k<nb;k++){
+                        if (p[k].carteprison == 1){
+                            printf("%d, %d a une carte sortie de prison, veux-tu lui acheter pour ");
+                        }
+                    }
+                }
                 srand(time(NULL));
                 de1 = rand() %6+1;
                 de2 = rand() %6+1;
@@ -105,7 +148,7 @@ int main()
                 }
             }
             else{
-                if(prison == 1){
+                if(p[i].enprison == 1){
                     p[i].position -= 1;
                     p[i].enprison = 0;
                 }
@@ -140,7 +183,7 @@ int main()
                 movePion(p);
                 achatCarte(p, c);
                 if(p[i].position == 3 || p[i].position == 17){
-                    cartecommu(p, i);
+                    cartecommu(p, i, nb);
                 }
                 if(p[i].position == 8 || p[i].position == 31){
                     cartechance(p, i);
