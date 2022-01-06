@@ -60,10 +60,9 @@ int main()
         printf("Combien de joueurs ?\n");
         scanf("%d",&nb);
     }
+    nb-=1;
 
-    //int d[nb];
-
-    for(i=1;i<=nb;i++){ //Setup position joueurs
+    for(i=0;i<=nb;i++){ //Setup position joueurs
         p[i].position = 0;
     }
 
@@ -81,7 +80,7 @@ int main()
                 i=1;
             }
             while(lance!=1){
-                
+
                 if(p[i].enprison == 0){
                     printf("Joueur %c, c'est a toi ! (tape 1 pour lancer les des)\n", p[i].nom);
                 }
