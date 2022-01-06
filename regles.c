@@ -27,3 +27,16 @@ void regles() {  // affichage des règles du jeu on sort avec la touche s (s par
     }
 
 }
+void credits() {  // affiche les createur du jeu
+    char sortie;
+    printf(" CE JEU A ETE CONÇUE PAR :");
+    printf("\n  Alex Danoffre chef du projet ");
+    printf("\n  Oscar  Hernandez toujours gagnant au Monopoly ");
+    printf("\n Mathis Bodelot Toujours perdant...");
+    printf("\n Loup ...  💤 ");
+    do {
+        printf("\n\n Revenir au menu principal, appuyez sur la touche 's'. ");
+        scanf("%c", &sortie);
+    } while (sortie != 's');  // s pour sortir
+    //Menu();
+}
