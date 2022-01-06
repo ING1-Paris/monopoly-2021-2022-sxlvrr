@@ -70,14 +70,14 @@ int main()
 
     do{
         if (lance == 0){
-            if(i>=1 || i<=5){
+            if(i>=0 || i<=4){
                 i+=1;
             }
             if(p[i].faillite == 1){
-                    i+=1;
-                }
+                i+=1;
+            }
             if(i>nb || i<nb){
-                i=1;
+                i=0;
             }
             while(lance!=1){
 
@@ -184,7 +184,7 @@ int main()
                     cartecommu(p, i, nb);
                 }
                 if(p[i].position == 8 || p[i].position == 31){
-                    cartechance(p, i);
+                    cartechance(p, i, nb);
                 }
                 lance = 0;
             }
