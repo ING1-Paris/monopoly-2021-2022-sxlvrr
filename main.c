@@ -181,10 +181,10 @@ int main()
                 movePion(p);
                 achatCarte(p, c);
                 if(p[i].position == 3 || p[i].position == 17){
-                    cartecommu(p, i, nb);
+                    cartecommu(p, i);
                 }
                 if(p[i].position == 8 || p[i].position == 31){
-                    cartechance(p, i, nb);
+                    cartechance(p, i);
                 }
                 lance = 0;
             }
