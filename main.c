@@ -22,13 +22,13 @@ int main()
     caseNew(0, 0, 0, 15, "Depart");     // Depart
     caseNew(0, 13, 0, 9, "Wish");       // Wish
     caseNew(0, 26, 0, 9, "Epicier");    // Epicier
-    caseNew(0, 39, 0, 15, "Commu");     // Commu
+    caseNew(0, 39, 0, 15, "Commu");     // Commu 3
     caseNew(0, 52, 0, 9, "Action");     // Action
     caseNew(0, 65, 0, 7, "EDF");        // EDF
     caseNew(0, 78, 0, 13, "LIDL");      // LIDL
     caseNew(0, 91, 0, 13, "Franprix");  // Fraprix
-    caseNew(5, 0, 0, 15, "Chance");     // CHANCE
-    caseNew(5, 91, 0, 15, "Chance");    // CHANCE
+    caseNew(5, 0, 0, 15, "Chance");     // CHANCE 31
+    caseNew(5, 91, 0, 15, "Chance");    // CHANCE 8
     caseNew(10, 0, 0, 1, "Bugatti");    // Bugatti
     caseNew(10, 91, 0, 13, "Monoprix"); // Monoprix
     caseNew(15, 0, 0, 15, "Impot");     // Impot
@@ -49,7 +49,7 @@ int main()
     caseNew(45, 39, 0, 7, "Suez");      // Suez
     caseNew(45, 52, 0, 12, "Xaomi");    // Xaomi
     caseNew(45, 65, 0, 12, "Samsung");  // Samsung
-    caseNew(45, 78, 0, 15, "Commu");    // COMMU
+    caseNew(45, 78, 0, 15, "Commu");    // COMMU 17
     caseNew(45, 91, 0, 12, "Apple");    // APPLE
     gotoligcol(0, 115);
     printf("%d", p[0].position);
@@ -143,6 +143,7 @@ int main()
         }
     }while(fin==0);
     free(p);
+    cartechance(p, i);
 
     return 0;
 }

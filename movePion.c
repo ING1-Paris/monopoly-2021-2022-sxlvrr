@@ -68,6 +68,6 @@ void movePion(struct t_joueur *p){
                 }
             }
     }
-return p;
+
 }
 

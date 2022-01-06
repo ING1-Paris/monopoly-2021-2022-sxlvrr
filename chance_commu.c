@@ -6,7 +6,7 @@ Les actions qui impliquent plusieurs joueurs -> Communauté
 Les actions qui impliquent un seul joueur -> Chance
 */
 
-int cartechance(struct t_joueur *p) // carte chance 
+int cartechance(struct t_joueur *p, int i) // carte chance 
 {
     srand(time(NULL));
     int r;
@@ -14,36 +14,15 @@ int cartechance(struct t_joueur *p) // carte chance
     printf("Carte Chance !\n");
     r=rand() % 16+1;
 
+    for(int i=0;i<4;i++){
     if (r==1){
         printf("Une amende.\n\nVersez 150€ a la banque.");
-        p[i].argent -= 150;
+        (p)[i].argent -= 150;
     }
     if (r==2){
         printf("Oh Oh Oh C'est Noel!\nTous les joeurs vous versent 200€");
-        if(j1 == tableau[]){
-            p2.argent -=200;
-            p3.argent -=200;
-            p4.argent -=200;
-            p1.argent +=600;
-        }
-        if(j2 == tableau[]){
-            p1.argent -=200;
-            p3.argent -=200;
-            p4.argent -=200;
-            p2.argent +=600;
-        }
-        if(j3 == tableau[]){
-            p1.argent -=200;
-            p2.argent -=200;
-            p4.argent -=200;
-            p3.argent +=600;
-        }
-        if(j4 == tableau[]){
-            p1.argent -=200;
-            p2.argent -=200;
-            p3.argent -=200;
-            p4.argent +=600;
-        }
+        if((p)[i].position == 8|| (p)[i].position== 31){
+            (p)[i].argent -=200;
     }
     if (r==3){
         if(j1 == tableau[] && p1.argent >= 750000){

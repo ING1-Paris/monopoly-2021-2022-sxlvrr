@@ -35,11 +35,13 @@ struct carte1 *initc();
 
 int menu();
 
+void nouvellePartie();
+
+int cartechance(struct t_joueur *p, int i);
+
 void regles();
 
 int achatCarte(struct t_joueur *p, struct carte1 *c);
-
-int cartechance(struct t_joueur *p);
 
 int cartecommu(struct t_joueur *p);
 
