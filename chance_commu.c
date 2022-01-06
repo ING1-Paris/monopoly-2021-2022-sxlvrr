@@ -6,7 +6,7 @@ Les actions qui impliquent plusieurs joueurs -> Communauté
 Les actions qui impliquent un seul joueur -> Chance
 */
 
-int* cartechance(struct t_joueur *p, int i) // carte chance 
+int cartechance(struct t_joueur *p, int i) // carte chance 
 {
     srand(time(NULL));
     int r;
@@ -90,8 +90,10 @@ int* cartechance(struct t_joueur *p, int i) // carte chance
             (p)[i].argent += 90;
         }
     }
-    return (p);
+    // souvient toi tu dois caster p : (int)p=int j;
+    return (int)p;
 }
+
 
 int cartecommu(struct t_joueur *p, int i)
 {

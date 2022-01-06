@@ -37,7 +37,7 @@ int menu();
 
 void nouvellePartie();
 
-int* cartechance(struct t_joueur *p, int i);
+int cartechance(struct t_joueur *p, int i);
 
 int cartecommu(struct t_joueur *p, int i);
 

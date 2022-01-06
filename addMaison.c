@@ -61,12 +61,12 @@ int addMaison(struct t_joueur *p){
         }
 
             for(int i=0;i<4;i++){
-                if (p[i].position==j){
+                if ((p)[i].position==j){
 
                     gotoligcol(ligj,colj);
-                    printf("%d",p[i].numero);
+                    printf("%d",(p)[i].numero);
                 }
             }
     }
-return p;
+return (int)p;
 }
