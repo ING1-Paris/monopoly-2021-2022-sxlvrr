@@ -89,13 +89,7 @@ int cartechance(struct t_joueur *p, int i) // carte chance
     return p;
 }
 
-<<<<<<< HEAD
-/*
-int luckcard(struct t_joueur *p)
-{
-=======
-int luckcard(struct t_joueur *p){
->>>>>>> bd551e823c28ce2a07cfc16f3a0e5a008dc490af
+/*int luckcard(struct t_joueur *p){
     srand(time(NULL));
     j1->argent = 200;
 
