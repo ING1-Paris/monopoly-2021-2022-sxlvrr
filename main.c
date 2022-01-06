@@ -11,11 +11,16 @@ int main()
     int prison = 0; //TEST ICI, SERA DANS STRUCT DE JOUEUR A LA FIN
 
     struct t_joueur *p;
+    printf(">>>>>>>><<<<<<<<<<<");
     p=initp();
+    
     struct carte1 *c;
+    
     c=initc();
+    
     // variable
-    menu();
+    menu(p);
+    
 
     ///////////////PLATEAU////////////////////////////////
     system("cls");

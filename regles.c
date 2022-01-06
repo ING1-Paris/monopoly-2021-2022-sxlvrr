@@ -36,25 +36,17 @@ void regles() {  // affichage des règles du jeu on sort avec la touche s (s par
     printf("\n    Un joueur est en faillite lorsqu’il doit plus qu’il ne peut payer à un autre joueur ou à la Banque. \n Si sa dette est envers un autre joueur, il doit remettre à ce joueur tout ce qu’il a de valeur et se retirer du jeu.\n Dans le cadre de ce règlement, s’il est propriétaire de maisons ou d’hôtels, il doit les restituer à la Banque en échange d’argent\n  à hauteur de la moitié du montant payé et cet argent est remis au créancier.      ");
     printf("\n    S’il a hypothéqué un bien, il remet également son bien à ce créancier,\n  mais le nouveau propriétaire doit payer immédiatement à la Banque le montant des intérêts sur le prêt,\n  soit 10 % de la valeur du bien.\n Une fois que le nouveau propriétaire l’a fait, il peut, à son gré, payer le capital ou détenir la propriété jusqu’à une date ultérieure\n  à laquelle il peut résilier l’hypothèque. S’il détient des biens de cette façon jusqu’à un tour ultérieur\n  il/elle doit payer les intérêts à nouveau lorsqu’il/elle lève l’hypothèque.     ");
     printf("\n    Si un joueur doit à la Banque, au lieu d’un autre joueur,\n plus que ce qu’il peut payer (en raison de taxes ou de pénalités),\n même en vendant ses bâtiments, en hypothéquant sa propriété ou en vendant ou en échangeant avec d’autres joueurs,\n il doit remettre tous ses biens à la Banque.\nDans ce cas, la Banque vend immédiatement aux enchères tous les biens ainsi pris,\n à l’exception des bâtiments. Un joueur en faillite doit immédiatement se retirer du jeu. Le dernier joueur qui reste dans le jeu gagne.\n      ");
-    do {
-        printf("\nPour revenir au menu principal, appuyez sur la touche 's'. ");
-        scanf("%c", &sortie);
-    } while (sortie != 's');
-    if(sortie=='s'){
-        menu();
-    }
-
-}
-void credits() {  // affiche les createur du jeu
-    char sortie;
     printf(" CE JEU A ETE CONÇUE PAR :");
     printf("\n  Alex Danoffre chef du projet ");
     printf("\n  Oscar  Hernandez toujours gagnant au Monopoly ");
     printf("\n Mathis Bodelot Toujours perdant...");
     printf("\n Loup ...  💤 ");
-    do {
-        printf("\n\n Revenir au menu principal, appuyez sur la touche 's'. ");
+    while (sortie != 's') {
+        printf("\n Pour revenir au menu principal, appuyez sur la touche 's' ");
         scanf("%c", &sortie);
-    } while (sortie != 's');  // s pour sortir
-    //Menu();
+    }
+    if(sortie=='s'){
+        menu();
+    }
+
 }

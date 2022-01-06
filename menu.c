@@ -1,7 +1,7 @@
 // bibliotheque des fonctions perso du projet
 #include "biblio.h"
 
-int menu(){
+int menu(struct t_joueur *p){
     int choixUser = 0;
     do {
     printf("Bienvenu sur monopoly Marque !\n");
@@ -17,7 +17,7 @@ int menu(){
     }while (choixUser < 1 || choixUser > 4);
     if (choixUser == 1)
         {
-            nouvellePartie();
+            nouvellePartie(p);
         }
         else if (choixUser == 2)
         {

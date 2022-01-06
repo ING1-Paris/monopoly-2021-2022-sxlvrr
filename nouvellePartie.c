@@ -1,17 +1,19 @@
 #include "biblio.h"
 int nouvellePartie(struct t_joueur *p){
-    
+    printf("%d",p[0].numero);
     int i, nb = 0;
+    int* j=0;
     for(i=0;i<4;i++){
-        (p)[i].argent=1000;
+        (p)[0].argent=1000;
     }
-     while(nb <=1 || nb >= 5){
+    
+     do{
         printf("Combien de joueurs ?\n");
         scanf("%d",&nb);
-    }
+    }while(nb <=1 || nb >= 5);
     nb-=1;
 
-    printf("Il y a %d joueurs dans la partie\n",nb);
+    printf("Il y a %d joueurs dans la partie\n",nb+1);
     printf("La partie peut commencer\n");
     Sleep(1000);
     system("cls");
@@ -25,5 +27,5 @@ int nouvellePartie(struct t_joueur *p){
     }
     printf("|");
     system("cls");
-return nb;
+return (int)p;
 }
