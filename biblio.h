@@ -45,6 +45,11 @@ void regles();
 
 int achatCarte(struct t_joueur *p, struct carte1 *c);
 
+<<<<<<< HEAD
+=======
+int cartecommu(struct t_joueur *p, int i);
+
+>>>>>>> bd551e823c28ce2a07cfc16f3a0e5a008dc490af
 void movePion(struct t_joueur *p);
 
 

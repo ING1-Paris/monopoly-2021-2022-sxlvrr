@@ -21,58 +21,81 @@ int cartechance(struct t_joueur *p, int i) // carte chance
     }
     if (r==2){
         printf("Oh Oh Oh C'est Noel!\nTous les joeurs vous versent 200€");
-        if((p)[i].position == 8|| (p)[i].position== 31){
             (p)[i].argent -=200;
     }
     if (r==3){
-        if(j1 == tableau[] && p1.argent >= 750000){
+        if((p)[i].argent >= 750000){
             printf("Coup dur \n Donnez 20% de votre argent a la banque pas de chance...");
-            p1.argent -= (p1.argent/100)*20;
-        }
-        if(j2 == tableau[] && p2.argent >= 750000){
-            printf("Coup dur \n Donnez 20% de votre argent a la banque pas de chance...");
-            p2.argent -= (p2.argent/100)*20;
-        }
-        if(j3 == tableau[] && p3.argent >= 750000){
-            printf("Coup dur \n Donnez 20% de votre argent a la banque pas de chance...");
-            p3.argent -= (p3.argent/100)*20;
-        }
-        if(j4 == tableau[] && p4.argent >= 750000){
-            printf("Coup dur \n Donnez 20% de votre argent a la banque pas de chance...");
-            p4.argent -= (p4.argent/100)*20;
+            (p)[i].argent -= ((p)[i].argent/100)*20;
         }
         else{
-            r=rand() % 21;
+            r=rand() % 16+1;
         }
     }
     if (r==4){
-        printf("Erreur de la banque\n Elle vous avez donner que 50 euros au de lieu de 300");
-        if(j1 == tableau[]){
-            p1.argent += 250;
-        }
-        if(j2 == tableau[]){
-            p2.argent += 250;
-        }
-        if(j3 == tableau[]){
-            p3.argent += 250;
-        }
-        if(j4 == tableau[]){
-            p4.argent += 250;
-        }
+        printf("Erreur de la banque\n Elle vous avez donner que 50€ au de lieu de 300€");
+        
+            (p)[i].argent -= 250;
     }
     if (r==5){
-        printf("C'est votre jour de chance vous gagne au bingo !!!!");
-        p1.argent += 2;
-        p2.argent += 2;
-        p3.argent += 2;
-        p4.argent += 2;
+        printf("C'est votre jour de chance vous gagne au bingo, vous gagnez 2 € !!!!");
+        (p)[i].argent += 2;  
+    }
+    if (r==6){
+        printf("Qui dit chance ne dit pas forcement benefice, vous perdez 120€");
+        (p)[i].argent -= 120;  
+    }
+    if (r==7){
+        printf("Bravo, grace a vos actions sur Toyota, vous gagnez 200€");
+        (p)[i].argent += 200;
+    }
+    if (r==8){
+        printf("Vous avez gagner une carte SORTIE DE PRISON! Preservez la ou vendez la a l'occasion");
+        (p)[i].carteprison =1;
+    }
+    if (r==9){
+        printf("Winamax: pari combine perdu, vous perdez 70€");
+        (p)[i].argent -= 70;
+    }
+    if (r==10){
+        printf("Credit agricole: Vous recevez votre salaire du mois, recuperez vos 750€!");
+        (p)[i].argent += 750;
+    }
+    if (r==11){
+        printf("Garez mieux votre voiture la prochaine fois! Vous perdez 80€...");
+        (p)[i].argent -= 80;
+    }
+    if (r==12){
+        printf("Surveillez vos enfants, leurs courses vous ont coute 54€");
+        (p)[i].argent -= 54;
+    }
+    if (r==13){
+        printf("Vous avez gagnez le concours de beaute de sephora, vous recevez 210€");
+        (p)[i].argent += 210;
+    }
+    if (r==14){
+        printf("Le Bon Coin: 2 articles ont ete vendu avec succes, recevez 50€");
+        (p)[i].argent += 50;
+    }
+    if (r==15){
+        printf("Mail: GoSport vous remercie de votre fidelite, recevez ce bon de 75€!");
+        (p)[i].argent += 75;
+    }
+    if (r==16){
+        printf("C'est gagneeeee, recevez 90€");
+        (p)[i].argent += 90;
+    }
     }
     return p;
 }
 
+<<<<<<< HEAD
 /*
 int luckcard(struct t_joueur *p)
 {
+=======
+int luckcard(struct t_joueur *p){
+>>>>>>> bd551e823c28ce2a07cfc16f3a0e5a008dc490af
     srand(time(NULL));
     j1->argent = 200;
 
