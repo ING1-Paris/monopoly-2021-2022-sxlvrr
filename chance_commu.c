@@ -89,13 +89,7 @@ int cartechance(struct t_joueur *p, int i) // carte chance
     return p;
 }
 
-<<<<<<< HEAD
-/*
-int luckcard(struct t_joueur *p)
-{
-=======
-int luckcard(struct t_joueur *p){
->>>>>>> bd551e823c28ce2a07cfc16f3a0e5a008dc490af
+/*int luckcard(struct t_joueur *p){
     srand(time(NULL));
     j1->argent = 200;
 
@@ -121,50 +115,84 @@ int luckcard(struct t_joueur *p){
 int cartecommu(struct t_joueur *p, int i, int nb)
 {
     srand(time(NULL));
-    int r;
+    int r,k;
     printf("Carte communaute !\n");
     r=rand() % 16+1;
-
+    for(i=0;i<4;i++){
     if (r==1){
         printf("Oeuvre de charite\nLa croix rouge recolte des dons et vous etes favorable a leurs actions.\nVersez 100€ a la banque.");
-        p[i].argent -=100;
+        (p)[i].argent -=100;
     }
     if (r==2){
         printf("C'est votre anniversaire !\nTous les joueurs vous versent 200€");
-        for(k=1;k<=nb;k++){
-            p[k].argent-=200;
-            p[i].argent+=200;
+        for(k=0;k<4;k++){
+            (p)[k].argent-=200;
+            (p)[i].argent+=200;
         }
     }
     if (r==3){
-        if(p[i].argent >= 7500){
+        if((p)[i].argent >= 7500){
             printf("Impot sur la fortune\nVotre richesse depassant la moyenne, vous vous devez de verser 10 pourcents de cette dernière a la banque");
-            p[i].argent -= (p1.argent/100)*10;
+            (p)[i].argent -= ((p)[i].argent/100)*10;}
         else{
-            r=rand() % 21;
+            r=rand() % 16+1;
         }
     }
     if (r==4){
-        printf("Erreur de la banque\nUn bug informatique a vendu une part des actions de l'epicier du coin, recevez 2500€");
-        if(j1 == tableau[17]){
-            p1.argent += 2500;
-        }
-        if(j2 == tableau[17]){
-            p2.argent += 2500;
-        }
-        if(j3 == tableau[17]){
-            p3.argent += 2500;
-        }
-        if(j4 == tableau[17]){
-            p4.argent += 2500;
-        }
+        printf("Erreur de la banque\nUn bug informatique a vendu une part des actions de l'epicier du coin, recevez 250€");
+        
+            (p)[i].argent += 250;
+       
     }
     if (r==5){
         printf("Fete commune\nChaque joueur verse 400€ a la banque afin de contribuer a la saint jean guile");
-        p1.argent -= 400;
-        p2.argent -= 400;
-        p3.argent -= 400;
-        p4.argent -= 400;
+        (p)[i].argent -= 400;
     }
-
+    if (r==6){
+        printf("Gazo vous racket 130€ BAW");
+        (p)[i].argent -= 130;
+    }
+    if (r==7){
+        printf("KobaLaD vous ramene votre argent, recuperez vos 130€");
+        (p)[i].argent += 130;
+    }
+    if (r==8){
+        printf("OH OH OH c'est noel, Vous avez ete sages, tous les joueurs recoivent 100€");
+        for(k=0;k<4;k++){
+        (p)[k].argent += 100;
+        }
+    }
+    if (r==9){
+        printf("Winamax: pari combine reussi, recevez 80€");
+        (p)[i].argent += 80;
+    }
+    if (r==10){
+        printf("Shooting photo rate, vous gagnez un lot de consolation, recevez 3€");
+        (p)[i].argent += 3;
+    }
+    if (r==11){
+        printf("Toi la, viens ici, donne moi ton telephone!!! vous perdez 90€");
+        (p)[i].argent -= 90;
+    }
+    if (r==12){
+        printf("Les billets pour la visite du musee sont reserves, payez 20€");
+        (p)[i].argent -= 20;
+    }
+    if (r==13){
+        printf("Vous avez votre bac! Votre Grand-Pere vous donne 150€");
+        (p)[i].argent += 150;
+    }
+    if (r==14){
+        printf("Crash des actions, vous gagnez 200€");
+        (p)[i].argent += 200;
+    }
+    if (r==15){
+        printf("Vous vous etes blesser dans le dernier virage en bobsleigh, versez 100€ à l'assurance");
+        (p)[i].argent -= 100;
+    }
+    if (r==16){
+        printf("Vous avez gagner votre competition fortnite! Recevez 280€");
+        (p)[i].argent += 280;
+    }
+    }
 }
