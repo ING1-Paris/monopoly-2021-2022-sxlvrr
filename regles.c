@@ -26,7 +26,7 @@ void regles() {  // affichage des règles du jeu on sort avec la touche s (s par
     printf("\n    Un joueur qui atterrit sur cet espace ne reçoit pas d’argent,\n de biens ou de récompenses de quelque nature que ce soit. Ce n’est qu’un lieu de repos “libre”.         ");
     printf("\n    MAISONS        ");
     printf("\n  S’il achète une maison, il peut la mettre sur n’importe laquelle de ces propriétés.\n La prochaine maison que le joueur achète doit être érigée sur l’une des propriétés non améliorées de ce groupe de couleurs\n ou de tout autre groupe de couleurs qu’il/elle possède.\n         ");
-    printf("\n  Le prix que le joueur doit payer à la Banque pour chaque maison est indiqué sur sa carte de titre de propriété pour la propriété sur laquelle il érige la maison.\n
+    printf("\n  Le prix que le joueur doit payer à la Banque pour chaque maison est indiqué sur sa carte de titre de propriété pour la propriété sur laquelle il érige la maison.\n");
     printf("\n    HOTEL       ");
     printf("\n    Meme principe que pour les maison mais vaut plus chere et rapporte plus il faut avant mettre 4 maisons pour pouvoir mettre un hotel        ");
     printf("\n   HYPOTHEQUE      ");
