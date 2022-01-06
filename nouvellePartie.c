@@ -1,5 +1,5 @@
 #include "biblio.h"
-void nouvellePartie(){
+/*void nouvellePartie(){
     int argentDepart = 10000;
     int i, choixUser = 0;
 
@@ -43,4 +43,4 @@ void nouvellePartie(){
     printf("de obtenue: %d\n",deScore);
 
 
-}
+}*/

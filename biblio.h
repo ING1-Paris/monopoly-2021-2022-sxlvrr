@@ -4,30 +4,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <Windows.h>
-
-
-
-
-void gotoligcol( int lig, int col ) {
-
-// ressources
-
-COORD mycoord;
-
-mycoord.X = col;
-
-mycoord.Y = lig;
-
-SetConsoleCursorPosition( GetStdHandle( STD_OUTPUT_HANDLE ), mycoord );
-
-}
-
-
-void Color(int couleurDuTexte,int couleurDeFond) // fonction d'affichage de couleurs
-{
-    HANDLE H=GetStdHandle(STD_OUTPUT_HANDLE);
-    SetConsoleTextAttribute(H,couleurDeFond*16+couleurDuTexte);
-}
+#include <time.h>
+void gotoligcol( int lig, int col );
+void Color(int couleurDuTexte,int couleurDeFond);
 
 void caseNew(int lig, int col, int color, int colorBack, char name[]);
 
@@ -51,9 +30,7 @@ struct t_joueur{
     int possessions[30];
     int faillite;
 };
-struct t_joueur *p;
 struct t_joueur *initp();
-struct carte1 *c;
 struct carte1 *initc();
 
 int menu();
