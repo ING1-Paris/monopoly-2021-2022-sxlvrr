@@ -3,7 +3,6 @@
 
 int menu(){
     int choixUser = 0;
-    int choixPossible[4] = {1, 2, 3, 4};
     do {
     printf("Bienvenu sur monopoly Marque !\n");
     printf("Veuillez nous indiquer ce que vous voulez faire\n");
@@ -15,7 +14,7 @@ int menu(){
     scanf("%d", &choixUser);
 
         
-    }while (choixUser != choixPossible[0] || choixUser != choixPossible[1] || choixUser != choixPossible[2] || choixUser != choixPossible[3]);
+    }while (choixUser < 1 || choixUser > 4);
     if (choixUser == 1)
         {
             nouvellePartie();
