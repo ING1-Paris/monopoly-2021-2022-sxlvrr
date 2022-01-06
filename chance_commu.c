@@ -37,7 +37,7 @@ int cartechance(struct t_joueur *p, int i) // carte chance
             }
         }
         if (r==4){
-            printf("Erreur de la banque\n Elle vous avez donner que 50€ au de lieu de 300€");
+            printf("Erreur de la banque\nElle vous avait donne que 50€ au lieu de 300€");
             
                 (p)[i].argent -= 250;
         }
@@ -78,12 +78,13 @@ int cartechance(struct t_joueur *p, int i) // carte chance
             (p)[i].argent += 210;
         }
         if (r==14){
-            printf("Le Bon Coin: 2 articles ont ete vendu avec succes, recevez 50€");
+            printf("Le Bon Coin: 2 articles ont ete vendus avec succes, recevez 50€");
             (p)[i].argent += 50;
         }
         if (r==15){
-            printf("Mail: GoSport vous remercie de votre fidelite, recevez ce bon de 75€!");
-            (p)[i].argent += 75;
+            printf("Oh non ! La police a mis la main sur votre argent non declare\nAllez en prison pour 3 tours");
+            (p)[i].enprison = 1;
+            (p)[i].position = 25;
         }
         if (r==16){
             printf("C'est gagneeeee, recevez 90€");
