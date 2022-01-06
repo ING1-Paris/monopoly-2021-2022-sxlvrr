@@ -2,7 +2,7 @@
 #include "biblio.h"
 
 
-void regles() {  // affichage des règles du jeu on sort avec la touche s (s par rapport à sortie)
+void regles(struct t_joueur *p) {  // affichage des règles du jeu on sort avec la touche s (s par rapport à sortie)
     char sortie;
     printf("                 REGLE DU JEU : ");
     printf("\n PRÉPARATION	");
@@ -46,7 +46,7 @@ void regles() {  // affichage des règles du jeu on sort avec la touche s (s par
         scanf("%c", &sortie);
     }
     if(sortie=='s'){
-        menu();
+        menu(p);
     }
 
 }

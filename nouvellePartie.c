@@ -16,7 +16,7 @@ int nouvellePartie(struct t_joueur *p){
     printf("Il y a %d joueurs dans la partie\n",nb+1);
     printf("La partie peut commencer\n");
     Sleep(1000);
-    system("cls");
+    //system("cls");
     printf("Generation de la grille de jeux en cours\n");
     printf("Que le jeu commence !");
     printf("|");
@@ -26,6 +26,6 @@ int nouvellePartie(struct t_joueur *p){
 
     }
     printf("|");
-    system("cls");
+    
 return (int)p;
 }

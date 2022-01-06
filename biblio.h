@@ -20,6 +20,8 @@ struct carte1 {
     int deshyp;
     int numero;
 };
+struct carte1 *initc();
+
 struct t_joueur{
     char nom[20];
     int numero;
@@ -32,17 +34,17 @@ struct t_joueur{
     int faillite;
 };
 struct t_joueur *initp();
-struct carte1 *initc();
 
-int menu();
 
-int nouvellePartie();
+int menu(struct t_joueur *p);
+
+int nouvellePartie(struct t_joueur *p);
 
 int cartechance(struct t_joueur *p, int i);
 
 int cartecommu(struct t_joueur *p, int i);
 
-void regles();
+void regles(struct t_joueur *p);
 
 int achatCarte(struct t_joueur *p, struct carte1 *c);
 

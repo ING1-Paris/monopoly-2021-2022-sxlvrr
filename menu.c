@@ -31,8 +31,9 @@ int menu(struct t_joueur *p){
         }
         else if (choixUser == 4)
         {
-            regles();
+            regles(p);
             
         }
+        return (int)p;
     }
     

@@ -13,17 +13,17 @@ int main()
     struct t_joueur *p;
     printf(">>>>>>>><<<<<<<<<<<");
     p=initp();
-    
+    //printf(">>>>>>>><<<<<<<<<<<");
     struct carte1 *c;
-    
+    //printf(">>>>>>>><<<<<<<<<<<");
     c=initc();
-    
+    //printf(">>>>>>>><<<<<<<<<<<"); // MARCHE PAS sur POWERSHELL
     // variable
     menu(p);
-    
+    //printf(">>>>>>>><<<<<<<<<<<");
 
     ///////////////PLATEAU////////////////////////////////
-    system("cls");
+    //1system("cls");
     caseNew(0, 0, 0, 15, "Depart");     // Depart
     caseNew(0, 13, 0, 9, "Wish");       // Wish
     caseNew(0, 26, 0, 9, "Epicier");    // Epicier
