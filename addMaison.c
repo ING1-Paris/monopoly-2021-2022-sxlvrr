@@ -1,7 +1,7 @@
 #include "biblio.h"
 
     
-int addMaison(){
+int addMaison(struct t_joueur *p){
     int ligj,colj=0;
 
     for(int j=0;j<32;j++){
