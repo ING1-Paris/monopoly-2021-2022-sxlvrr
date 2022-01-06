@@ -116,6 +116,7 @@ int main()
 
                 if(p[i].position >= 31){
                     p[i].position -= 31;
+                    p[i].argent +=200;
                 }
 
                 printf("De 1 : %d\nDe 2 : %d\n\n",de1,de2);
@@ -138,12 +139,17 @@ int main()
                 }
                 movePion(p);
                 achatCarte(p, c);
+                if(p[i].position == 3 || p[i].position == 17){
+                    cartecommu(p, i);
+                }
+                if(p[i].position == 8 || p[i].position == 31){
+                    cartechance(p, i);
+                }
                 lance = 0;
             }
         }
     }while(fin==0);
     free(p);
-    cartechance(p, i);
 
     return 0;
 }
