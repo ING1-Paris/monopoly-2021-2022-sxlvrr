@@ -27,6 +27,7 @@ struct t_joueur{
     int position;
     int enprison;
     int carteprison;
+    int toursprison;
     int possessions[30];
     int faillite;
 };

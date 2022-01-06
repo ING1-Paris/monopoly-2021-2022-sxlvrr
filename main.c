@@ -142,8 +142,15 @@ int main()
                     printf("De 1 : %4d\nDe 2 : %4d\n",de1,de2);
                     lance = 0;
                     if(de1 == de2){
-                        p[i].position += 1;
                         printf("Bravo pour ce double ! Tu sors de prison\n");
+                        p[i].enprison = 0;
+                    }
+                    else{
+                        p[i].toursprison += 1;
+                        if(p[i].toursprison == 3){
+                            p[i].enprison = 0;
+                            p[i].toursprison = 0;
+                        }
                     }
                 }
             }
@@ -185,6 +192,10 @@ int main()
                 }
                 if(p[i].position == 8 || p[i].position == 31){
                     cartechance(p, i);
+                    if(p[i].argent <= 0){
+                        p[i].faillite = 1;
+                        printf("Oh non ! %c tu as fait faillite... Dommage mais c'est fini pour toi !",p[i].nom);
+                    }
                 }
                 lance = 0;
             }
