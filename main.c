@@ -61,8 +61,6 @@ int main()
         scanf("%d",&nb);
     }
 
-    //int d[nb];
-
     for(i=1;i<=nb;i++){ //Setup position joueurs
         p[i].position = 0;
     }
