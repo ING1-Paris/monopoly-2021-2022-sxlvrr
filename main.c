@@ -184,7 +184,7 @@ int main()
                     cartecommu(p, i, nb);
                 }
                 if(p[i].position == 8 || p[i].position == 31){
-                    cartechance(p, i);
+                    cartechance(p, i, nb);
                 }
                 lance = 0;
             }
