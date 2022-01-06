@@ -62,11 +62,7 @@ int main()
     }
     nb-=1;
 
-<<<<<<< HEAD
     for(i=0;i<=nb;i++){ //Setup position joueurs
-=======
-    for(i=1;i<=nb;i++){ //Setup position joueurs
->>>>>>> a5e94cdb0c45d6c6206b48bbad3c39b31853f56a
         p[i].position = 0;
     }
 
@@ -74,14 +70,14 @@ int main()
 
     do{
         if (lance == 0){
-            if(i>=1 || i<=5){
+            if(i>=0 || i<=4){
                 i+=1;
             }
             if(p[i].faillite == 1){
-                    i+=1;
-                }
+                i+=1;
+            }
             if(i>nb || i<nb){
-                i=1;
+                i=0;
             }
             while(lance!=1){
 
