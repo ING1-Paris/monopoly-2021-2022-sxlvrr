@@ -56,11 +56,6 @@ int main()
 
     printf("%d", p[0].position);
 
-    while(nb <=1 || nb >= 5){
-        printf("Combien de joueurs ?\n");
-        scanf("%d",&nb);
-    }
-    nb-=1;
 
     for(i=0;i<=nb;i++){ //Setup position joueurs
         p[i].position = 0;

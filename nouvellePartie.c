@@ -1,29 +1,17 @@
 #include "biblio.h"
-void nouvellePartie(){
-    int argentDepart = 10000;
-    int i, choixUser = 0;
-
-     do {
-        printf("Veuillez entrer le nombre de joueurs entre 2 et 4: ");
-        scanf("%d", &choixUser);
-    } while (choixUser < 2 || choixUser > 4);
-
-    int tailleTab = choixUser;
-    int Joueurs[tailleTab];
-
-    for(i = 1;i < tailleTab + 1;i++)
-    {
-        Joueurs[i] = i;
+int nouvellePartie(struct t_joueur *p){
+    
+    int i, nb = 0;
+    for(i=0;i<4;i++){
+        (p)[i].argent=1000;
     }
-
-    size_t tailleTabPions = sizeof(Joueurs)/sizeof(Joueurs[0]);
-
-    int pions[tailleTabPions];
-    for(i = 1;i < tailleTabPions + 1;i++)
-    {
-        pions[i] = Joueurs[i];
+     while(nb <=1 || nb >= 5){
+        printf("Combien de joueurs ?\n");
+        scanf("%d",&nb);
     }
-    printf("Il y a %d joueurs dans la partie\n",tailleTabPions);
+    nb-=1;
+
+    printf("Il y a %d joueurs dans la partie\n",nb);
     printf("La partie peut commencer\n");
     Sleep(1000);
     system("cls");
@@ -37,10 +25,5 @@ void nouvellePartie(){
     }
     printf("|");
     system("cls");
-    int lanceur,deScore = 0;
-    lanceur = lanceurDe(tailleTabPions);
-    deScore = lancerDes();
-    printf("de obtenue: %d\n",deScore);
-
-
+return nb;
 }

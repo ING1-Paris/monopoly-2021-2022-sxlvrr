@@ -36,7 +36,7 @@ struct carte1 *initc();
 
 int menu();
 
-void nouvellePartie();
+int nouvellePartie();
 
 int cartechance(struct t_joueur *p, int i);
 
