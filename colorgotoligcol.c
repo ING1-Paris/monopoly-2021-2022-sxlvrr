@@ -20,3 +20,4 @@ void Color(int couleurDuTexte,int couleurDeFond) // fonction d'affichage de coul
     HANDLE H=GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(H,couleurDeFond*16+couleurDuTexte);
 }
+

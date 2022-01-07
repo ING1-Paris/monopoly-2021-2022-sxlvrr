@@ -1,7 +1,7 @@
 
 #include "biblio.h"
 
-    
+
 int my_strlen(const char *str){
     int i;
     i = 0;
@@ -10,3 +10,4 @@ int my_strlen(const char *str){
     }
     return i;
 }
+

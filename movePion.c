@@ -4,7 +4,9 @@
 void movePion(struct t_joueur *p){
     int ligj,colj=0;
     int i=0;
-    for(int j=0;j<32;j++){
+    int j=0;
+    (p)[i].position==j;
+    for(j=0;j<32;j++){
         if(j>=0 && j<=7){
             ligj=3;
         }
@@ -68,5 +70,7 @@ void movePion(struct t_joueur *p){
                 }
             }
     }
+    return p;
 }
+
 

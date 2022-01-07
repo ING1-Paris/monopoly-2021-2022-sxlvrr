@@ -38,16 +38,16 @@ int cartechance(struct t_joueur *p, int i) // carte chance
         }
         if (r==4){
             printf("Erreur de la banque\nElle vous avait donne que 50€ au lieu de 300€");
-            
+
                 (p)[i].argent -= 250;
         }
         if (r==5){
             printf("C'est votre jour de chance vous gagne au bingo, vous gagnez 2 € !!!!");
-            (p)[i].argent += 2;  
+            (p)[i].argent += 2;
         }
         if (r==6){
             printf("Qui dit chance ne dit pas forcement benefice, vous perdez 120€");
-            (p)[i].argent -= 120;  
+            (p)[i].argent -= 120;
         }
         if (r==7){
             printf("Bravo, grace a vos actions sur Toyota, vous gagnez 200€");
@@ -126,9 +126,9 @@ int cartecommu(struct t_joueur *p, int i)
         }
         if (r==4){
             printf("Erreur de la banque\nUn bug informatique a vendu une part des actions de l'epicier du coin, recevez 250€");
-            
+
                 (p)[i].argent += 250;
-        
+
         }
         if (r==5){
             printf("Fete commune\nChaque joueur verse 400€ a la banque afin de contribuer a la saint jean guile");
@@ -186,3 +186,4 @@ int cartecommu(struct t_joueur *p, int i)
     }
     return (int)p;
 }
+

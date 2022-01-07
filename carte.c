@@ -1,378 +1,368 @@
 #include "biblio.h"
 
 struct carte1 *initc(){
-    struct carte1 *c = (struct carte1 *)malloc(4 * sizeof(struct carte1));
-    struct carte1 c_depart={ // DEPART
-    //////strcpy (c_depart.nom, "Depart"),
-    c_depart.numero=0};
-    c[0]=c_depart;
-    struct carte1 c_prison={ // PRISON
-    ////strcpy (c_prison.nom , "Prison"),
-    c_prison.numero=25};
-    c[25]=c_prison;
+    struct carte1 *c = (struct carte1 *)calloc(4,sizeof(struct carte1));
+     // DEPART
+    strcpy(c[0].nom, "Depart");
+    c[0].numero=0;
 
-    struct carte1 c_visiteprison={ // VISITE PRISON
-    ////strcpy(c_visiteprison.nom , "Visite Prison"),
-    c_visiteprison.numero=10};
-    c[10]=c_visiteprison;
-
-    struct carte1 c_enchere={ // CARTE ENCHERE
-    ////strcpy(c_enchere.nom , "Enchere");
-    c_enchere.numero=26};
-    c[26]=c_enchere;
-
-    struct carte1 c_stationnement={ // STATIONNEMENT GRATUIT
-    //////strcpy(c_stationnement.nom , "Stationnement gratuit");
-    c_stationnement.numero=15};
-    c[15]=c_stationnement;
-
-    struct carte1 c_wish={ // WISH
-    ////strcpy(c_wish.nom , "Wish");
-    c_wish.prixC=60,
-    c_wish.loyer =2,
-    c_wish.loyerGr=4,
-    c_wish.m1=10,
-    c_wish.m2=30,
-    c_wish.m3=90,
-    c_wish.m4=160,
-    c_wish.h=250,
-    c_wish.prixM =50,
-    c_wish.prixH = 50,
-    c_wish.hyp = 30 ,
-    c_wish.deshyp=33 ,
-    c_wish.numero=1};
-    c[1]=c_wish;
-
-    struct carte1 c_epicier={ // EPICIER DU COIN
-    ////strcpy(c_epicier.nom , "Epicier du coin");
-    c_epicier.prixC=60,
-    c_epicier.loyer =4,
-    c_epicier.loyerGr=8,
-    c_epicier.m1=20,
-    c_epicier.m2=60,
-    c_epicier.m3=180,
-    c_epicier.m4=360,
-    c_epicier.h=450,
-    c_epicier.prixM =50,
-    c_epicier.prixH = 50,
-    c_epicier.hyp = 30,
-    c_epicier.deshyp= 33,
-    c_epicier.numero=2};
-    c[2]=c_epicier;
-
-    struct carte1 c_action={ // ACTION (enseigne)
-    ////strcpy(c_action.nom , "Action");
-    c_action.prixC=100,
-    c_action.loyer =6,
-    c_action.loyerGr=12,
-    c_action.m1=30,
-    c_action.m2=90,
-    c_action.m3=270,
-    c_action.m4=400,
-    c_action.h=550,
-    c_action.prixM =50,
-    c_action.prixH = 50,
-    c_action.hyp = 50,
-    c_action.deshyp= 55,
-    c_action.numero=4};
-    c[4]=c_action;
-
-    struct carte1 c_lidl={ // LIDL
-    ////strcpy(c_lidl.nom , "Lidl");
-    c_lidl.prixC=100,
-    c_lidl.loyer =6,
-    c_lidl.loyerGr=12,
-    c_lidl.m1=30,
-    c_lidl.m2=90,
-    c_lidl.m3=270,
-    c_lidl.m4=400,
-    c_lidl.h=550,
-    c_lidl.prixM =50,
-    c_lidl.prixH = 50,
-    c_lidl.hyp =50 ,
-    c_lidl.deshyp=55 ,
-    c_lidl.numero=6};
-    c[6]=c_lidl;
-
-    struct carte1 c_franprix={ // FRANPRIX
-    ////strcpy(c_franprix.nom , "Franprix");
-    c_franprix.prixC=120,
-    c_franprix.loyer =8,
-    c_franprix.loyerGr=16,
-    c_franprix.m1=40,
-    c_franprix.m2=100,
-    c_franprix.m3=300,
-    c_franprix.m4=450,
-    c_franprix.h=600,
-    c_franprix.prixM =50,
-    c_franprix.prixH = 50,
-    c_franprix.hyp =60 ,
-    c_franprix.deshyp=66 ,
-    c_franprix.numero=7};
-    c[7]=c_franprix;
-
-    struct carte1 c_monoprix={ // MONOPRIX
-    ////strcpy(c_monoprix.nom , "Monoprix");
-    c_monoprix.prixC=140,
-    c_monoprix.loyer =10,
-    c_monoprix.loyerGr=20,
-    c_monoprix.m1=50,
-    c_monoprix.m2=150,
-    c_monoprix.m3=450,
-    c_monoprix.m4=625,
-    c_monoprix.h=750,
-    c_monoprix.prixM =100,
-    c_monoprix.prixH = 100,
-    c_monoprix.hyp =70 ,
-    c_monoprix.deshyp=77 ,
-    c_monoprix.numero=9};
-    c[9]=c_monoprix;
-
-    struct carte1 c_nike={ // NIKE
-    ////strcpy(c_nike.nom , "Nike");
-    c_nike.prixC=140,
-    c_nike.loyer =10,
-    c_nike.loyerGr=20,
-    c_nike.m1=50,
-    c_nike.m2=150,
-    c_nike.m3=450,
-    c_nike.m4=625,
-    c_nike.h=750,
-    c_nike.prixM =100,
-    c_nike.prixH = 100,
-    c_nike.hyp =70 ,
-    c_nike.deshyp=77 ,
-    c_nike.numero=11};
-    c[11]=c_nike;
-
-    struct carte1 c_adidas={ // ADIDAS
-    ////strcpy(c_adidas.nom , "Adidas");
-    c_adidas.prixC=160,
-    c_adidas.loyer =12,
-    c_adidas.loyerGr=24,
-    c_adidas.m1=60,
-    c_adidas.m2=180,
-    c_adidas.m3=500,
-    c_adidas.m4=700,
-    c_adidas.h=900,
-    c_adidas.prixM =100,
-    c_adidas.prixH = 100,
-    c_adidas.hyp = 80,
-    c_adidas.deshyp= 88,
-    c_adidas.numero=13};
-    c[13]=c_adidas;
+     // PRISON
+    strcpy(c[25].nom , "Prison");
+    c[25].numero=25;
 
 
-    struct carte1 c_reebok={ // REEBOK
-    ////strcpy(c_reebok.nom , "Reebok");
-    c_reebok.prixC=180,
-    c_reebok.loyer =14,
-    c_reebok.loyerGr=28,
-    c_reebok.m1=70,
-    c_reebok.m2=200,
-    c_reebok.m3=550,
-    c_reebok.m4=750,
-    c_reebok.h=950,
-    c_reebok.prixM =100,
-    c_reebok.prixH = 100,
-    c_reebok.hyp = 90,
-    c_reebok.deshyp= 99,
-    c_reebok.numero=14};
-    c[14]=c_reebok; 
+     // VISITE PRISON
+    strcpy(c[10].nom , "Visite Prison");
+    c[10].numero=10;
 
-    struct carte1 c_samsung={ // SAMSUNG
-    ////strcpy(c_samsung.nom , "Samsung");
-    c_samsung.prixC=180,
-    c_samsung.loyer =14,
-    c_samsung.loyerGr=28,
-    c_samsung.m1=70,
-    c_samsung.m2=200,
-    c_samsung.m3=550,
-    c_samsung.m4=750,
-    c_samsung.h=950,
-    c_samsung.prixM =100,
-    c_samsung.prixH = 100,
-    c_samsung.hyp = 90,
-    c_samsung.deshyp=99 ,
-    c_samsung.numero=18};
-    c[18]=c_samsung;
 
-    struct carte1 c_apple={ // APPLE
-    ////strcpy(c_apple.nom , "Apple");
-    c_apple.prixC=200,
-    c_apple.loyer =16,
-    c_apple.loyerGr=32,
-    c_apple.m1=80,
-    c_apple.m2=220,
-    c_apple.m3=600,
-    c_apple.m4=800,
-    c_apple.h=1000,
-    c_apple.prixM =100,
-    c_apple.prixH = 100,
-    c_apple.hyp =100 ,
-    c_apple.deshyp= 110,
-    c_apple.numero=16};
-    c[16]=c_apple;
+    // CARTE ENCHERE
+    strcpy(c[26].nom , "Enchere");
+    c[26].numero=26;
 
-    struct carte1 c_xaomi={ // XAOMI
-    ////strcpy(c_xaomi.nom , "Xaomi");
-    c_xaomi.prixC=220,
-    c_xaomi.loyer =18,
-    c_xaomi.loyerGr=36,
-    c_xaomi.m1=90,
-    c_xaomi.m2=250,
-    c_xaomi.m3=700,
-    c_xaomi.m4=875,
-    c_xaomi.h=1050,
-    c_xaomi.prixM =150,
-    c_xaomi.prixH = 150,
-    c_xaomi.hyp = 110,
-    c_xaomi.deshyp= 121,
-    c_xaomi.numero=19};
-    c[19]=c_xaomi;
 
-    struct carte1 c_lv={ // LV
-    ////strcpy(c_lv.nom , "Louis Vuitton"),
-    c_lv.prixC=220,
-    c_lv.loyer =18,
-    c_lv.loyerGr=36,
-    c_lv.m1=90,
-    c_lv.m2=250,
-    c_lv.m3=750,
-    c_lv.m4=875,
-    c_lv.h=1050,
-    c_lv.prixM =150,
-    c_lv.prixH = 150,
-    c_lv.hyp =110 ,
-    c_lv.deshyp= 121,
-    c_lv.numero=22};
-    c[21]=c_lv;
+    // STATIONNEMENT GRATUIT
+    strcpy(c[15].nom , "Stationnement gratuit");
+    c[15].numero=15;
 
-    struct carte1 c_gucci={ // GUCCI
-    ////strcpy(c_gucci.nom , "Gucci");
-    c_gucci.prixC=240,
-    c_gucci.loyer =20,
-    c_gucci.loyerGr=40,
-    c_gucci.m1=100,
-    c_gucci.m2=300,
-    c_gucci.m3=750,
-    c_gucci.m4=925,
-    c_gucci.h=1100,
-    c_gucci.prixM =150,
-    c_gucci.prixH = 150,
-    c_gucci.hyp =120 ,
-    c_gucci.deshyp=132 ,
-    c_gucci.numero=24};
-    c[24]=c_gucci;
 
-    struct carte1 c_rolex={ // ROLEX
-    ////strcpy(c_rolex.nom , "Rolex");
-    c_rolex.prixC=280,
-    c_rolex.loyer =24,
-    c_rolex.loyerGr=48,
-    c_rolex.m1=120,
-    c_rolex.m2=360,
-    c_rolex.m3=850,
-    c_rolex.m4=1025,
-    c_rolex.h=1200,
-    c_rolex.prixM =150,
-    c_rolex.prixH = 150,
-    c_rolex.hyp = 140,
-    c_rolex.deshyp= 154,
-    c_rolex.numero=27};
-    c[27]=c_rolex;
+    // WISH
+    strcpy(c[1].nom , "Wish");
+    c[1].prixC=60,
+    c[1].loyer =2,
+    c[1].loyerGr=4,
+    c[1].m1=10,
+    c[1].m2=30,
+    c[1].m3=90,
+    c[1].m4=160,
+    c[1].h=250,
+    c[1].prixM =50,
+    c[1].prixH = 50,
+    c[1].hyp = 30 ,
+    c[1].deshyp=33 ,
+    c[1].numero=1;
 
-    struct carte1 c_gatti={ // BUGATTI
-    ////strcpy(c_gatti.nom , "Bugatti");
-    c_gatti.prixC=300,
-    c_gatti.loyer =26,
-    c_gatti.loyerGr=52,
-    c_gatti.m1=130,
-    c_gatti.m2=390,
-    c_gatti.m3=900,
-    c_gatti.m4=1100,
-    c_gatti.h=1275,
-    c_gatti.prixM =200,
-    c_gatti.prixH = 200,
-    c_gatti.hyp =150 ,
-    c_gatti.deshyp=165,
-    c_gatti.numero=30};
-    c[30]=c_gatti;
 
-    struct carte1 c_sncf={ // SNCF
-    ////strcpy(c_sncf.nom , "SNCF");
-    c_sncf.prixC=200,
-    c_sncf.loyer =50,
-    c_sncf.m1=0,
-    c_sncf.m2=100, // LOYER SI 2 gares
-    c_sncf.m3=200, // Loyer si toutes les gares
-    c_sncf.m4=0,
-    c_sncf.prixM =0,
-    c_sncf.prixH = 0,
-    c_sncf.hyp =100 ,
-    c_sncf.deshyp=110 ,
-    c_sncf.numero=28};
-    c[28]=c_sncf;
+    // EPICIER DU COIN
+    strcpy(c[2].nom , "Epicier du coin");
+    c[2].prixC=60,
+    c[2].loyer =4,
+    c[2].loyerGr=8,
+    c[2].m1=20,
+    c[2].m2=60,
+    c[2].m3=180,
+    c[2].m4=360,
+    c[2].h=450,
+    c[2].prixM =50,
+    c[2].prixH = 50,
+    c[2].hyp = 30,
+    c[2].deshyp= 33,
+    c[2].numero=2;
 
-    struct carte1 c_airf={ // AIRFRANCE
-    ////strcpy(c_airf.nom , "AirFrance");
-    c_airf.prixC=200,
-    c_airf.loyer =50,
-    c_airf.m1=0,
-    c_airf.m2=100,
-    c_airf.m3=200,
-    c_airf.m4=0,
-    c_airf.prixM =0,
-    c_airf.prixH = 0,
-    c_airf.hyp = 100,
-    c_airf.deshyp= 110,
-    c_airf.numero=12};
-    c[12]=c_airf;
+    // ACTION (enseigne)
+    strcpy(c[4].nom , "Action");
+    c[4].prixC=100,
+    c[4].loyer =6,
+    c[4].loyerGr=12,
+    c[4].m1=30,
+    c[4].m2=90,
+    c[4].m3=270,
+    c[4].m4=400,
+    c[4].h=550,
+    c[4].prixM =50,
+    c[4].prixH = 50,
+    c[4].hyp = 50,
+    c[4].deshyp= 55,
+    c[4].numero=4;
 
-    struct carte1 c_ratp={ // RATP
-    ////strcpy(c_ratp.nom , "RATP");
-    c_ratp.prixC=200,
-    c_ratp.loyer =50,
-    c_ratp.m1=0,
-    c_ratp.m2=100,
-    c_ratp.m3=200,
-    c_ratp.m4=0,
-    c_ratp.prixM =0,
-    c_ratp.prixH = 0,
-    c_ratp.hyp =100 ,
-    c_ratp.deshyp=110 ,
-    c_ratp.numero=21};
-    c[21]=c_ratp;
 
-    struct carte1 c_edf={ // EDF (/!\ ne pas oublier l'implantation du dé /!\)
-    ////strcpy(c_edf.nom , "EDF");
-    c_edf.prixC=150,
-    c_edf.loyer =4,      // (! xdé)
-    c_edf.loyerGr=10,    //4 fois le résultat du dé (! xdé)
-    c_edf.m1=0,
-    c_edf.m2=0, // Si les deux services : fois 10
-    c_edf.m3=0,
-    c_edf.m4=0,
-    c_edf.prixM =0,
-    c_edf.hyp = 100,
-    c_edf.deshyp= 110,
-    c_edf.numero=5};
-    c[5]=c_edf;
+    // LIDL
+    strcpy(c[6].nom , "Lidl");
+    c[6].prixC=100,
+    c[6].loyer =6,
+    c[6].loyerGr=12,
+    c[6].m1=30,
+    c[6].m2=90,
+    c[6].m3=270,
+    c[6].m4=400,
+    c[6].h=550,
+    c[6].prixM =50,
+    c[6].prixH = 50,
+    c[6].hyp =50 ,
+    c[6].deshyp=55 ,
+    c[6].numero=6;
 
-    struct carte1 c_suez={ // SUEZ (/!\ ne pas oublier l'implantation du dé /!\)
-    ////strcpy(c_suez.nom , "Suez");
-    c_suez.prixC=150,
-    c_suez.loyer =4,        // (! xdé)
-    c_suez.m1=0,
-    c_suez.loyerGr=10,      // (! xdé)
-    c_suez.m2=0,
-    c_suez.m3=0,
-    c_suez.m4=0,
-    c_suez.prixM =0,
-    c_suez.hyp =100 ,
-    c_suez.deshyp= 110,
-    c_suez.numero=20};
-    c[20]=c_suez;
+
+     // FRANPRIX
+    strcpy(c[7].nom , "Franprix");
+    c[7].prixC=120,
+    c[7].loyer =8,
+    c[7].loyerGr=16,
+    c[7].m1=40,
+    c[7].m2=100,
+    c[7].m3=300,
+    c[7].m4=450,
+    c[7].h=600,
+    c[7].prixM =50,
+    c[7].prixH = 50,
+    c[7].hyp =60 ,
+    c[7].deshyp=66 ,
+    c[7].numero=7;
+
+
+    // MONOPRIX
+    strcpy(c[9].nom , "Monoprix");
+    c[9].prixC=140,
+    c[9].loyer =10,
+    c[9].loyerGr=20,
+    c[9].m1=50,
+    c[9].m2=150,
+    c[9].m3=450,
+    c[9].m4=625,
+    c[9].h=750,
+    c[9].prixM =100,
+    c[9].prixH = 100,
+    c[9].hyp =70 ,
+    c[9].deshyp=77 ,
+    c[9].numero=9;
+
+
+    // NIKE
+    strcpy(c[11].nom , "Nike");
+    c[11].prixC=140,
+    c[11].loyer =10,
+    c[11].loyerGr=20,
+    c[11].m1=50,
+    c[11].m2=150,
+    c[11].m3=450,
+    c[11].m4=625,
+    c[11].h=750,
+    c[11].prixM =100,
+    c[11].prixH = 100,
+    c[11].hyp =70 ,
+    c[11].deshyp=77 ,
+    c[11].numero=11;
+
+
+    // ADIDAS
+    strcpy(c[13].nom , "Adidas");
+    c[13].prixC=160,
+    c[13].loyer =12,
+    c[13].loyerGr=24,
+    c[13].m1=60,
+    c[13].m2=180,
+    c[13].m3=500,
+    c[13].m4=700,
+    c[13].h=900,
+    c[13].prixM =100,
+    c[13].prixH = 100,
+    c[13].hyp = 80,
+    c[13].deshyp= 88,
+    c[13].numero=13;
+
+
+    // REEBOK
+    strcpy(c[14].nom , "Reebok");
+    c[14].prixC=180,
+    c[14].loyer =14,
+    c[14].loyerGr=28,
+    c[14].m1=70,
+    c[14].m2=200,
+    c[14].m3=550,
+    c[14].m4=750,
+    c[14].h=950,
+    c[14].prixM =100,
+    c[14].prixH = 100,
+    c[14].hyp = 90,
+    c[14].deshyp= 99,
+    c[14].numero=14;
+
+
+     // SAMSUNG
+    strcpy(c[18].nom , "Samsung");
+    c[18].prixC=180,
+    c[18].loyer =14,
+    c[18].loyerGr=28,
+    c[18].m1=70,
+    c[18].m2=200,
+    c[18].m3=550,
+    c[18].m4=750,
+    c[18].h=950,
+    c[18].prixM =100,
+    c[18].prixH = 100,
+    c[18].hyp = 90,
+    c[18].deshyp=99 ,
+    c[18].numero=18;
+
+
+     // APPLE
+    strcpy(c[16].nom , "Apple");
+    c[16].prixC=200,
+    c[16].loyer =16,
+    c[16].loyerGr=32,
+    c[16].m1=80,
+    c[16].m2=220,
+    c[16].m3=600,
+    c[16].m4=800,
+    c[16].h=1000,
+    c[16].prixM =100,
+    c[16].prixH = 100,
+    c[16].hyp =100 ,
+    c[16].deshyp= 110,
+    c[16].numero=16;
+
+
+     // XAOMI
+    strcpy(c[19].nom , "Xaomi");
+    c[19].prixC=220,
+    c[19].loyer =18,
+    c[19].loyerGr=36,
+    c[19].m1=90,
+    c[19].m2=250,
+    c[19].m3=700,
+    c[19].m4=875,
+    c[19].h=1050,
+    c[19].prixM =150,
+    c[19].prixH = 150,
+    c[19].hyp = 110,
+    c[19].deshyp= 121,
+    c[19].numero=19;
+
+
+     // LV
+    strcpy(c[22].nom , "Louis Vuitton"),
+    c[22].prixC=220,
+    c[22].loyer =18,
+    c[22].loyerGr=36,
+    c[22].m1=90,
+    c[22].m2=250,
+    c[22].m3=750,
+    c[22].m4=875,
+    c[22].h=1050,
+    c[22].prixM =150,
+    c[22].prixH = 150,
+    c[22].hyp =110 ,
+    c[22].deshyp= 121,
+    c[22].numero=22;
+
+
+    // GUCCI
+    strcpy(c[24].nom , "Gucci");
+    c[24].prixC=240,
+    c[24].loyer =20,
+    c[24].loyerGr=40,
+    c[24].m1=100,
+    c[24].m2=300,
+    c[24].m3=750,
+    c[24].m4=925,
+    c[24].h=1100,
+    c[24].prixM =150,
+    c[24].prixH = 150,
+    c[24].hyp =120 ,
+    c[24].deshyp=132 ,
+    c[24].numero=24;
+
+    // ROLEX
+    strcpy(c[27].nom , "Rolex");
+    c[27].prixC=280,
+    c[27].loyer =24,
+    c[27].loyerGr=48,
+    c[27].m1=120,
+    c[27].m2=360,
+    c[27].m3=850,
+    c[27].m4=1025,
+    c[27].h=1200,
+    c[27].prixM =150,
+    c[27].prixH = 150,
+    c[27].hyp = 140,
+    c[27].deshyp= 154,
+    c[27].numero=27;
+
+     // BUGATTI
+    strcpy(c[30].nom , "Bugatti");
+    c[30].prixC=300,
+    c[30].loyer =26,
+    c[30].loyerGr=52,
+    c[30].m1=130,
+    c[30].m2=390,
+    c[30].m3=900,
+    c[30].m4=1100,
+    c[30].h=1275,
+    c[30].prixM =200,
+    c[30].prixH = 200,
+    c[30].hyp =150 ,
+    c[30].deshyp=165,
+    c[30].numero=30;
+
+    // SNCF
+    strcpy(c[28].nom , "SNCF");
+    c[28].prixC=200,
+    c[28].loyer =50,
+    c[28].m1=0,
+    c[28].m2=100, // LOYER SI 2 gares
+    c[28].m3=200, // Loyer si toutes les gares
+    c[28].m4=0,
+    c[28].prixM =0,
+    c[28].prixH = 0,
+    c[28].hyp =100 ,
+    c[28].deshyp=110 ,
+    c[28].numero=28;
+
+    // AIRFRANCE
+    strcpy(c[12].nom , "AirFrance");
+    c[12].prixC=200,
+    c[12].loyer =50,
+    c[12].m1=0,
+    c[12].m2=100,
+    c[12].m3=200,
+    c[12].m4=0,
+    c[12].prixM =0,
+    c[12].prixH = 0,
+    c[12].hyp = 100,
+    c[12].deshyp= 110,
+    c[12].numero=12;
+
+    // RATP
+    strcpy(c[21].nom , "RATP");
+    c[21].prixC=200,
+    c[21].loyer =50,
+    c[21].m1=0,
+    c[21].m2=100,
+    c[21].m3=200,
+    c[21].m4=0,
+    c[21].prixM =0,
+    c[21].prixH = 0,
+    c[21].hyp =100 ,
+    c[21].deshyp=110 ,
+    c[21].numero=21;
+
+    // EDF (/!\ ne pas oublier l'implantation du dé /!\)
+    strcpy(c[5].nom , "EDF");
+    c[5].prixC=150,
+    c[5].loyer =4,      // (! xdé)
+    c[5].loyerGr=10,    //4 fois le résultat du dé (! xdé)
+    c[5].m1=0,
+    c[5].m2=0, // Si les deux services : fois 10
+    c[5].m3=0,
+    c[5].m4=0,
+    c[5].prixM =0,
+    c[5].hyp = 100,
+    c[5].deshyp= 110,
+    c[5].numero=5;
+
+    // SUEZ (/!\ ne pas oublier l'implantation du dé /!\)
+    strcpy(c[20].nom , "Suez");
+    c[20].prixC=150,
+    c[20].loyer =4,        // (! xdé)
+    c[20].m1=0,
+    c[20].loyerGr=10,      // (! xdé)
+    c[20].m2=0,
+    c[20].m3=0,
+    c[20].m4=0,
+    c[20].prixM =0,
+    c[20].hyp =100 ,
+    c[20].deshyp= 110,
+    c[20].numero=20;
 
     return c;
 }
@@ -380,5 +370,6 @@ struct carte1 *initc(){
 
 
 
-    
+
+
 

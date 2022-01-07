@@ -50,3 +50,4 @@ void regles(struct t_joueur *p) {  // affichage des règles du jeu on sort avec 
     }
 
 }
+

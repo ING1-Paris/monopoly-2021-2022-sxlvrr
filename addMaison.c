@@ -1,6 +1,6 @@
 #include "biblio.h"
 
-    
+
 int addMaison(struct t_joueur *p){
     int ligj,colj=0;
 
@@ -70,3 +70,4 @@ int addMaison(struct t_joueur *p){
     }
 return (int)p;
 }
+

@@ -13,7 +13,7 @@ int menu(struct t_joueur *p){
     printf("faites votre choix: \n");
     scanf("%d", &choixUser);
 
-        
+
     }while (choixUser < 1 || choixUser > 4);
     if (choixUser == 1)
         {
@@ -32,8 +32,8 @@ int menu(struct t_joueur *p){
         else if (choixUser == 4)
         {
             regles(p);
-            
+
         }
         return (int)p;
     }
-    
+

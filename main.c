@@ -1,4 +1,3 @@
-
 #include "biblio.h"
 
 
@@ -11,19 +10,20 @@ int main()
     int prison = 0; //TEST ICI, SERA DANS STRUCT DE JOUEUR A LA FIN
 
     struct t_joueur *p;
-    printf(">>>>>>>><<<<<<<<<<<");
+    //printf(">>>>>>>><<<<<<<<<<<");
     p=initp();
     //printf(">>>>>>>><<<<<<<<<<<");
     struct carte1 *c;
     //printf(">>>>>>>><<<<<<<<<<<");
-    c=initc();
+    //c=initc();
+
     //printf(">>>>>>>><<<<<<<<<<<"); // MARCHE PAS sur POWERSHELL
     // variable
     menu(p);
     //printf(">>>>>>>><<<<<<<<<<<");
 
     ///////////////PLATEAU////////////////////////////////
-    //1system("cls");
+    system("cls");
     caseNew(0, 0, 0, 15, "Depart");     // Depart
     caseNew(0, 13, 0, 9, "Wish");       // Wish
     caseNew(0, 26, 0, 9, "Epicier");    // Epicier
@@ -56,13 +56,9 @@ int main()
     caseNew(45, 65, 0, 12, "Samsung");  // Samsung
     caseNew(45, 78, 0, 15, "Commu");    // COMMU 17
     caseNew(45, 91, 0, 12, "Apple");    // APPLE
-    gotoligcol(0, 115);
-    printf("%d", p[0].position);
-
-    printf("%d", p[0].position);
 
 
-    for(i=0;i<=nb;i++){ //Setup position joueurs
+    for(i=0;i<nb;i++){ //Setup position joueurs
         p[i].position = 0;
     }
 
@@ -82,10 +78,11 @@ int main()
             while(lance!=1){
 
                 if(p[i].enprison == 0){
-                    printf("Joueur %c, c'est a toi ! (tape 1 pour lancer les des)\n", p[i].nom);
+                    gotoligcol(0, 115);
+                    printf("Joueur %s, c'est a toi ! (tape 1 pour lancer les des)\n", p[i].nom);
                 }
                 else{
-                    printf("Joueur %c, tu es en prison, fais un double en lancant les des (en tapant 1) pour sortir !\n", p[i].nom);
+                    printf("Joueur %s, tu es en prison, fais un double en lancant les des (en tapant 1) pour sortir !\n", p[i].nom);
                 }
                 scanf("%d", &lance);
             }
@@ -98,14 +95,14 @@ int main()
                     for(int k=0;k<=nb;k++){
                         if(p[k].carteprison == 1){
                             int kc = 0, ic = 0, prixcarte = 0;
-                            printf("Joueur %c, %c est en prison et il se trouve que tu as en ta possession une carte sortie de prison\nSouhaites-tu lui vendre ta carte ? (1 pour oui, 0 pour non)\n",p[k].nom,p[i].nom);
-                            scanf("%d",kc);
+                            printf("Joueur %s, %s est en prison et il se trouve que tu as en ta possession une carte sortie de prison\nSouhaites-tu lui vendre ta carte ? (1 pour oui, 0 pour non)\n",p[k].nom,p[i].nom);
+                            scanf("%d",&kc);
 
                             if(kc == 1){
                                 printf("A quel prix souhaites-tu vendre ta carte ?\n");
-                                scanf("%d",prixcarte);
-                                printf("Joueur %c, %c accepte de te vendre sa carte prison pour %d€,\nAcceptes-tu l'offre ? (0 pour non, 1 pour oui) : ",p[i].nom,p[k].nom,prixcarte);
-                                scanf("%d",ic);
+                                scanf("%d",&prixcarte);
+                                printf("Joueur %s, %s accepte de te vendre sa carte prison pour %d€,\nAcceptes-tu l'offre ? (0 pour non, 1 pour oui) : ",p[i].nom,p[k].nom,prixcarte);
+                                scanf("%d",&ic);
                                 if(ic == 1){
                                     p[k].carteprison = 0;
                                     p[k].argent += prixcarte;
@@ -114,7 +111,7 @@ int main()
                                     k=4;
                                 }
                                 else{
-                                    printf("%c refuse l'offre",p[i].nom);
+                                    printf("%s refuse l'offre",p[i].nom);
                                 }
                             }
                         }
@@ -123,7 +120,7 @@ int main()
 
                 if(p[i].carteprison == 1){
                     printf("\nTu as une carte sortie de prison, veux-tu l'utiliser ?\n1 pour oui, 0 pour non : ");
-                    scanf("%d", sortie);
+                    scanf("%d", &sortie);
                     if(sortie == 1){
                         p[i].position += 1;
                         p[i].carteprison = 0;
@@ -156,6 +153,7 @@ int main()
             }
 
             else{
+
                 srand(time(NULL));
                 de1 = rand() %6+1;
                 de2 = rand() %6+1;
@@ -182,9 +180,6 @@ int main()
                     printf("Quel chanceux ! Tu viens de faire 3 doubles a la suite\nCependant tu vas en prison\n\n");
                     compteurdouble = 0;
                 }
-                if(compteurdouble == 1 || compteurdouble == 2){
-                    i-=1;
-                }
                 movePion(p);
                 achatCarte(p, c);
                 if(p[i].position == 3 || p[i].position == 17){
@@ -192,15 +187,18 @@ int main()
                 }
                 if(p[i].position == 8 || p[i].position == 31){
                     cartechance(p, i);
-                    if(p[i].argent <= 0){
-                        p[i].faillite = 1;
-                        printf("Oh non ! %c tu as fait faillite... Dommage mais c'est fini pour toi !",p[i].nom);
-                    }
                 }
-                lance = 0;
+                if(p[i].argent <= 0){
+                    p[i].faillite = 1;
+                    printf("Oh non ! %s tu as fait faillite... Dommage mais c'est fini pour toi !",p[i].nom);
+                }
+                if(compteurdouble == 1 || compteurdouble == 2){
+                    i-=1;
+                }
             }
+            lance = 0;
         }
-    }while(fin==0);
+    }while(fin!=1);
     free(p);
 
     return 0;
