@@ -6,8 +6,10 @@ void caseNew(int lig, int col, int color, int colorBack, char name[]){
         gotoligcol(lig+i,col);
         printf("             ");
     }
-    gotoligcol(lig,col+3);
+    gotoligcol(lig,col);
     printf("%s", name);
     Color(15,0);
+
+
 }
 

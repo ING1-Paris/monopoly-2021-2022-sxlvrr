@@ -1,14 +1,14 @@
 #include "biblio.h"
 
 
-int addMaison(struct t_joueur *p){
+struct t_joueur *addMaison(struct t_joueur *p){
     int ligj,colj=0;
 
     for(int j=0;j<32;j++){
         if(j>=0 && j<=7){
             ligj=3;
         }
-        else if(j==0 ||j>=23 && j<=31){
+        else if((j==0 ||j>=23) && j<=31){
             colj=7;
         }
         else if(j<=23 && j>=16){
@@ -68,6 +68,6 @@ int addMaison(struct t_joueur *p){
                 }
             }
     }
-return (int)p;
+return p;
 }
 

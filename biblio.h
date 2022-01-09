@@ -19,6 +19,8 @@ struct carte1 {
     int hyp;
     int deshyp;
     int numero;
+    int nbM;
+    int nbH;
 };
 struct carte1 *initc();
 
@@ -30,26 +32,29 @@ struct t_joueur{
     int enprison;
     int carteprison;
     int toursprison;
-    int possessions[30];
+    char *possessions[30];
     int faillite;
 };
 struct t_joueur *initp();
 
+void plateau(struct t_joueur *p, int nb);
 
-int menu(struct t_joueur *p);
+struct t_joueur *menu(struct t_joueur *p);
 
-int nouvellePartie(struct t_joueur *p);
+struct t_joueur *nouvellePartie(struct t_joueur *p);
 
-int cartechance(struct t_joueur *p, int i);
+struct t_joueur *cartechance(struct t_joueur *p,int nb,int i);
 
-int cartecommu(struct t_joueur *p, int i);
+struct t_joueur *cartecommu(struct t_joueur *p, int nb,int i);
 
 void regles(struct t_joueur *p);
 
-int achatCarte(struct t_joueur *p, struct carte1 *c);
+struct t_joueur *achatCarte(struct t_joueur *p, struct carte1 *c,int nb, int i);
 
-void movePion(struct t_joueur *p);
+void movePion(struct t_joueur *p, int nb,struct carte1 *c);
 
+struct t_joueur *addMaison(struct t_joueur *p);
+void sauvegarde(struct t_joueur *p, int nbj );
 
 #endif // BIBLI
 

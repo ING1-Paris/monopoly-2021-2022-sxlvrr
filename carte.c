@@ -1,7 +1,8 @@
 #include "biblio.h"
-
+/* carte.c cree toute les structure pour chaque carte avec leur specificite
+les cartes avec des proprietes ont un loyer nb de maison etc */
 struct carte1 *initc(){
-    struct carte1 *c = (struct carte1 *)calloc(4,sizeof(struct carte1));
+    struct carte1 *c = (struct carte1 *)malloc(31*sizeof(struct carte1));
      // DEPART
     strcpy(c[0].nom, "Depart");
     c[0].numero=0;
@@ -17,7 +18,7 @@ struct carte1 *initc(){
 
 
     // CARTE ENCHERE
-    strcpy(c[26].nom , "Enchere");
+    strcpy(c[26].nom , "Chill");
     c[26].numero=26;
 
 
@@ -41,6 +42,8 @@ struct carte1 *initc(){
     c[1].hyp = 30 ,
     c[1].deshyp=33 ,
     c[1].numero=1;
+    c[1].nbM=0;
+    c[1].nbH=0;
 
 
     // EPICIER DU COIN
@@ -58,7 +61,8 @@ struct carte1 *initc(){
     c[2].hyp = 30,
     c[2].deshyp= 33,
     c[2].numero=2;
-
+    c[2].nbM=0;
+    c[2].nbH=0;
     // ACTION (enseigne)
     strcpy(c[4].nom , "Action");
     c[4].prixC=100,
@@ -74,6 +78,8 @@ struct carte1 *initc(){
     c[4].hyp = 50,
     c[4].deshyp= 55,
     c[4].numero=4;
+    c[4].nbM=0;
+    c[4].nbH=0;
 
 
     // LIDL
@@ -91,6 +97,8 @@ struct carte1 *initc(){
     c[6].hyp =50 ,
     c[6].deshyp=55 ,
     c[6].numero=6;
+    c[6].nbM=0;
+    c[6].nbH=0;
 
 
      // FRANPRIX
@@ -108,6 +116,8 @@ struct carte1 *initc(){
     c[7].hyp =60 ,
     c[7].deshyp=66 ,
     c[7].numero=7;
+    c[7].nbM=0;
+    c[7].nbH=0;
 
 
     // MONOPRIX
@@ -336,11 +346,11 @@ struct carte1 *initc(){
     c[21].deshyp=110 ,
     c[21].numero=21;
 
-    // EDF (/!\ ne pas oublier l'implantation du dÃ© /!\)
+    // EDF (/!\ ne pas oublier l'implantation du dé /!\)
     strcpy(c[5].nom , "EDF");
     c[5].prixC=150,
-    c[5].loyer =4,      // (! xdÃ©)
-    c[5].loyerGr=10,    //4 fois le rÃ©sultat du dÃ© (! xdÃ©)
+    c[5].loyer =4,      // (! xdé)
+    c[5].loyerGr=10,    //4 fois le résultat du dé (! xdé)
     c[5].m1=0,
     c[5].m2=0, // Si les deux services : fois 10
     c[5].m3=0,
@@ -350,12 +360,12 @@ struct carte1 *initc(){
     c[5].deshyp= 110,
     c[5].numero=5;
 
-    // SUEZ (/!\ ne pas oublier l'implantation du dÃ© /!\)
+    // SUEZ (/!\ ne pas oublier l'implantation du dé /!\)
     strcpy(c[20].nom , "Suez");
     c[20].prixC=150,
-    c[20].loyer =4,        // (! xdÃ©)
+    c[20].loyer =4,        // (! xdé)
     c[20].m1=0,
-    c[20].loyerGr=10,      // (! xdÃ©)
+    c[20].loyerGr=10,      // (! xdé)
     c[20].m2=0,
     c[20].m3=0,
     c[20].m4=0,
