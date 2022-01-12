@@ -2,7 +2,7 @@
 
 void gotoligcol( int lig, int col ) {
 
-// ressources
+// ressources, permet de gérer la position des différents éléments dans le tableau
 
 COORD mycoord;
 

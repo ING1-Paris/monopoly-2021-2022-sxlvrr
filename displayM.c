@@ -1,15 +1,10 @@
 #include "biblio.h"
 
+void displayM(struct t_joueur *p,struct carte1 *c, int i, int nb){  //Affiche la/les maison(s) achetée(s) par le joueur sur le plateau
+int ligj, colj;
+ for(int j=0;j<32;j++) {
 
-void movePion(struct t_joueur *p, int nb,struct carte1 *c,int i) //Déplacement du "pion" du joueur à sa case correspondante à chaque tour
-{
-    int ligj,colj=0;    //(Placement en fonction de la ligne / colonne)
 
-    int j;
-
-    for(i=0; i<nb; i++)
-    {
-        j=p[i].position;
 
         if(j>=0 && j<=7)
         {
@@ -87,28 +82,46 @@ void movePion(struct t_joueur *p, int nb,struct carte1 *c,int i) //Déplacement 
             colj=7;
         }
 
-        /*
-        Ici, on permet aux joueurs de se positionner indépendemment des autres afin qu'ils ne soient pas superposés
-        */
 
-        if(i==0){
-            ligj-=2;
-            colj-=1;
+        if(c[j].nbM==1){        //Affiche en fonction de la case les maisons et hotels
+            Color(15,0);
+            ligj+=1;
+            colj-=7;
+            gotoligcol(ligj,colj);
+            printf("M");
+            Color(15,0);
         }
-        if(i==1){
-            ligj-=1;
-            colj-=1;
+        if(c[j].nbM==2){
+            Color(15,0);
+            ligj+=1;
+            colj-=7;
+            gotoligcol(ligj,colj);
+            printf("M   M");
+            Color(15,0);
         }
-        if(i==2){
-            ligj-=2;
+        if(c[j].nbM==3){
+            Color(15,0);
+            ligj+=1;
+            colj-=7;
+            gotoligcol(ligj,colj);
+            printf("M   M   M");
+            Color(15,0);
         }
-        if(i==3){
-            ligj-=1;
+        if(c[j].nbM==4){
+            Color(15,0);
+            ligj+=1;
+            colj-=7;
+            gotoligcol(ligj,colj);
+            printf("M   M   M   M");
+            Color(15,0);
         }
-        gotoligcol(ligj,colj);
-        printf("%d",p[i].numero);
-
-
-    }
+        if(c[j].nbH==1){
+            Color(15,0);
+            ligj+=1;
+            gotoligcol(ligj,colj);
+            printf("H");
+            Color(15,0);
+        }
+       }
 
 }

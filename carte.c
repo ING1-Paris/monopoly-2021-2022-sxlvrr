@@ -1,30 +1,43 @@
 #include "biblio.h"
-/* carte.c cree toute les structure pour chaque carte avec leur specificite
-les cartes avec des proprietes ont un loyer nb de maison etc */
+
 struct carte1 *initc(){
     struct carte1 *c = (struct carte1 *)malloc(31*sizeof(struct carte1));
      // DEPART
     strcpy(c[0].nom, "Depart");
     c[0].numero=0;
+     c[0].nbM=0;
+    c[0].nbH=0;
+    c[0].hypo=0;
 
      // PRISON
     strcpy(c[25].nom , "Prison");
     c[25].numero=25;
-
+     c[25].nbM=0;
+    c[25].nbH=0;
+ c[25].hypo=0;
 
      // VISITE PRISON
     strcpy(c[10].nom , "Visite Prison");
     c[10].numero=10;
+     c[10].nbM=0;
+    c[10].nbH=0;
+     c[10].hypo=0;
 
 
     // CARTE ENCHERE
-    strcpy(c[26].nom , "Chill");
+    strcpy(c[26].nom , "Slogan");
     c[26].numero=26;
+     c[26].nbM=0;
+    c[26].nbH=0;
+     c[26].hypo=0;
 
 
     // STATIONNEMENT GRATUIT
     strcpy(c[15].nom , "Stationnement gratuit");
     c[15].numero=15;
+     c[15].nbM=0;
+    c[15].nbH=0;
+     c[15].hypo=0;
 
 
     // WISH
@@ -44,6 +57,7 @@ struct carte1 *initc(){
     c[1].numero=1;
     c[1].nbM=0;
     c[1].nbH=0;
+     c[1].hypo=0;
 
 
     // EPICIER DU COIN
@@ -63,6 +77,7 @@ struct carte1 *initc(){
     c[2].numero=2;
     c[2].nbM=0;
     c[2].nbH=0;
+     c[2].hypo=0;
     // ACTION (enseigne)
     strcpy(c[4].nom , "Action");
     c[4].prixC=100,
@@ -80,6 +95,7 @@ struct carte1 *initc(){
     c[4].numero=4;
     c[4].nbM=0;
     c[4].nbH=0;
+     c[4].hypo=0;
 
 
     // LIDL
@@ -99,6 +115,7 @@ struct carte1 *initc(){
     c[6].numero=6;
     c[6].nbM=0;
     c[6].nbH=0;
+     c[6].hypo=0;
 
 
      // FRANPRIX
@@ -118,6 +135,7 @@ struct carte1 *initc(){
     c[7].numero=7;
     c[7].nbM=0;
     c[7].nbH=0;
+     c[7].hypo=0;
 
 
     // MONOPRIX
@@ -135,7 +153,9 @@ struct carte1 *initc(){
     c[9].hyp =70 ,
     c[9].deshyp=77 ,
     c[9].numero=9;
-
+    c[9].nbM=0;
+    c[9].nbH=0;
+     c[9].hypo=0;
 
     // NIKE
     strcpy(c[11].nom , "Nike");
@@ -152,6 +172,9 @@ struct carte1 *initc(){
     c[11].hyp =70 ,
     c[11].deshyp=77 ,
     c[11].numero=11;
+    c[11].nbM=0;
+    c[11].nbH=0;
+     c[11].hypo=0;
 
 
     // ADIDAS
@@ -169,6 +192,9 @@ struct carte1 *initc(){
     c[13].hyp = 80,
     c[13].deshyp= 88,
     c[13].numero=13;
+    c[13].nbM=0;
+    c[13].nbH=0;
+     c[13].hypo=0;
 
 
     // REEBOK
@@ -186,6 +212,9 @@ struct carte1 *initc(){
     c[14].hyp = 90,
     c[14].deshyp= 99,
     c[14].numero=14;
+    c[14].nbM=0;
+    c[14].nbH=0;
+     c[14].hypo=0;
 
 
      // SAMSUNG
@@ -203,6 +232,9 @@ struct carte1 *initc(){
     c[18].hyp = 90,
     c[18].deshyp=99 ,
     c[18].numero=18;
+    c[18].nbM=0;
+    c[18].nbH=0;
+     c[18].hypo=0;
 
 
      // APPLE
@@ -220,6 +252,9 @@ struct carte1 *initc(){
     c[16].hyp =100 ,
     c[16].deshyp= 110,
     c[16].numero=16;
+    c[16].nbM=0;
+    c[16].nbH=0;
+     c[16].hypo=0;
 
 
      // XAOMI
@@ -237,6 +272,9 @@ struct carte1 *initc(){
     c[19].hyp = 110,
     c[19].deshyp= 121,
     c[19].numero=19;
+    c[19].nbM=0;
+    c[19].nbH=0;
+     c[19].hypo=0;
 
 
      // LV
@@ -254,6 +292,9 @@ struct carte1 *initc(){
     c[22].hyp =110 ,
     c[22].deshyp= 121,
     c[22].numero=22;
+    c[22].nbM=0;
+    c[22].nbH=0;
+     c[22].hypo=0;
 
 
     // GUCCI
@@ -271,6 +312,9 @@ struct carte1 *initc(){
     c[24].hyp =120 ,
     c[24].deshyp=132 ,
     c[24].numero=24;
+    c[24].nbM=0;
+    c[24].nbH=0;
+     c[24].hypo=0;
 
     // ROLEX
     strcpy(c[27].nom , "Rolex");
@@ -287,6 +331,9 @@ struct carte1 *initc(){
     c[27].hyp = 140,
     c[27].deshyp= 154,
     c[27].numero=27;
+    c[27].nbM=0;
+    c[27].nbH=0;
+     c[27].hypo=0;
 
      // BUGATTI
     strcpy(c[30].nom , "Bugatti");
@@ -303,6 +350,9 @@ struct carte1 *initc(){
     c[30].hyp =150 ,
     c[30].deshyp=165,
     c[30].numero=30;
+    c[30].nbM=0;
+    c[30].nbH=0;
+     c[30].hypo=0;
 
     // SNCF
     strcpy(c[28].nom , "SNCF");
@@ -310,13 +360,14 @@ struct carte1 *initc(){
     c[28].loyer =50,
     c[28].m1=0,
     c[28].m2=100, // LOYER SI 2 gares
-    c[28].m3=200, // Loyer si toutes les gares
+    c[28].m3=200, // Loyer si toutes les gares // FAIRE GROUPE ET TAXE IMPOT ET MATHIS HYPOTHEQUE
     c[28].m4=0,
     c[28].prixM =0,
     c[28].prixH = 0,
     c[28].hyp =100 ,
     c[28].deshyp=110 ,
     c[28].numero=28;
+     c[28].hypo=0;
 
     // AIRFRANCE
     strcpy(c[12].nom , "AirFrance");
@@ -331,6 +382,7 @@ struct carte1 *initc(){
     c[12].hyp = 100,
     c[12].deshyp= 110,
     c[12].numero=12;
+     c[12].hypo=0;
 
     // RATP
     strcpy(c[21].nom , "RATP");
@@ -345,12 +397,13 @@ struct carte1 *initc(){
     c[21].hyp =100 ,
     c[21].deshyp=110 ,
     c[21].numero=21;
+     c[21].hypo=0;
 
-    // EDF (/!\ ne pas oublier l'implantation du dé /!\)
+    // EDF (/!\ ne pas oublier l'implantation du dÃ© /!\)
     strcpy(c[5].nom , "EDF");
     c[5].prixC=150,
-    c[5].loyer =4,      // (! xdé)
-    c[5].loyerGr=10,    //4 fois le résultat du dé (! xdé)
+    c[5].loyer =4,      // (! xdÃ©)
+    c[5].loyerGr=10,    //4 fois le rÃ©sultat du dÃ© (! xdÃ©)
     c[5].m1=0,
     c[5].m2=0, // Si les deux services : fois 10
     c[5].m3=0,
@@ -359,13 +412,14 @@ struct carte1 *initc(){
     c[5].hyp = 100,
     c[5].deshyp= 110,
     c[5].numero=5;
+     c[5].hypo=0;
 
-    // SUEZ (/!\ ne pas oublier l'implantation du dé /!\)
+    // SUEZ (/!\ ne pas oublier l'implantation du dÃ© /!\)
     strcpy(c[20].nom , "Suez");
     c[20].prixC=150,
-    c[20].loyer =4,        // (! xdé)
+    c[20].loyer =4,        // (! xdÃ©)
     c[20].m1=0,
-    c[20].loyerGr=10,      // (! xdé)
+    c[20].loyerGr=10,      // (! xdÃ©)
     c[20].m2=0,
     c[20].m3=0,
     c[20].m4=0,
@@ -373,6 +427,17 @@ struct carte1 *initc(){
     c[20].hyp =100 ,
     c[20].deshyp= 110,
     c[20].numero=20;
+     c[20].hypo=0;
+
+    c[23].numero=23;
+     c[23].nbM=0;
+    c[23].nbH=0;
+     c[23].hypo=0;
+
+    c[29].numero=29;
+     c[29].nbM=0;
+    c[29].nbH=0;
+     c[29].hypo=0;
 
     return c;
 }

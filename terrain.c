@@ -1,16 +1,11 @@
 #include "biblio.h"
 
-
-void movePion(struct t_joueur *p, int nb,struct carte1 *c,int i) //Déplacement du "pion" du joueur à sa case correspondante à chaque tour
-{
-    int ligj,colj=0;    //(Placement en fonction de la ligne / colonne)
-
-    int j;
-
-    for(i=0; i<nb; i++)
-    {
-        j=p[i].position;
-
+void terrain(int i, struct t_joueur *p, struct carte1 *c){
+int j;
+int ligj,colj;
+    j=p[i].position;
+for(i=0;i<4;i++){
+for(j=0;j<32;j++){
         if(j>=0 && j<=7)
         {
             ligj=3;
@@ -86,29 +81,12 @@ void movePion(struct t_joueur *p, int nb,struct carte1 *c,int i) //Déplacement 
         {
             colj=7;
         }
-
-        /*
-        Ici, on permet aux joueurs de se positionner indépendemment des autres afin qu'ils ne soient pas superposés
-        */
-
-        if(i==0){
-            ligj-=2;
-            colj-=1;
+        if(p[i].possessions[j]==c[j].nom){
+            ligj-=3;
+            colj+=5;
+            gotoligcol(ligj,colj);  // si un joueur achete une carte son numero s'affiche
+            printf("%d",p[i].numero);
         }
-        if(i==1){
-            ligj-=1;
-            colj-=1;
-        }
-        if(i==2){
-            ligj-=2;
-        }
-        if(i==3){
-            ligj-=1;
-        }
-        gotoligcol(ligj,colj);
-        printf("%d",p[i].numero);
-
-
-    }
-
+}
+}
 }
